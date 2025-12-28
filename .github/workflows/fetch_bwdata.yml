@@ -1,9 +1,9 @@
-name: Fetch BW AIS data
+name: Fetch BarentsWatch AIS data
 
 on:
   workflow_dispatch:        # manual trigger
   schedule:
-    - cron: "*/15 * * * *"  # every 15 minutes (optional, adjust as needed)
+    - cron: "*/60 * * * *"  # every 60 minutes (optional, adjust as needed)
 
 permissions:
   contents: write           # required to commit JSON back to repo
@@ -27,11 +27,10 @@ jobs:
           pip install requests
 
       - name: Fetch and filter BW AIS data
+        run: python scripts/fetch/fetch_bwdata.py
         env:
           BWAPI_CLIENTID_URLENCODED: ${{ secrets.BWAPI_CLIENTID_URLENCODED }}
           BWAPI_PWSECRET: ${{ secrets.BWAPI_PWSECRET }}
-        run: |
-          python scripts/fetch/fetch_bwdata.py
 
       - name: Prepare docs data directory
         run: |
