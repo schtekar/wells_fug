@@ -1,0 +1,45 @@
+name: Fetch SODIR data
+
+on:
+  workflow_dispatch:        # manual trigger (important for testing)
+  schedule:
+    - cron: "0 6 * * *"     # daily at 06:00 UTC
+
+permissions:
+  contents: write           # required to commit JSON back to repo
+
+jobs:
+  fetch-sodir:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Fetch and filter SODIR data
+        run: |
+          python scripts/fetch/fetch_sodirdata.py
+
+      - name: Prepare docs data directory
+        run: |
+          mkdir -p docs/data
+          cp data/raw/sodirdata.json docs/data/sodirdata.json
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add docs/data/sodirdata.json
+          git commit -m "Update SODIR data" || echo "No changes to commit"
+          git push
