@@ -1,3 +1,4 @@
+# data is saved to docs/bwdata.json
 
 """
 fetch_bwdata.py
