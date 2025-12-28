@@ -1,3 +1,5 @@
+# data is saved to docs/sodirdata.json
+
 import requests
 import json
 from datetime import datetime, timedelta
