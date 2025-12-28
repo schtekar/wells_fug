@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import List, Dict, Any
 
 import requests
-from rig_registry import RIG_MMSI  # Dictionary: rig_name -> MMSI
+from scripts.config.rig_registry import RIG_MMSI # Dictionary: rig_name -> MMSI
 
 
 # =========================
