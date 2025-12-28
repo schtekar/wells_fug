@@ -1,4 +1,4 @@
-# Data lagres i docs/kdhdata.json
+# data is saved to docs/kdhdata.json
 
 import requests
 import json
