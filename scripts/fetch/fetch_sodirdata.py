@@ -1,4 +1,5 @@
 # data is saved to data/raw/sodirdata.json
+# accessible from (docs/) data/sodirdata.json
 
 """
 Fetch and filter wellbore data from the SODIR (Norwegian Offshore Directorate) API.
