@@ -53,8 +53,10 @@ def get_time_interval(days_ago: int) -> (str, str):
     Return 18:00–23:59 UTC for a given day `days_ago`.
     """
     d = datetime.now(timezone.utc) - timedelta(days=days_ago)
-    start = d.replace(hour=18, minute=0, second=0, microsecond=0).strftime("%Y%m%d%H%M")
-    end = d.replace(hour=23, minute=59, second=59, microsecond=0).strftime("%Y%m%d%H%M")
+    start_dt = d.replace(hour=18, minute=0, second=0, microsecond=0)
+    end_dt = d.replace(hour=23, minute=59, second=59, microsecond=0)
+    start = start_dt.strftime("%Y%m%d%H%M")
+    end = end_dt.strftime("%Y%m%d%H%M")
     return start, end
 
 
@@ -80,7 +82,9 @@ def main() -> None:
 
     # Fetch well/rig data
     print("🌍 Fetching well/rig data...")
-    wells = requests.get(DATA_URL).json()
+    resp = requests.get(DATA_URL)
+    resp.raise_for_status()
+    wells = resp.json()
 
     unique_rigs = {w["rig_name"] for w in wells if w["rig_name"] in RIG_MMSI}
     print(f"🎯 Rigs found in registry: {unique_rigs}")
