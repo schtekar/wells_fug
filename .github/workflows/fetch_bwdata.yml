@@ -34,7 +34,7 @@ jobs:
         env:
           BWAPI_CLIENTID_URLENCODED: ${{ secrets.BWAPI_CLIENTID_URLENCODED }}
           BWAPI_PWSECRET: ${{ secrets.BWAPI_PWSECRET }}
-
+          
       - name: Prepare docs data directory
         run: |
           mkdir -p docs/data
