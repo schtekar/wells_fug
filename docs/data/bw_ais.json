@@ -1,142 +1,166 @@
-[
-  {
-    "mmsi": 310776000,
-    "latitude": 58.672198,
-    "longitude": 2.235073,
-    "msgtime": "2025-12-29T11:34:55.2816591+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 257452000,
-    "latitude": 61.077517,
-    "longitude": 1.988205,
-    "msgtime": "2025-12-29T11:34:53.7928903+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 310713000,
-    "latitude": 60.838447,
-    "longitude": 3.58182,
-    "msgtime": "2025-12-29T11:34:51+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 257459000,
-    "latitude": 60.505585,
-    "longitude": 2.01514,
-    "msgtime": "2025-12-29T11:33:18.9501881+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 565369000,
-    "latitude": 70.859115,
-    "longitude": 20.373463,
-    "msgtime": "2025-12-29T11:34:53+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 257095000,
-    "latitude": 56.423142,
-    "longitude": 3.210525,
-    "msgtime": "2025-12-29T11:32:37.0868545+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 538004905,
-    "latitude": 65.143913,
-    "longitude": 7.43134,
-    "msgtime": "2025-12-29T11:29:50.9934964+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 563050900,
-    "latitude": 59.217833,
-    "longitude": 2.4235,
-    "msgtime": "2025-12-29T11:34:46.5931151+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 538010632,
-    "latitude": 56.274593,
-    "longitude": 3.399608,
-    "msgtime": "2025-12-29T11:32:37.0859597+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 258615000,
-    "latitude": 72.454173,
-    "longitude": 20.14883,
-    "msgtime": "2025-12-29T11:34:59.9971222+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 308928000,
-    "latitude": 65.862038,
-    "longitude": 7.397302,
-    "msgtime": "2025-12-29T11:34:52.7927093+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 258627000,
-    "latitude": 65.031387,
-    "longitude": 6.873685,
-    "msgtime": "2025-12-29T11:33:08.097366+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 566391000,
-    "latitude": 65.411613,
-    "longitude": 7.39616,
-    "msgtime": "2025-12-29T11:34:55.793181+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 636016111,
-    "latitude": 58.41806,
-    "longitude": 1.715832,
-    "msgtime": "2025-12-29T11:33:41.3326997+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 565798000,
-    "latitude": 61.275103,
-    "longitude": 2.114613,
-    "msgtime": "2025-12-29T11:33:39.3337129+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 310766000,
-    "latitude": 58.33042,
-    "longitude": 1.590943,
-    "msgtime": "2025-12-29T11:33:59.9498109+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 310767000,
-    "latitude": 60.110993,
-    "longitude": 2.59194,
-    "msgtime": "2025-12-29T11:34:32+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 257440000,
-    "latitude": 61.299875,
-    "longitude": 2.361022,
-    "msgtime": "2025-12-29T11:34:55.793201+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 311000483,
-    "latitude": 64.342322,
-    "longitude": 7.72233,
-    "msgtime": "2025-12-29T11:34:53+00:00",
-    "source": "barentswatch"
-  },
-  {
-    "mmsi": 259783000,
-    "latitude": 56.548293,
-    "longitude": 3.21381,
-    "msgtime": "2025-12-29T11:34:52.7928468+00:00",
-    "source": "barentswatch"
-  }
-]
+{
+  "fetched_at": "2025-12-29T11:43:16.247701+00:00",
+  "source": "barentswatch",
+  "rigs": [
+    {
+      "mmsi": 310776000,
+      "rig_name": "DEEPSEA NORDKAPP",
+      "latitude": 58.672202,
+      "longitude": 2.235088,
+      "msgtime": "2025-12-29T11:43:14.8933421+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 257452000,
+      "rig_name": "ASKELADDEN",
+      "latitude": 61.077518,
+      "longitude": 1.98821,
+      "msgtime": "2025-12-29T11:43:15.3808431+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 310713000,
+      "rig_name": "DEEPSEA ABERDEEN",
+      "latitude": 60.838435,
+      "longitude": 3.5818,
+      "msgtime": "2025-12-29T11:43:12+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 257459000,
+      "rig_name": "ASKEPOTT",
+      "latitude": 60.505577,
+      "longitude": 2.015122,
+      "msgtime": "2025-12-29T11:42:15.0713625+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 565369000,
+      "rig_name": "COSLPROSPECTOR",
+      "latitude": 70.85732,
+      "longitude": 20.350415,
+      "msgtime": "2025-12-29T11:43:13+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 257095000,
+      "rig_name": "LINUS",
+      "latitude": 56.423172,
+      "longitude": 3.210537,
+      "msgtime": "2025-12-29T11:41:54.7187083+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 538004905,
+      "rig_name": "TRANSOCEAN SPITSBERGEN",
+      "latitude": 65.143892,
+      "longitude": 7.431287,
+      "msgtime": "2025-12-29T11:41:54.7184781+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 563050900,
+      "rig_name": "COSLPIONEER",
+      "latitude": 59.218,
+      "longitude": 2.4235,
+      "msgtime": "2025-12-29T11:40:45.9250136+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 538010632,
+      "rig_name": "NOBLE INVINCIBLE",
+      "latitude": 56.274655,
+      "longitude": 3.399677,
+      "msgtime": "2025-12-29T11:41:35.7102638+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 258615000,
+      "rig_name": "TRANSOCEAN ENABLER",
+      "latitude": 72.454155,
+      "longitude": 20.148823,
+      "msgtime": "2025-12-29T11:43:11.1815344+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 308928000,
+      "rig_name": "SCARABEO 8",
+      "latitude": 65.862033,
+      "longitude": 7.397252,
+      "msgtime": "2025-12-29T11:43:13.382057+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 258627000,
+      "rig_name": "TRANSOCEAN ENCOURAGE",
+      "latitude": 65.031377,
+      "longitude": 6.873755,
+      "msgtime": "2025-12-29T11:42:20.0911158+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 566391000,
+      "rig_name": "COSLINNOVATOR",
+      "latitude": 65.411625,
+      "longitude": 7.39615,
+      "msgtime": "2025-12-29T11:43:14.8934614+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 636016111,
+      "rig_name": "SHELF DRILLING BARSK",
+      "latitude": 58.418067,
+      "longitude": 1.715838,
+      "msgtime": "2025-12-29T11:42:50.7691576+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 565798000,
+      "rig_name": "COSLPROMOTER",
+      "latitude": 61.275103,
+      "longitude": 2.114612,
+      "msgtime": "2025-12-29T11:42:32.1584087+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 310766000,
+      "rig_name": "DEEPSEA ATLANTIC",
+      "latitude": 58.33042,
+      "longitude": 1.590927,
+      "msgtime": "2025-12-29T11:40:57.8851482+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 310767000,
+      "rig_name": "DEEPSEA STAVANGER",
+      "latitude": 60.110987,
+      "longitude": 2.59197,
+      "msgtime": "2025-12-29T11:40:25+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 257440000,
+      "rig_name": "DEEPSEA BOLLSTA",
+      "latitude": 61.29987,
+      "longitude": 2.361023,
+      "msgtime": "2025-12-29T11:43:14.893634+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 311000483,
+      "rig_name": "DEEPSEA YANTAI",
+      "latitude": 64.34233,
+      "longitude": 7.721953,
+      "msgtime": "2025-12-29T11:43:14+00:00",
+      "source": "barentswatch"
+    },
+    {
+      "mmsi": 259783000,
+      "rig_name": "WEST ELARA",
+      "latitude": 56.5483,
+      "longitude": 3.21384,
+      "msgtime": "2025-12-29T11:42:54.7742625+00:00",
+      "source": "barentswatch"
+    }
+  ]
+}
