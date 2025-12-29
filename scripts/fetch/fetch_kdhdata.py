@@ -1,55 +1,44 @@
+# fetch_kdhdata.py
+"""
+Fetch historical rig positions from Kystdatahuset (KDH) and merge into ais_msg_main.json.
+
+- Fetches positions for rigs in RIG_MMSI
+- Time window: 10:00–12:00 UTC
+- Days ago: 3, 7, 30 → msg_3d, msg_1w, msg_1mo
+- Stores messages in BW-compatible format
+- Safely merges into ais_msg_main.json (atomic, concurrency-safe)
+"""
+
+import os
 import json
-import math
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from datetime import datetime, timezone
+from typing import Any
+
+import requests
+from scripts.config.rig_registry import RIG_MMSI
 
 # =========================
-# Paths
+# Config
 # =========================
-SODIR_PATH = Path("docs/data/sodirdata.json")
-AIS_MAIN_PATH = Path("docs/data/ais_msg_main.json")   # BW + KDH merged AIS
-KDH_OUTPUT_PATH = Path("docs/data/kdhdata.json")      # NEW: explicit output
-OUTPUT_PATH = Path("docs/data/rig_well_analysis.json")
+AUTH_URL = "https://kystdatahuset.no/ws/api/auth/login"
+AIS_URL = "https://kystdatahuset.no/ws/api/ais/positions/for-mmsis-time"
+DATA_URL = "https://schtekar.github.io/wells_fug/data/sodirdata.json"
 
-# =========================
-# Thresholds
-# =========================
-STATIONARY_THRESHOLD_M = 50    # meters
-ONSITE_THRESHOLD_M = 100       # meters (reserved for future use)
+USERNAME = os.getenv("KDH_USERNAME")
+PASSWORD = os.getenv("KDH_PW")
 
-# =========================
-# Geo helpers
-# =========================
-def valid_coords(lat, lon):
-    try:
-        return (
-            lat is not None
-            and lon is not None
-            and not math.isnan(lat)
-            and not math.isnan(lon)
-        )
-    except Exception:
-        return False
+if not USERNAME or not PASSWORD:
+    raise RuntimeError("❌ Missing KDH_USERNAME or KDH_PW in environment")
 
-
-def haversine_km(lat1, lon1, lat2, lon2):
-    R = 6371.0
-    phi1, phi2 = math.radians(lat1), math.radians(lat2)
-    dphi = math.radians(lat2 - lat1)
-    dlambda = math.radians(lon2 - lon1)
-
-    a = (
-        math.sin(dphi / 2) ** 2
-        + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
-    )
-    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+KDH_PATH = Path("docs/data/kdhdata.json")
+MAIN_MSG_PATH = Path("docs/data/ais_msg_main.json")
 
 # =========================
 # Safe JSON helpers
 # =========================
 def load_json_safe(path: Path, default):
     if not path.exists():
-        print(f"⚠️ {path} not found, using default")
         return default
     try:
         with path.open("r", encoding="utf-8") as f:
@@ -59,160 +48,111 @@ def load_json_safe(path: Path, default):
         return default
 
 
-def save_json_atomic(data, path: Path):
+def save_json_atomic(data: Any, path: Path):
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(".tmp")
     with tmp.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
     tmp.replace(path)
-    print(f"✅ Wrote {path} ({len(data) if isinstance(data, dict) else 'list'})")
+    print(f"✅ Saved {path} ({len(data) if isinstance(data, dict) else 'list'})")
 
 # =========================
-# Reference position helper
+# Time helper
 # =========================
-from scripts.config.rw_analysis_config import REFERENCE_POSITION_OPTIONS
-
-
-def get_reference_position(rig_data, period="12h"):
-    """
-    Return reference position dict for movement comparison.
-    period: "12h", "1d", "2d", "3d", "1w", "1mo"
-    """
-    config = REFERENCE_POSITION_OPTIONS.get(period)
-    if not config:
-        return None
-    return rig_data.get(config["tag"])
-
-# =========================
-# Main analysis
-# =========================
-def main():
-    now = datetime.now(timezone.utc)
-
-    sodir = load_json_safe(SODIR_PATH, [])
-    ais_main = load_json_safe(AIS_MAIN_PATH, {})
-
-    if not ais_main:
-        print("⚠️ AIS main doc is empty — nothing to analyse")
-        return
-
-    # -----------------------
-    # Index wells by rig
-    # -----------------------
-    wells_by_rig = {}
-    for w in sodir:
-        rig = w.get("rig_name")
-        if rig and valid_coords(w.get("lat"), w.get("lon")):
-            wells_by_rig.setdefault(rig, []).append(w)
-
-    rig_results = {}
-
-    # -----------------------
-    # Per-rig analysis
-    # -----------------------
-    for mmsi, rig_snap in ais_main.items():
-        mmsi = str(mmsi)  # normalize MMSI keys
-
-        recent = rig_snap.get("msg_recent")
-        if not recent:
-            continue
-
-        lat = recent.get("latitude")
-        lon = recent.get("longitude")
-        rig_name = recent.get("rig_name")
-
-        if not rig_name or not valid_coords(lat, lon):
-            continue
-
-        # -----------------------
-        # Movement analysis
-        # -----------------------
-        reference_pos = get_reference_position(rig_snap, period="12h")
-
-        movement_m = None
-        rig_moving = False
-        movement_km = None
-
-        if reference_pos and valid_coords(
-            reference_pos.get("latitude"),
-            reference_pos.get("longitude"),
-        ):
-            movement_km = haversine_km(
-                reference_pos["latitude"],
-                reference_pos["longitude"],
-                lat,
-                lon,
-            )
-            movement_m = movement_km * 1000
-            rig_moving = movement_m > STATIONARY_THRESHOLD_M
-
-        # -----------------------
-        # Wells & approach
-        # -----------------------
-        assigned_wells = []
-        likely_target_well = None
-        min_distance = None
-
-        for w in wells_by_rig.get(rig_name, []):
-            w_lat = w["lat"]
-            w_lon = w["lon"]
-
-            distance_km = haversine_km(lat, lon, w_lat, w_lon)
-            distance_m = distance_km * 1000
-
-            approach_ratio = None
-            if reference_pos and movement_km and movement_km > 0:
-                ref_distance_km = haversine_km(
-                    reference_pos["latitude"],
-                    reference_pos["longitude"],
-                    w_lat,
-                    w_lon,
-                )
-                approach_ratio = max(
-                    0.0,
-                    (ref_distance_km - distance_km) / movement_km,
-                )
-
-            assigned_wells.append(
-                {
-                    "wellbore_name": w["wellbore_name"],
-                    "distance_m": round(distance_m, 1),
-                    "approach_ratio": None
-                    if approach_ratio is None
-                    else round(approach_ratio, 3),
-                }
-            )
-
-            if min_distance is None or distance_m < min_distance:
-                min_distance = distance_m
-                likely_target_well = w["wellbore_name"]
-
-        rig_results[rig_name] = {
-            "mmsi": mmsi,
-            "lat": lat,
-            "lon": lon,
-            "last_seen": recent.get("msgtime"),
-            "rig_moving": rig_moving,
-            "movement_m": None if movement_m is None else round(movement_m, 1),
-            "assigned_wells": assigned_wells,
-            "likely_target_well": likely_target_well,
-        }
-
-    # -----------------------
-    # Writes (atomic)
-    # -----------------------
-    save_json_atomic(ais_main, KDH_OUTPUT_PATH)
-
-    save_json_atomic(
-        {
-            "generated_at": now.isoformat(),
-            "rigs": rig_results,
-        },
-        OUTPUT_PATH,
+def get_time_interval(days_ago: int) -> tuple[str, str]:
+    d = datetime.now(timezone.utc) - timedelta(days=days_ago)
+    start_dt = d.replace(hour=10, minute=0, second=0, microsecond=0)
+    end_dt = d.replace(hour=12, minute=0, second=0, microsecond=0)
+    return (
+        start_dt.strftime("%Y%m%d%H%M"),
+        end_dt.strftime("%Y%m%d%H%M"),
     )
 
-    print("✅ KDH analysis pipeline complete")
+# =========================
+# Main
+# =========================
+def main():
+    print("🔐 Authenticating with Kystdatahuset...")
+    auth_payload = {"username": USERNAME, "password": PASSWORD}
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "*/*",
+        "User-Agent": "wells_fug/1.0",
+    }
 
+    r = requests.post(AUTH_URL, json=auth_payload, headers=headers)
+    r.raise_for_status()
+    auth_data = r.json()
+
+    if not auth_data.get("success"):
+        raise RuntimeError(f"❌ Authentication failed: {auth_data}")
+
+    jwt = auth_data["data"]["JWT"]
+    print("✅ Authentication OK")
+
+    ais_headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {jwt}",
+        "User-Agent": "wells_fug/1.0",
+    }
+
+    print("🌍 Fetching well registry...")
+    wells = requests.get(DATA_URL).json()
+    rigs = {w["rig_name"] for w in wells if w["rig_name"] in RIG_MMSI}
+    print(f"🎯 Rigs found: {sorted(rigs)}")
+
+    # Load existing data safely
+    main_doc = load_json_safe(MAIN_MSG_PATH, {})
+    kdh_store = {}
+
+    days_tags = [(3, "msg_3d"), (7, "msg_1w"), (30, "msg_1mo")]
+
+    for rig in rigs:
+        mmsi = str(RIG_MMSI[rig])   # normalize MMSI
+        kdh_store[mmsi] = {}
+
+        print(f"\n🚢 {rig} (MMSI {mmsi})")
+
+        for days_ago, tag in days_tags:
+            start, end = get_time_interval(days_ago)
+            payload = {
+                "mmsiIds": [int(mmsi)],
+                "start": start,
+                "end": end,
+                "minSpeed": 0,
+            }
+
+            r = requests.post(AIS_URL, json=payload, headers=ais_headers)
+            r.raise_for_status()
+            datapoints = r.json().get("data", [])
+
+            print(f"  ⏱ {days_ago}d ago {start}-{end}: {len(datapoints)} points")
+
+            if not datapoints:
+                continue
+
+            last = datapoints[-1]
+            msg = {
+                "mmsi": int(mmsi),
+                "rig_name": rig,
+                "latitude": last[3],
+                "longitude": last[2],
+                "msgtime": last[1],
+                "source": "kystdatahuset",
+            }
+
+            kdh_store[mmsi][tag] = msg
+
+            main_doc.setdefault(mmsi, {})
+            main_doc[mmsi][tag] = msg
+
+            print(f"    ✅ Stored {tag}")
+
+    # Atomic writes
+    save_json_atomic(kdh_store, KDH_PATH)
+    save_json_atomic(main_doc, MAIN_MSG_PATH)
+
+    print("✅ KDH AIS merge complete")
 
 if __name__ == "__main__":
     main()
