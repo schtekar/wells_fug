@@ -7,14 +7,15 @@ from datetime import datetime, timezone
 # Paths
 # =========================
 SODIR_PATH = Path("docs/data/sodirdata.json")
-AIS_MAIN_PATH = Path("docs/data/ais_msg_main.json")  # includes BW + KDH messages
+AIS_MAIN_PATH = Path("docs/data/ais_msg_main.json")   # BW + KDH merged AIS
+KDH_OUTPUT_PATH = Path("docs/data/kdhdata.json")      # NEW: explicit output
 OUTPUT_PATH = Path("docs/data/rig_well_analysis.json")
 
 # =========================
 # Thresholds
 # =========================
-STATIONARY_THRESHOLD_M = 50   # configurable
-ONSITE_THRESHOLD_M = 100      # distance to consider rig onsite at well
+STATIONARY_THRESHOLD_M = 50    # meters
+ONSITE_THRESHOLD_M = 100       # meters (reserved for future use)
 
 # =========================
 # Geo helpers
@@ -30,11 +31,13 @@ def valid_coords(lat, lon):
     except Exception:
         return False
 
+
 def haversine_km(lat1, lon1, lat2, lon2):
-    R = 6371
+    R = 6371.0
     phi1, phi2 = math.radians(lat1), math.radians(lat2)
     dphi = math.radians(lat2 - lat1)
     dlambda = math.radians(lon2 - lon1)
+
     a = (
         math.sin(dphi / 2) ** 2
         + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
@@ -46,6 +49,7 @@ def haversine_km(lat1, lon1, lat2, lon2):
 # =========================
 def load_json_safe(path: Path, default):
     if not path.exists():
+        print(f"⚠️ {path} not found, using default")
         return default
     try:
         with path.open("r", encoding="utf-8") as f:
@@ -54,17 +58,20 @@ def load_json_safe(path: Path, default):
         print(f"⚠️ {path} contains invalid JSON, using default")
         return default
 
-def save_json_atomic(data: dict, path: Path):
+
+def save_json_atomic(data, path: Path):
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(".tmp")
     with tmp.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
     tmp.replace(path)
+    print(f"✅ Wrote {path} ({len(data) if isinstance(data, dict) else 'list'})")
 
 # =========================
 # Reference position helper
 # =========================
 from scripts.config.rw_analysis_config import REFERENCE_POSITION_OPTIONS
+
 
 def get_reference_position(rig_data, period="12h"):
     """
@@ -80,12 +87,18 @@ def get_reference_position(rig_data, period="12h"):
 # Main analysis
 # =========================
 def main():
-    sodir = load_json_safe(SODIR_PATH, [])
-    main_data = load_json_safe(AIS_MAIN_PATH, {})
-
     now = datetime.now(timezone.utc)
 
+    sodir = load_json_safe(SODIR_PATH, [])
+    ais_main = load_json_safe(AIS_MAIN_PATH, {})
+
+    if not ais_main:
+        print("⚠️ AIS main doc is empty — nothing to analyse")
+        return
+
+    # -----------------------
     # Index wells by rig
+    # -----------------------
     wells_by_rig = {}
     for w in sodir:
         rig = w.get("rig_name")
@@ -94,28 +107,35 @@ def main():
 
     rig_results = {}
 
-    for mmsi_key, rig_snap in main_data.items():
-        mmsi = str(mmsi_key)  # normalize MMSI
+    # -----------------------
+    # Per-rig analysis
+    # -----------------------
+    for mmsi, rig_snap in ais_main.items():
+        mmsi = str(mmsi)  # normalize MMSI keys
 
         recent = rig_snap.get("msg_recent")
-        if not recent or not valid_coords(recent.get("latitude"), recent.get("longitude")):
+        if not recent:
             continue
 
-        rig_name = recent.get("rig_name")
         lat = recent.get("latitude")
         lon = recent.get("longitude")
+        rig_name = recent.get("rig_name")
+
+        if not rig_name or not valid_coords(lat, lon):
+            continue
 
         # -----------------------
         # Movement analysis
         # -----------------------
         reference_pos = get_reference_position(rig_snap, period="12h")
 
-        movement_km = None
         movement_m = None
         rig_moving = False
+        movement_km = None
 
         if reference_pos and valid_coords(
-            reference_pos.get("latitude"), reference_pos.get("longitude")
+            reference_pos.get("latitude"),
+            reference_pos.get("longitude"),
         ):
             movement_km = haversine_km(
                 reference_pos["latitude"],
@@ -127,7 +147,7 @@ def main():
             rig_moving = movement_m > STATIONARY_THRESHOLD_M
 
         # -----------------------
-        # Assigned wells & approach
+        # Wells & approach
         # -----------------------
         assigned_wells = []
         likely_target_well = None
@@ -141,16 +161,16 @@ def main():
             distance_m = distance_km * 1000
 
             approach_ratio = None
-            if reference_pos and movement_km:
+            if reference_pos and movement_km and movement_km > 0:
                 ref_distance_km = haversine_km(
                     reference_pos["latitude"],
                     reference_pos["longitude"],
                     w_lat,
                     w_lon,
                 )
-                distance_moved_km = movement_km or 0.001
                 approach_ratio = max(
-                    0, (ref_distance_km - distance_km) / distance_moved_km
+                    0.0,
+                    (ref_distance_km - distance_km) / movement_km,
                 )
 
             assigned_wells.append(
@@ -178,6 +198,11 @@ def main():
             "likely_target_well": likely_target_well,
         }
 
+    # -----------------------
+    # Writes (atomic)
+    # -----------------------
+    save_json_atomic(ais_main, KDH_OUTPUT_PATH)
+
     save_json_atomic(
         {
             "generated_at": now.isoformat(),
@@ -186,7 +211,8 @@ def main():
         OUTPUT_PATH,
     )
 
-    print(f"✅ Rig–well analysis written to {OUTPUT_PATH}")
+    print("✅ KDH analysis pipeline complete")
+
 
 if __name__ == "__main__":
     main()
