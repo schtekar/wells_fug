@@ -1,14 +1,12 @@
-# data is saved to data/raw/kdhdata.json
-# accessible from docs/kdhdata.json
-
+# fetch_kdhdata.py
 """
-Fetch AIS positions from Kystdatahuset (KDH) for known rigs.
+Fetch historical rig positions from Kystdatahuset (KDH) and merge into ais_msg_main.json.
 
-This script:
-- Authenticates using username/password
-- Fetches well/rig data
-- Retrieves first and last positions for 2 and 3 days ago
-- Stores results as JSON with metadata
+- Fetches positions for rigs in RIG_MMSI
+- Time window: 10:00–12:00 UTC
+- Days ago: 3, 7, 30 → msg_3d, msg_1w, msg_1mo
+- Stores messages in BW-compatible format
+- Merges with existing ais_msg_main.json
 """
 
 import os
@@ -21,9 +19,8 @@ import requests
 from scripts.config.rig_registry import RIG_MMSI
 
 # =========================
-# Configuration
+# Config
 # =========================
-
 AUTH_URL = "https://kystdatahuset.no/ws/api/auth/login"
 AIS_URL = "https://kystdatahuset.no/ws/api/ais/positions/for-mmsis-time"
 DATA_URL = "https://schtekar.github.io/wells_fug/data/sodirdata.json"
@@ -34,130 +31,106 @@ PASSWORD = os.getenv("KDH_PW")
 if not USERNAME or not PASSWORD:
     raise RuntimeError("❌ Missing KDH_USERNAME or KDH_PW in environment")
 
-OUTPUT_PATH = Path("data/raw/kdhdata.json")
+KDH_PATH = Path("data/raw/kdhdata.json")          # filtered and stored KDH messages
+MAIN_MSG_PATH = Path("docs/data/ais_msg_main.json")
 
 # =========================
-# Helper functions
+# Helpers
 # =========================
-
 def write_json(data: Any, path: Path) -> None:
-    """Write JSON data to disk, creating parent directories if needed."""
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
     print(f"✅ Saved {path}")
 
-
 def get_time_interval(days_ago: int) -> (str, str):
     """
-    Return 18:00–23:59 UTC for a given day `days_ago`.
+    Return 10:00–12:00 UTC for a given day `days_ago`.
     """
     d = datetime.now(timezone.utc) - timedelta(days=days_ago)
-    start_dt = d.replace(hour=18, minute=0, second=0, microsecond=0)
-    end_dt = d.replace(hour=23, minute=59, second=59, microsecond=0)
+    start_dt = d.replace(hour=10, minute=0, second=0, microsecond=0)
+    end_dt = d.replace(hour=12, minute=0, second=0, microsecond=0)
     start = start_dt.strftime("%Y%m%d%H%M")
     end = end_dt.strftime("%Y%m%d%H%M")
     return start, end
 
-
 # =========================
-# Main entry point
+# Main
 # =========================
-
-def main() -> None:
+def main():
     print("🔐 Authenticating with Kystdatahuset...")
-
     auth_payload = {"username": USERNAME, "password": PASSWORD}
     headers = {"Content-Type": "application/json", "Accept": "*/*", "User-Agent": "wells_fug/1.0"}
-
     resp = requests.post(AUTH_URL, json=auth_payload, headers=headers)
     resp.raise_for_status()
     auth_data = resp.json()
-
     if not auth_data.get("success"):
         raise RuntimeError(f"❌ Authentication failed: {auth_data}")
-
     JWT = auth_data["data"]["JWT"]
     print("✅ Authentication OK – JWT received")
 
     # Fetch well/rig data
     print("🌍 Fetching well/rig data...")
-    resp = requests.get(DATA_URL)
-    resp.raise_for_status()
-    wells = resp.json()
-
+    wells = requests.get(DATA_URL).json()
     unique_rigs = {w["rig_name"] for w in wells if w["rig_name"] in RIG_MMSI}
     print(f"🎯 Rigs found in registry: {unique_rigs}")
 
-    # Headers for AIS requests
     ais_headers = {"Content-Type": "application/json", "Authorization": f"Bearer {JWT}", "User-Agent": "wells_fug/1.0"}
 
-    rig_positions: List[Dict[str, Any]] = []
+    # Load existing main doc if exists
+    if MAIN_MSG_PATH.exists():
+        with MAIN_MSG_PATH.open("r", encoding="utf-8") as f:
+            main_doc = json.load(f)
+    else:
+        main_doc = {}
+
+    # Load or initialize KDH storage
+    kdh_messages_store = {}
+
+    # Define days and tags
+    days_tags = [(3, "msg_3d"), (7, "msg_1w"), (30, "msg_1mo")]
 
     for rig in unique_rigs:
         mmsi = RIG_MMSI[rig]
+        kdh_messages_store[mmsi] = {}
         print(f"\n🚢 {rig} (MMSI {mmsi})")
 
-        found_data = False
-
-        for days_ago in [2, 3]:
+        for days_ago, tag in days_tags:
             start, end = get_time_interval(days_ago)
             payload = {"mmsiIds": [mmsi], "start": start, "end": end, "minSpeed": 0}
-
-            print(f"  ⏱ Trying {days_ago} days ago: {start}–{end}")
 
             r = requests.post(AIS_URL, json=payload, headers=ais_headers)
             r.raise_for_status()
             data = r.json()
             datapoints = data.get("data", [])
-            print(f"    → success={data.get('success')} datapoints={len(datapoints)}")
+            print(f"  ⏱ {days_ago}d ago {start}-{end}: {len(datapoints)} points")
 
-            if data.get("success") and datapoints:
-                first = datapoints[0]
+            if datapoints:
                 last = datapoints[-1]
-
-                rig_positions.append({
-                    "rig_name": rig,
+                msgtime_raw = last[1]
+                msgtime_dt = datetime.fromisoformat(msgtime_raw.replace("Z", "+00:00"))
+                msg = {
                     "mmsi": mmsi,
-                    "days_ago": days_ago,
-                    "position_type": "first",
-                    "lat": first[3],
-                    "lon": first[2],
-                    "speed": first[4],
-                    "course": first[5],
-                    "timestamp": first[1]
-                })
-
-                rig_positions.append({
                     "rig_name": rig,
-                    "mmsi": mmsi,
-                    "days_ago": days_ago,
-                    "position_type": "last",
-                    "lat": last[3],
-                    "lon": last[2],
-                    "speed": last[4],
-                    "course": last[5],
-                    "timestamp": last[1]
-                })
-
-                print(f"    ✅ Saved first + last for {days_ago} days ago")
-                found_data = True
-                break
+                    "latitude": last[3],
+                    "longitude": last[2],
+                    "msgtime": msgtime_raw,
+                    "_msgtime_dt": msgtime_dt.isoformat(),
+                    "source": "kystdatahuset",
+                }
+                kdh_messages_store[mmsi][tag] = msg
+                # Merge into main_doc
+                if mmsi not in main_doc:
+                    main_doc[mmsi] = {}
+                main_doc[mmsi][tag] = msg
+                print(f"    ✅ Stored {tag}")
             else:
-                print(f"    ⚠️ No data found for {days_ago} days ago")
+                print(f"    ⚠️ No data for {days_ago}d ago")
 
-        if not found_data:
-            print(f"    ❌ No data found for {rig} on either 2 or 3 days ago")
-
-    # Add metadata for fetch
-    output = {
-        "fetched_at": datetime.now(timezone.utc).isoformat(),
-        "source": "kystdatahuset",
-        "rigs": rig_positions,
-    }
-
-    write_json(output, OUTPUT_PATH)
-
+    # Save filtered KDH data
+    write_json(kdh_messages_store, KDH_PATH)
+    # Update main doc
+    write_json(main_doc, MAIN_MSG_PATH)
 
 if __name__ == "__main__":
     main()
