@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-29T22:05:49.186249+00:00",
+  "generated_at": "2025-12-29T22:18:28.565056+00:00",
   "rigs": {
     "ASKELADDEN": {
       "mmsi": "257452000",
@@ -131,8 +131,34 @@
       "last_seen": "2025-12-29T20:45:21+00:00",
       "rig_moving": false,
       "movement_m": null,
-      "assigned_wells": [],
-      "likely_target_well": null
+      "assigned_wells": [
+        {
+          "wellbore_name": "7122/8-4 S",
+          "distance_m": 145254.9,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "7018/5-U-9",
+          "distance_m": 18273.9,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "7018/5-2",
+          "distance_m": 18261.5,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "7220/7-5",
+          "distance_m": 188425.5,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "7122/8-3 A",
+          "distance_m": 144108.8,
+          "approach_ratio": null
+        }
+      ],
+      "likely_target_well": "7018/5-2"
     },
     "LINUS": {
       "mmsi": "257095000",
@@ -203,8 +229,19 @@
       "last_seen": "2025-12-29T20:44:19.7013439+00:00",
       "rig_moving": false,
       "movement_m": null,
-      "assigned_wells": [],
-      "likely_target_well": null
+      "assigned_wells": [
+        {
+          "wellbore_name": "25/11-HT-3 Y2H",
+          "distance_m": 3887.2,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "25/11-FT-2 Y2H",
+          "distance_m": 31.1,
+          "approach_ratio": null
+        }
+      ],
+      "likely_target_well": "25/11-FT-2 Y2H"
     },
     "NOBLE INTEGRATOR": {
       "mmsi": "538010630",
@@ -372,8 +409,34 @@
       "last_seen": "2025-12-29T20:45:25.1382863+00:00",
       "rig_moving": false,
       "movement_m": null,
-      "assigned_wells": [],
-      "likely_target_well": null
+      "assigned_wells": [
+        {
+          "wellbore_name": "34/8-20 A",
+          "distance_m": 497002.8,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "6507/8-12 S",
+          "distance_m": 83.1,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "6610/7-U-3",
+          "distance_m": 171864.3,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "35/11-32 S",
+          "distance_m": 511983.7,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "30/2-U-2",
+          "distance_m": 551981.7,
+          "approach_ratio": null
+        }
+      ],
+      "likely_target_well": "6507/8-12 S"
     },
     "SHELF DRILLING BARSK": {
       "mmsi": "636016111",
@@ -398,8 +461,44 @@
       "last_seen": "2025-12-29T20:45:28.1377021+00:00",
       "rig_moving": false,
       "movement_m": null,
-      "assigned_wells": [],
-      "likely_target_well": null
+      "assigned_wells": [
+        {
+          "wellbore_name": "15/5-C-2 H",
+          "distance_m": 293550.4,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "34/7-I-4 BH",
+          "distance_m": 33.4,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "15/9-E-2 AH",
+          "distance_m": 309749.5,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "16/7-A-2 AH",
+          "distance_m": 332574.8,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "34/7-I-1 AH",
+          "distance_m": 177.7,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "16/2-U-8",
+          "distance_m": 267057.9,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "16/3-U-2",
+          "distance_m": 280973.6,
+          "approach_ratio": null
+        }
+      ],
+      "likely_target_well": "34/7-I-4 BH"
     },
     "DEEPSEA ATLANTIC": {
       "mmsi": "310766000",
