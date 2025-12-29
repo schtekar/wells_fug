@@ -1,71 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Norwegian Wells Map</title>
-
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
-<!-- MarkerCluster CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
-
-<style>
-  body, html { margin: 0; padding: 0; height: 100%; }
-  #map { width: 100%; height: 100%; }
-</style>
+  <meta charset="UTF-8">
+  <title>Wells & Rigs Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <style>
+    #map { height: 100vh; width: 100%; }
+    .legend { background: white; padding: 6px; border-radius: 4px; }
+  </style>
 </head>
 <body>
-
 <div id="map"></div>
 
-<!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-<!-- MarkerCluster JS -->
-<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-
 <script>
-// Center the map roughly on Norway
-var map = L.map('map').setView([60, 4], 5);
-
-// Add a base layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '© OpenStreetMap'
+// Initialize map
+const map = L.map('map').setView([60, 3], 5); // center over Norway
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Load wells data
+// Load well data
 fetch('data/sodirdata.json')
-  .then(response => response.json())
-  .then(data => {
-    var markers = L.markerClusterGroup();
-
-    data.forEach(well => {
-      const lat = parseFloat(well.lat);
-      const lon = parseFloat(well.lon);
-
-      if (!isNaN(lat) && !isNaN(lon)) {
-        const popupContent = `
-          <b>${well.wellbore_name}</b><br>
-          Rig: ${well.rig_name}<br>
-          Operator: ${well.operator}<br>
-          Field: ${well.field}<br>
-          <a href="${well.fact_page_url}" target="_blank">Fact Page</a>
-        `;
-
-        const marker = L.marker([lat, lon]).bindPopup(popupContent);
-        markers.addLayer(marker);
-      }
+  .then(res => res.json())
+  .then(wells => {
+    wells.forEach(w => {
+      if (!w.lat || !w.lon || w.lat === "NaN" || w.lon === "NaN") return;
+      const popupContent = `
+        <b>Well:</b> ${w.wellbore_name}<br>
+        <b>Rig:</b> ${w.rig_name}<br>
+        <b>Status:</b> ${w.status}<br>
+        <b>Operator:</b> ${w.operator}<br>
+        <a href="${w.fact_page_url}" target="_blank">Fact Page</a>
+      `;
+      L.circleMarker([w.lat, w.lon], {
+        radius: 6,
+        fillColor: 'blue',
+        color: 'white',
+        weight: 1,
+        fillOpacity: 0.8
+      }).bindPopup(popupContent).addTo(map);
     });
+  });
 
-    map.addLayer(markers);
-  })
-  .catch(err => console.error("Error loading sodirdata.json:", err));
+// Load rig snapshots
+fetch('data/bw_snapshots.json')
+  .then(res => res.json())
+  .then(snapshots => {
+    Object.values(snapshots).forEach(rig => {
+      const msg = rig.msg_recent;
+      if (!msg || !msg.latitude || !msg.longitude) return;
 
+      const popupContent = `
+        <b>Rig:</b> ${msg.rig_name}<br>
+        <b>MMSI:</b> ${msg.mmsi}<br>
+        <b>Source:</b> ${msg.source}<br>
+        <b>Time:</b> ${msg.msgtime}
+      `;
+      L.circleMarker([msg.latitude, msg.longitude], {
+        radius: 6,
+        fillColor: 'red',
+        color: 'white',
+        weight: 1,
+        fillOpacity: 0.8
+      }).bindPopup(popupContent).addTo(map);
+    });
+  });
+
+// Legend
+const legend = L.control({position: 'bottomright'});
+legend.onAdd = function(map) {
+  const div = L.DomUtil.create('div', 'legend');
+  div.innerHTML = `
+    <b>Legend</b><br>
+    <span style="color: blue;">●</span> Wells<br>
+    <span style="color: red;">●</span> Rigs (most recent)
+  `;
+  return div;
+};
+legend.addTo(map);
 </script>
-
 </body>
 </html>
