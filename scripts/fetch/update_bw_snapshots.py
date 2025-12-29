@@ -143,6 +143,7 @@ def main():
         if rig_snap.get("msg_recent") is not None
     }
 
+    print(f"Main doc has {len(main_doc)} entries. Keys: {list(main_doc.keys())[:5]}")  # show first 5 keys
     save_json_safely(main_doc, MAIN_MSG_PATH)
 
 
