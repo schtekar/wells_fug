@@ -34,8 +34,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Pull latest changes and rebase local commits
-          git pull origin main --rebase || echo "No changes to rebase"
+          git pull origin main --rebase || echo "No changes to rebase" # Pull latest changes and rebase local commits
 
           git add docs/data/bw_snapshots.json
           git commit -m "Update BW snapshots" || echo "No changes to commit"
