@@ -131,17 +131,27 @@ def main():
     # Save snapshots
     save_json_safely(snapshots, SNAPSHOT_PATH)
 
-    # Build main AIS message doc
-    main_doc = {
-        mmsi: {
+    # -----------------------
+    main_doc = {}
+    for mmsi, rig_snap in snapshots.items():
+        main_doc[str(mmsi)] = {  # ensure keys are strings
             "msg_recent": rig_snap.get("msg_recent"),
             "msg_12h": rig_snap.get("msg_12h"),
             "msg_1d": rig_snap.get("msg_1d"),
             "msg_2d": rig_snap.get("msg_2d"),
         }
-        for mmsi, rig_snap in snapshots.items()
-        if rig_snap.get("msg_recent") is not None
-    }
+
+    # Ensure parent directories exist
+    MAIN_MSG_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+    # Save JSON
+    with MAIN_MSG_PATH.open("w", encoding="utf-8") as f:
+        json.dump(main_doc, f, indent=2)
+
+    # Debug: absolute path and preview
+    print(f"✅ Saved JSON to {MAIN_MSG_PATH.resolve()} ({len(main_doc)} entries)")
+    print("Preview of file contents (first 300 chars):")
+    print(MAIN_MSG_PATH.read_text(encoding='utf-8')[:300])
 
     print(f"Main doc has {len(main_doc)} entries. Keys: {list(main_doc.keys())[:5]}")  # show first 5 keys
     save_json_safely(main_doc, MAIN_MSG_PATH)
