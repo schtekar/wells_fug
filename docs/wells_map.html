@@ -21,12 +21,19 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
+// Helper for color based on movement
+function rigColor(rig) {
+  return rig.rig_moving ? 'orange' : 'red';
+}
+
 // Load well data
+let wellsByName = {};
 fetch('data/sodirdata.json')
   .then(res => res.json())
   .then(wells => {
     wells.forEach(w => {
       if (!w.lat || !w.lon || w.lat === "NaN" || w.lon === "NaN") return;
+      wellsByName[w.wellbore_name] = w;
       const popupContent = `
         <b>Well:</b> ${w.wellbore_name}<br>
         <b>Rig:</b> ${w.rig_name}<br>
@@ -44,27 +51,35 @@ fetch('data/sodirdata.json')
     });
   });
 
-// Load rig snapshots
-fetch('data/bw_snapshots.json')
+// Load rig-well analysis
+fetch('data/rig_well_analysis.json')
   .then(res => res.json())
-  .then(snapshots => {
-    Object.values(snapshots).forEach(rig => {
-      const msg = rig.msg_recent;
-      if (!msg || !msg.latitude || !msg.longitude) return;
+  .then(data => {
+    const rigs = data.rigs;
+    Object.values(rigs).forEach(rig => {
+      if (!rig.lat || !rig.lon) return;
 
       const popupContent = `
-        <b>Rig:</b> ${msg.rig_name}<br>
-        <b>MMSI:</b> ${msg.mmsi}<br>
-        <b>Source:</b> ${msg.source}<br>
-        <b>Time:</b> ${msg.msgtime}
+        <b>Rig:</b> ${rig.mmsi} (${rig.likely_target_well})<br>
+        <b>Moving:</b> ${rig.rig_moving}<br>
+        <b>Last seen:</b> ${rig.last_seen}<br>
       `;
-      L.circleMarker([msg.latitude, msg.longitude], {
-        radius: 6,
-        fillColor: 'red',
+      const marker = L.circleMarker([rig.lat, rig.lon], {
+        radius: 7,
+        fillColor: rigColor(rig),
         color: 'white',
         weight: 1,
-        fillOpacity: 0.8
+        fillOpacity: 0.9
       }).bindPopup(popupContent).addTo(map);
+
+      // Draw line to likely target well
+      const targetWell = wellsByName[rig.likely_target_well];
+      if (targetWell) {
+        L.polyline([
+          [rig.lat, rig.lon],
+          [targetWell.lat, targetWell.lon]
+        ], {color: 'green', weight: 2, dashArray: '4,4'}).addTo(map);
+      }
     });
   });
 
@@ -75,7 +90,9 @@ legend.onAdd = function(map) {
   div.innerHTML = `
     <b>Legend</b><br>
     <span style="color: blue;">●</span> Wells<br>
-    <span style="color: red;">●</span> Rigs (most recent)
+    <span style="color: red;">●</span> Rig (stationary)<br>
+    <span style="color: orange;">●</span> Rig (moving)<br>
+    <span style="color: green;">─</span> Path to likely target well
   `;
   return div;
 };
