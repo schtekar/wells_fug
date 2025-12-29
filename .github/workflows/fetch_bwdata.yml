@@ -40,11 +40,15 @@ jobs:
           mkdir -p docs/data
           cp data/raw/bw_ais.json docs/data/bw_ais.json
 
-      - name: Commit and push updated data
+        - name: Commit and push updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          # Pull latest changes and rebase local commits on top
+          git pull origin main --rebase || echo "No changes to rebase"
+
           git add docs/data/bw_ais.json
           git commit -m "Update BW AIS data" || echo "No changes to commit"
-          git push
+          git push origin main
+
