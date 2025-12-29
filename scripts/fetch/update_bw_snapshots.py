@@ -5,6 +5,7 @@ from datetime import datetime, timezone, timedelta
 # Paths
 BW_JSON_PATH = Path("docs/data/bw_ais.json")
 SNAPSHOT_PATH = Path("docs/data/bw_snapshots.json")
+MAIN_MSG_PATH = Path("docs/data/ais_msg_main.json")
 
 # =========================
 # Helper functions
@@ -132,7 +133,25 @@ def main():
         for r in rig_snap.get("running_msgs", []):
             r.pop("msgtime_dt", None)
 
+    # Save updated snapshots
     save_snapshots(snapshots, SNAPSHOT_PATH)
+
+    # -----------------------
+    # Update main AIS message doc
+    # -----------------------
+    main_doc = {}
+    for mmsi, rig_snap in snapshots.items():
+        main_doc[mmsi] = {
+            "msg_recent": rig_snap.get("msg_recent"),
+            "msg_12h": rig_snap.get("msg_12h"),
+            "msg_1d": rig_snap.get("msg_1d"),
+            "msg_2d": rig_snap.get("msg_2d"),
+        }
+
+    MAIN_MSG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with MAIN_MSG_PATH.open("w", encoding="utf-8") as f:
+        json.dump(main_doc, f, indent=2)
+    print(f"✅ Updated main AIS message doc: {MAIN_MSG_PATH}")
 
 
 if __name__ == "__main__":
