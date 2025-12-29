@@ -3,7 +3,7 @@ name: Update BW Snapshots
 on:
   workflow_dispatch:        # manual trigger
   schedule:
-    - cron: "0 * * * *"    # every hour at minute 0 UTC
+    - cron: "0 * * * *"     # every hour at minute 0 UTC
 
 permissions:
   contents: write           # required to commit JSON back to repo
@@ -36,8 +36,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git pull origin main --rebase || echo "No changes to rebase" # Pull latest changes and rebase local commits
+          # Rebase on latest main to avoid push conflicts
+          git pull origin main --rebase || echo "No changes to rebase"
 
-          git add docs/data/bw_snapshots.json
-          git commit -m "Update BW snapshots" || echo "No changes to commit"
+          # IMPORTANT: stage BOTH outputs
+          git add docs/data/bw_snapshots.json docs/data/ais_msg_main.json
+
+          git commit -m "Update BW snapshots and AIS main doc" || echo "No changes to commit"
           git push origin main
