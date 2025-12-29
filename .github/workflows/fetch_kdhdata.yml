@@ -1,15 +1,12 @@
-# data is saved to data/raw/kdhdata.json
-# accessible from (docs/) data/kdhdata.json
-
-name: Fetch Kystdatahuset AIS data
+name: Fetch KDH AIS data
 
 on:
-  workflow_dispatch:        # manual trigger
+  workflow_dispatch:       # manual trigger
   schedule:
-    - cron: "0 6 * * *"    # every day at 06:00 UTC
+    - cron: "0 6 * * *"   # daily at 06:00 UTC
 
 permissions:
-  contents: write           # required to commit JSON back to repo
+  contents: write          # needed to commit JSON back to repo
 
 jobs:
   fetch-kdh-ais:
@@ -29,10 +26,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Fetch and filter KDH AIS data
+      - name: Fetch KDH AIS data
         run: python -m scripts.fetch.fetch_kdhdata
-        # -m tells python to run this as a package,
-        # required when fetch_kdhdata.py is stored in scripts/fetch
         env:
           KDH_USERNAME: ${{ secrets.KDH_USERNAME }}
           KDH_PW: ${{ secrets.KDH_PW }}
