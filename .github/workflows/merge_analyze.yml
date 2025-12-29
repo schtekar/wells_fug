@@ -1,15 +1,15 @@
-name: Merge BW + KDH AIS Data
+name: Merge and Analyze AIS Data
 
 on:
   workflow_dispatch:        # manual trigger
   schedule:
-    - cron: "*/15 * * * *"    # every 15 minutes
+    - cron: "*/15 * * * *"  # every 15 minutes
 
 permissions:
   contents: write           # required to commit JSON back to repo
 
 jobs:
-  merge-ais:
+  merge-analyze:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,14 +28,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Run BW + KDH merge
+      - name: Merge BW + KDH AIS data
         run: python -m scripts.fetch.merge_bw_kdh
 
-      - name: Commit and push merged AIS
+      - name: Run Rig–Well Analysis
+        run: python -m scripts.analyze.rig_well_analysis
+
+      - name: Commit and push updated JSONs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add docs/data/ais_msg_main2.json
-          git commit -m "Update merged AIS data" || echo "No changes to commit"
+          git add docs/data/ais_msg_main2.json docs/data/rig_well_analysis.json
+          git commit -m "Update merged AIS and rig–well analysis" || echo "No changes to commit"
           git push
