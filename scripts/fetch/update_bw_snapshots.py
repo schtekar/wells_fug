@@ -1,108 +1,128 @@
-# scripts/fetch/update_bw_snapshots.py
-# Purpose: maintain rolling snapshots of BW AIS data for each rig
-
 import json
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
-from typing import Any, Dict, List
 
-from scripts.config.rig_registry import RIG_MMSI
-
-# -------------------------
-# Config
-# -------------------------
-BW_AIS_PATH = Path("docs/data/bw_ais.json")
+# Paths
+BW_JSON_PATH = Path("docs/data/bw_ais.json")
 SNAPSHOT_PATH = Path("docs/data/bw_snapshots.json")
-MAX_RUNNING_MSGS = 12  # Keep last 12 messages for each rig
-HOURS_12 = 12
 
-# -------------------------
+# =========================
 # Helper functions
-# -------------------------
-def load_json(path: Path) -> Any:
-    if path.exists():
-        with path.open("r", encoding="utf-8") as f:
-            return json.load(f)
-    return {}
+# =========================
 
-def write_json(data: Any, path: Path) -> None:
+def load_bw_messages(path: Path):
+    if not path.exists():
+        print(f"⚠️ {path} not found, returning empty list")
+        return []
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+            if not isinstance(data, list):
+                print(f"⚠️ Expected a list in {path}, got {type(data)}, returning empty list")
+                return []
+            # Keep only dicts
+            return [m for m in data if isinstance(m, dict)]
+    except json.JSONDecodeError:
+        print(f"⚠️ Could not decode JSON in {path}, returning empty list")
+        return []
+
+def load_snapshots(path: Path):
+    if not path.exists():
+        return {}
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+            if not isinstance(data, dict):
+                return {}
+            return data
+    except json.JSONDecodeError:
+        return {}
+
+def save_snapshots(data: dict, path: Path):
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
-    print(f"✅ Saved {path}")
+    print(f"✅ Saved snapshots to {path}")
 
-def parse_iso_utc(ts: str) -> datetime:
-    return datetime.fromisoformat(ts.replace("Z", "+00:00")).astimezone(timezone.utc)
-
-# -------------------------
-# Main logic
-# -------------------------
 def main():
-    now_utc = datetime.now(timezone.utc)
-    today_str = now_utc.strftime("%Y-%m-%d")
-    
-    # Load latest BW messages
-    try:
-        bw_messages = load_json(BW_AIS_PATH)
-    except Exception as e:
-        print(f"⚠️ Could not load {BW_AIS_PATH}: {e}")
-        bw_messages = []
+    now = datetime.now(timezone.utc)
+    bw_messages = load_bw_messages(BW_JSON_PATH)
+    snapshots = load_snapshots(SNAPSHOT_PATH)
 
-    # Load existing snapshots
-    snapshots = load_json(SNAPSHOT_PATH)
+    # Sort messages by time for processing
+    for msg in bw_messages:
+        # Convert msgtime to datetime
+        try:
+            msg_dt = datetime.fromisoformat(msg["msgtime"].replace("Z", "+00:00"))
+        except Exception:
+            continue
 
-    for rig_name, mmsi in RIG_MMSI.items():
-        rig_snap = snapshots.get(rig_name, {
-            "msg_recent": None,
-            "running_msgs": [],
-            "msg_12h": None,
-            "msg_1d": None,
-            "msg_2d": None
-        })
+        mmsi = msg.get("mmsi")
+        if mmsi is None:
+            continue
 
-        # Find latest message for this rig
-        msgs_for_rig = [m for m in bw_messages if m.get("mmsi") == mmsi]
-        if msgs_for_rig:
-            latest_msg = max(msgs_for_rig, key=lambda m: parse_iso_utc(m["msgtime"]))
-            latest_ts = parse_iso_utc(latest_msg["msgtime"])
+        if mmsi not in snapshots:
+            snapshots[mmsi] = {
+                "msg_recent": None,
+                "running_msgs": [],
+                "msg_12h": None,
+                "msg_1d": None,
+                "msg_2d": None
+            }
 
-            # Update msg_recent if newer
-            if not rig_snap["msg_recent"] or latest_ts > parse_iso_utc(rig_snap["msg_recent"]["msgtime"]):
-                rig_snap["msg_recent"] = latest_msg
-                rig_snap["running_msgs"].append(latest_msg)
+        rig_snap = snapshots[mmsi]
 
-        # Prune running messages older than 12h
-        pruned_msgs = []
-        for msg in rig_snap["running_msgs"]:
-            msg_ts = parse_iso_utc(msg["msgtime"])
-            if now_utc - msg_ts < timedelta(hours=HOURS_12):
-                pruned_msgs.append(msg)
-        rig_snap["running_msgs"] = pruned_msgs[-MAX_RUNNING_MSGS:]  # keep last MAX_RUNNING_MSGS
+        # -----------------------
+        # 1️⃣ Update msg_recent
+        # -----------------------
+        rig_snap["msg_recent"] = msg
 
-        # Update msg_12h if first message reaches 12h
-        if not rig_snap["msg_12h"]:
-            for msg in rig_snap["running_msgs"]:
-                msg_ts = parse_iso_utc(msg["msgtime"])
-                if now_utc - msg_ts >= timedelta(hours=HOURS_12):
-                    rig_snap["msg_12h"] = msg
-                    break
+        # -----------------------
+        # 2️⃣ Maintain running messages (max 12)
+        # -----------------------
+        # Add new message
+        rig_snap.setdefault("running_msgs", [])
+        running_msgs = rig_snap["running_msgs"]
 
-        snapshots[rig_name] = rig_snap
+        # Avoid duplicate times
+        if all(r.get("msgtime") != msg["msgtime"] for r in running_msgs):
+            running_msgs.append({"msg": msg, "msgtime_dt": msg_dt})
 
-    # -------------------------
-    # Midnight UTC updates (roll 12h → 1d → 2d)
-    # -------------------------
-    # We'll check if we need to roll by checking the date in snapshots
-    last_roll_date = snapshots.get("_last_roll_date")
-    if last_roll_date != today_str:
+        # Sort by datetime
+        running_msgs.sort(key=lambda x: x["msgtime_dt"])
+        # Keep max 12
+        if len(running_msgs) > 12:
+            running_msgs[:] = running_msgs[-12:]
+
+        # -----------------------
+        # 3️⃣ msg_12h
+        # -----------------------
+        # Find first message >=12h old
+        for r in running_msgs:
+            age = now - r["msgtime_dt"]
+            if age >= timedelta(hours=12):
+                rig_snap["msg_12h"] = r["msg"]
+                break  # only first to reach 12h
+
+        # -----------------------
+        # 4️⃣ Remove old messages >12h
+        # -----------------------
+        running_msgs[:] = [r for r in running_msgs if now - r["msgtime_dt"] < timedelta(hours=12)]
+
+    # -----------------------
+    # 5️⃣ msg_1d and msg_2d update at midnight UTC
+    # -----------------------
+    if now.hour == 0 and now.minute < 60:
         for rig_snap in snapshots.values():
-            if isinstance(rig_snap, dict):
-                rig_snap["msg_2d"] = rig_snap.get("msg_1d")
-                rig_snap["msg_1d"] = rig_snap.get("msg_12h")
-        snapshots["_last_roll_date"] = today_str
+            rig_snap["msg_2d"] = rig_snap.get("msg_1d")
+            rig_snap["msg_1d"] = rig_snap.get("msg_12h")
 
-    # Write snapshots
-    write_json(snapshots, SNAPSHOT_PATH)
+    # Remove internal datetime before saving
+    for rig_snap in snapshots.values():
+        for r in rig_snap.get("running_msgs", []):
+            r.pop("msgtime_dt", None)
+
+    save_snapshots(snapshots, SNAPSHOT_PATH)
 
 if __name__ == "__main__":
     main()
