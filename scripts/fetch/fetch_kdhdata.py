@@ -1,151 +1,150 @@
 # data is saved to docs/kdhdata.json
 
-import requests
-import json
-from datetime import datetime, timedelta
-import os
-from rig_registry import RIG_MMSI
+"""
+Fetch latest AIS positions for offshore rigs from Kystdatahuset (KDH) API.
 
-# --------------------
-# KONFIG
-# --------------------
+This script:
+- Authenticates with KDH using username/password
+- Loads relevant wells from Sodir data
+- Filters for rigs in the registry
+- Fetches first + last AIS positions per rig for 2 or 3 days ago
+- Adds internal _timestamp_dt for comparison
+- Writes cleaned JSON data for downstream use
+"""
+
+import os
+import json
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+from typing import List, Dict, Any
+
+import requests
+from scripts.config.rig_registry import RIG_MMSI
+
+# =========================
+# Configuration
+# =========================
+
 AUTH_URL = "https://kystdatahuset.no/ws/api/auth/login"
 AIS_URL = "https://kystdatahuset.no/ws/api/ais/positions/for-mmsis-time"
 DATA_URL = "https://schtekar.github.io/wells_fug/sodirdata.json"
 
-USERNAME = os.getenv("KYSTDATAHUSET_USERNAME")
-PASSWORD = os.getenv("KYSTDATAHUSET_PASSWORD")
+USERNAME = os.getenv("KDH_USERNAME")
+PASSWORD = os.getenv("KDH_PW")
+
+OUTPUT_PATH = Path("docs/kdhdata.json")
 
 if not USERNAME or not PASSWORD:
-    raise RuntimeError("❌ Mangler KYSTDATAHUSET_USERNAME eller PASSWORD i environment")
+    raise RuntimeError("❌ Missing KDH_USERNAME or KDH_PW environment variables")
 
-# --------------------
-# 1️⃣ AUTENTISERING
-# --------------------
-print("🔐 Autentiserer mot Kystdatahuset...")
+# =========================
+# Helper functions
+# =========================
 
-auth_payload = {
-    "username": USERNAME,
-    "password": PASSWORD
-}
+def authenticate_kdh(username: str, password: str) -> str:
+    """Authenticate with Kystdatahuset and return JWT token."""
+    print("🔐 Authenticating with Kystdatahuset...")
+    payload = {"username": username, "password": password}
+    headers = {"Content-Type": "application/json", "Accept": "*/*", "User-Agent": "wells_fug/1.0"}
+    resp = requests.post(AUTH_URL, json=payload, headers=headers, timeout=30)
+    resp.raise_for_status()
+    data = resp.json()
+    if not data.get("success"):
+        raise RuntimeError(f"❌ Authentication failed: {data}")
+    print("✅ JWT received")
+    return data["data"]["JWT"]
 
-auth_headers = {
-    "Content-Type": "application/json",
-    "Accept": "*/*",
-    "User-Agent": "wells_fug/1.0"
-}
+def get_time_interval_utc(days_ago: int) -> (str, str):
+    """Return UTC start and end strings (YYYYMMDDHHMM) for 18:00–23:59 UTC on a given day."""
+    d = datetime.now(timezone.utc) - timedelta(days=days_ago)
+    start = d.replace(hour=18, minute=0, second=0, microsecond=0)
+    end = d.replace(hour=23, minute=59, second=59, microsecond=0)
+    return start.strftime("%Y%m%d%H%M"), end.strftime("%Y%m%d%H%M")
 
-auth_resp = requests.post(AUTH_URL, json=auth_payload, headers=auth_headers)
-auth_resp.raise_for_status()
-auth_data = auth_resp.json()
+def fetch_wells() -> List[str]:
+    """Fetch well data from Sodir JSON and return rig names found in registry."""
+    print("🌍 Fetching wells from Sodir...")
+    wells = requests.get(DATA_URL).json()
+    unique_rigs = {w["rig_name"] for w in wells if w["rig_name"] in RIG_MMSI}
+    print(f"🎯 Rigs found in registry: {unique_rigs}")
+    return list(unique_rigs)
 
-if not auth_data.get("success"):
-    raise RuntimeError(f"❌ Autentisering feilet: {auth_data}")
+def fetch_rig_positions(jwt: str, rig_names: List[str]) -> List[Dict[str, Any]]:
+    """Fetch first + last AIS positions per rig for 2 or 3 days ago, including internal _timestamp_dt."""
+    headers = {"Content-Type": "application/json", "Authorization": f"Bearer {jwt}", "User-Agent": "wells_fug/1.0"}
+    rig_positions: List[Dict[str, Any]] = []
 
-JWT = auth_data["data"]["JWT"]
-print("✅ Autentisering OK – JWT mottatt")
+    for rig in rig_names:
+        mmsi = RIG_MMSI[rig]
+        print(f"\n🚢 Fetching positions for {rig} (MMSI {mmsi})")
+        found_data = False
 
-# --------------------
-# 2️⃣ HENT BRØNNDATA
-# --------------------
-print("🌍 Henter brønndata...")
-wells = requests.get(DATA_URL).json()
+        for days_ago in [2, 3]:
+            start, end = get_time_interval_utc(days_ago)
+            payload = {"mmsiIds": [mmsi], "start": start, "end": end, "minSpeed": 0}
+            print(f"  ⏱ Trying {days_ago} days ago: {start}–{end}")
 
-unique_rigs = {w["rig_name"] for w in wells if w["rig_name"] in RIG_MMSI}
-print(f"🎯 Rigger funnet i registry: {unique_rigs}")
+            resp = requests.post(AIS_URL, json=payload, headers=headers, timeout=30)
+            resp.raise_for_status()
+            data = resp.json()
+            datapoints = data.get("data", [])
 
-# --------------------
-# 3️⃣ TIDSINTERVALL
-# --------------------
-def get_time_interval(days_ago: int):
-    """
-    Returnerer tidsrom 18:00–23:59 UTC for gitt dag
-    """
-    d = datetime.utcnow() - timedelta(days=days_ago)
-    start = d.replace(hour=18, minute=0, second=0).strftime("%Y%m%d%H%M")
-    end = d.replace(hour=23, minute=59, second=59).strftime("%Y%m%d%H%M")
-    return start, end
+            print(f"    → success={data.get('success')}, datapoints={len(datapoints)}")
+            if data.get("success") and datapoints:
+                first, last = datapoints[0], datapoints[-1]
+                for idx, point in enumerate([first, last], start=1):
+                    ts_raw = point[1]
+                    ts_dt = datetime.fromisoformat(ts_raw.replace("Z", "+00:00"))
+                    rig_positions.append({
+                        "rig_name": rig,
+                        "mmsi": mmsi,
+                        "days_ago": days_ago,
+                        "position_type": "first" if idx == 1 else "last",
+                        "lat": point[3],
+                        "lon": point[2],
+                        "speed": point[4],
+                        "course": point[5],
+                        "timestamp": ts_raw,
+                        "_timestamp_dt": ts_dt,  # internal only for comparison
+                    })
+                print(f"    ✅ Stored first + last for {days_ago} days ago")
+                found_data = True
+                break
+            else:
+                print(f"    ⚠️ No data found for {days_ago} days ago")
 
-# --------------------
-# 4️⃣ HENT POSISJONER
-# --------------------
-headers = {
-    "Content-Type": "application/json",
-    "Authorization": f"Bearer {JWT}",
-    "User-Agent": "wells_fug/1.0"
-}
+        if not found_data:
+            print(f"    ❌ No data found for {rig} for either 2 or 3 days ago")
 
-rig_positions = []
+    # Remove internal datetime before returning
+    for v in rig_positions:
+        v.pop("_timestamp_dt", None)
 
-for rig in unique_rigs:
-    mmsi = RIG_MMSI[rig]
-    print(f"\n🚢 {rig} (MMSI {mmsi})")
+    return rig_positions
 
-    found_data = False
+def write_json(data: Any, path: Path) -> None:
+    """Write JSON data to disk."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+    print(f"✅ Saved {path}")
 
-    for days_ago in [2, 3]:
-        start, end = get_time_interval(days_ago)
+# =========================
+# Main entry point
+# =========================
 
-        payload = {
-            "mmsiIds": [mmsi],
-            "start": start,
-            "end": end,
-            "minSpeed": 0
-        }
+def main() -> None:
+    jwt = authenticate_kdh(USERNAME, PASSWORD)
+    rig_names = fetch_wells()
+    positions = fetch_rig_positions(jwt, rig_names)
 
-        print(f"  ⏱ Forsøker {days_ago} døgn siden: {start}–{end}")
+    output = {
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+        "source": "kystdatahuset",
+        "rigs": positions,
+    }
 
-        r = requests.post(AIS_URL, json=payload, headers=headers)
-        r.raise_for_status()
-        data = r.json()
+    write_json(output, OUTPUT_PATH)
 
-        datapoints = data.get("data", [])
-        print(f"    → success={data.get('success')} datapunkter={len(datapoints)}")
-
-        if data.get("success") and datapoints:
-            first = datapoints[0]
-            last = datapoints[-1]
-
-            rig_positions.append({
-                "rig_name": rig,
-                "mmsi": mmsi,
-                "days_ago": days_ago,
-                "position_type": "first",
-                "lat": first[3],
-                "lon": first[2],
-                "speed": first[4],
-                "course": first[5],
-                "timestamp": first[1]
-            })
-
-            rig_positions.append({
-                "rig_name": rig,
-                "mmsi": mmsi,
-                "days_ago": days_ago,
-                "position_type": "last",
-                "lat": last[3],
-                "lon": last[2],
-                "speed": last[4],
-                "course": last[5],
-                "timestamp": last[1]
-            })
-
-            print(f"    ✅ Lagret first + last for {days_ago} døgn siden")
-            found_data = True
-            break
-
-        else:
-            print(f"    ⚠️ Ingen data funnet for {days_ago} døgn siden")
-
-    if not found_data:
-        print(f"    ❌ Ingen data funnet for {rig} verken 2 eller 3 døgn siden")
-
-# --------------------
-# 5️⃣ LAGRE RESULTAT
-# --------------------
-os.makedirs("docs", exist_ok=True)
-
-with open("docs/kdhdata.json", "w") as f:
-    json.dump(rig_positions, f, indent=2)
-
-print(f"\n✅ Lagret {len(rig_positions)} posisjoner til docs/kdhdata.json")
+if __name__ == "__main__":
+    main()
