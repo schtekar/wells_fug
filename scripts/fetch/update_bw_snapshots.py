@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
+import tempfile
+import shutil
 
 # Paths
 BW_JSON_PATH = Path("docs/data/bw_ais.json")
@@ -19,7 +21,6 @@ def load_bw_messages(path: Path):
     try:
         with path.open("r", encoding="utf-8") as f:
             data = json.load(f)
-            # If it's a dict, try to get 'rigs' key
             if isinstance(data, dict):
                 messages = data.get("rigs", [])
             elif isinstance(data, list):
@@ -28,9 +29,7 @@ def load_bw_messages(path: Path):
                 print(f"⚠️ Unexpected JSON structure in {path}, returning empty list")
                 return []
 
-            # Keep only dicts
-            messages = [m for m in messages if isinstance(m, dict)]
-            return messages
+            return [m for m in messages if isinstance(m, dict)]
     except json.JSONDecodeError:
         print(f"⚠️ Could not decode JSON in {path}, returning empty list")
         return []
@@ -48,17 +47,27 @@ def load_snapshots(path: Path):
         print(f"⚠️ Could not decode JSON in {path}, returning empty dict")
         return {}
 
-def save_json_safely(data: dict, path: Path):
+def save_json_atomic(data: dict, path: Path):
+    """Safely write JSON to a temp file and atomically move to target."""
     if not data:
         print(f"⚠️ No data to save to {path}, skipping write")
         return
     path.parent.mkdir(parents=True, exist_ok=True)
     try:
-        with path.open("w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
-        print(f"✅ Saved JSON to {path} ({len(data)} entries)")
-    except Exception as e:
-        print(f"❌ Failed to save {path}: {e}")
+        # Ensure JSON serializable
+        json_str = json.dumps(data, indent=2)
+    except TypeError as e:
+        print(f"❌ Serialization error for {path}: {e}")
+        return
+
+    # Write to temp file and move atomically
+    with tempfile.NamedTemporaryFile("w", delete=False, dir=path.parent, encoding="utf-8") as tmp:
+        tmp.write(json_str)
+        tmp.flush()
+        tmp_name = tmp.name
+
+    shutil.move(tmp_name, path)
+    print(f"✅ Saved JSON to {path} ({len(data)} entries)")
 
 # =========================
 # Main
@@ -75,7 +84,6 @@ def main():
 
     print(f"ℹ️ Loaded {len(bw_messages)} BW messages")
 
-    # Process messages
     for msg in bw_messages:
         try:
             msg_dt = datetime.fromisoformat(msg["msgtime"].replace("Z", "+00:00"))
@@ -99,7 +107,6 @@ def main():
         rig_snap["msg_recent"] = msg
         running_msgs = rig_snap.setdefault("running_msgs", [])
 
-        # Avoid duplicates
         if all(r.get("msgtime") != msg["msgtime"] for r in running_msgs):
             running_msgs.append({"msg": msg, "msgtime_dt": msg_dt})
 
@@ -107,54 +114,42 @@ def main():
         if len(running_msgs) > 12:
             running_msgs[:] = running_msgs[-12:]
 
-        # msg_12h
         rig_snap["msg_12h"] = None
         for r in running_msgs:
             if now - r["msgtime_dt"] >= timedelta(hours=12):
                 rig_snap["msg_12h"] = r["msg"]
                 break
 
-        # Remove messages older than 12h
         running_msgs[:] = [r for r in running_msgs if now - r["msgtime_dt"] < timedelta(hours=12)]
 
-    # Update msg_1d / msg_2d at midnight UTC
     if now.hour == 0 and now.minute < 60:
         for rig_snap in snapshots.values():
             rig_snap["msg_2d"] = rig_snap.get("msg_1d")
             rig_snap["msg_1d"] = rig_snap.get("msg_12h")
 
-    # Clean internal datetime
     for rig_snap in snapshots.values():
         for r in rig_snap.get("running_msgs", []):
             r.pop("msgtime_dt", None)
 
-    # Save snapshots
-    save_json_safely(snapshots, SNAPSHOT_PATH)
+    save_json_atomic(snapshots, SNAPSHOT_PATH)
 
-    # -----------------------
-    main_doc = {}
-    for mmsi, rig_snap in snapshots.items():
-        main_doc[str(mmsi)] = {  # ensure keys are strings
+    # Build main doc with string keys
+    main_doc = {
+        str(mmsi): {
             "msg_recent": rig_snap.get("msg_recent"),
             "msg_12h": rig_snap.get("msg_12h"),
             "msg_1d": rig_snap.get("msg_1d"),
             "msg_2d": rig_snap.get("msg_2d"),
         }
+        for mmsi, rig_snap in snapshots.items()
+    }
 
-    # Ensure parent directories exist
-    MAIN_MSG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    save_json_atomic(main_doc, MAIN_MSG_PATH)
 
-    # Save JSON
-    with MAIN_MSG_PATH.open("w", encoding="utf-8") as f:
-        json.dump(main_doc, f, indent=2)
-
-    # Debug: absolute path and preview
-    print(f"✅ Saved JSON to {MAIN_MSG_PATH.resolve()} ({len(main_doc)} entries)")
+    # Debug
+    print(f"Main doc has {len(main_doc)} entries. Keys: {list(main_doc.keys())[:5]}")
     print("Preview of file contents (first 300 chars):")
     print(MAIN_MSG_PATH.read_text(encoding='utf-8')[:300])
-
-    print(f"Main doc has {len(main_doc)} entries. Keys: {list(main_doc.keys())[:5]}")  # show first 5 keys
-    save_json_safely(main_doc, MAIN_MSG_PATH)
 
 
 if __name__ == "__main__":
