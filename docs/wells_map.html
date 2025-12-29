@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Norwegian Wells Map</title>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<!-- MarkerCluster CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+
+<style>
+  body, html { margin: 0; padding: 0; height: 100%; }
+  #map { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- MarkerCluster JS -->
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+<script>
+// Center the map roughly on Norway
+var map = L.map('map').setView([60, 4], 5);
+
+// Add a base layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '© OpenStreetMap'
+}).addTo(map);
+
+// Load wells data
+fetch('data/sodirdata.json')
+  .then(response => response.json())
+  .then(data => {
+    var markers = L.markerClusterGroup();
+
+    data.forEach(well => {
+      const lat = parseFloat(well.lat);
+      const lon = parseFloat(well.lon);
+
+      if (!isNaN(lat) && !isNaN(lon)) {
+        const popupContent = `
+          <b>${well.wellbore_name}</b><br>
+          Rig: ${well.rig_name}<br>
+          Operator: ${well.operator}<br>
+          Field: ${well.field}<br>
+          <a href="${well.fact_page_url}" target="_blank">Fact Page</a>
+        `;
+
+        const marker = L.marker([lat, lon]).bindPopup(popupContent);
+        markers.addLayer(marker);
+      }
+    });
+
+    map.addLayer(markers);
+  })
+  .catch(err => console.error("Error loading sodirdata.json:", err));
+
+</script>
+
+</body>
+</html>
