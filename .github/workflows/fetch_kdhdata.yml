@@ -1,12 +1,12 @@
 name: Fetch KDH AIS data
 
 on:
-  workflow_dispatch:       # manual trigger
+  workflow_dispatch:
   schedule:
-    - cron: "0 6 * * *"    # daily at 06:00 UTC
+    - cron: "0 6 * * *"
 
 permissions:
-  contents: write          # needed to commit JSON back to repo
+  contents: write
 
 jobs:
   fetch-kdh-ais:
@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # IMPORTANT: allow rebase/pull
+          fetch-depth: 0   # IMPORTANT: same fix as BW
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,21 +34,13 @@ jobs:
           KDH_USERNAME: ${{ secrets.KDH_USERNAME }}
           KDH_PW: ${{ secrets.KDH_PW }}
 
-      - name: Prepare docs data directory
-        run: |
-          mkdir -p docs/data
-          cp data/raw/kdhdata.json docs/data/kdhdata.json
-
       - name: Commit and push updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Avoid push conflicts with other workflows
           git pull origin main --rebase || echo "No changes to rebase"
 
-          # Stage ALL KDH-related outputs
-          git add docs/data/kdhdata.json docs/data/ais_msg_main.json
-
+          git add docs/data/kdhdata.json
           git commit -m "Update KDH AIS data" || echo "No changes to commit"
           git push origin main
