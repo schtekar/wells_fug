@@ -45,13 +45,20 @@ def load_snapshots(path: Path):
                 return {}
             return data
     except json.JSONDecodeError:
+        print(f"⚠️ Could not decode JSON in {path}, returning empty dict")
         return {}
 
-def save_snapshots(data: dict, path: Path):
+def save_json_safely(data: dict, path: Path):
+    if not data:
+        print(f"⚠️ No data to save to {path}, skipping write")
+        return
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
-    print(f"✅ Saved snapshots to {path}")
+    try:
+        with path.open("w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2)
+        print(f"✅ Saved JSON to {path} ({len(data)} entries)")
+    except Exception as e:
+        print(f"❌ Failed to save {path}: {e}")
 
 # =========================
 # Main
@@ -62,9 +69,14 @@ def main():
     bw_messages = load_bw_messages(BW_JSON_PATH)
     snapshots = load_snapshots(SNAPSHOT_PATH)
 
-    # Sort messages by time for processing
+    if not bw_messages:
+        print(f"⚠️ No BW messages found in {BW_JSON_PATH}, skipping snapshot update")
+        return
+
+    print(f"ℹ️ Loaded {len(bw_messages)} BW messages")
+
+    # Process messages
     for msg in bw_messages:
-        # Convert msgtime to datetime
         try:
             msg_dt = datetime.fromisoformat(msg["msgtime"].replace("Z", "+00:00"))
         except Exception:
@@ -84,74 +96,54 @@ def main():
             }
 
         rig_snap = snapshots[mmsi]
-
-        # -----------------------
-        # 1️⃣ Update msg_recent
-        # -----------------------
         rig_snap["msg_recent"] = msg
+        running_msgs = rig_snap.setdefault("running_msgs", [])
 
-        # -----------------------
-        # 2️⃣ Maintain running messages (max 12)
-        # -----------------------
-        rig_snap.setdefault("running_msgs", [])
-        running_msgs = rig_snap["running_msgs"]
-
-        # Avoid duplicate times
+        # Avoid duplicates
         if all(r.get("msgtime") != msg["msgtime"] for r in running_msgs):
             running_msgs.append({"msg": msg, "msgtime_dt": msg_dt})
 
-        # Sort by datetime
         running_msgs.sort(key=lambda x: x["msgtime_dt"])
-        # Keep max 12
         if len(running_msgs) > 12:
             running_msgs[:] = running_msgs[-12:]
 
-        # -----------------------
-        # 3️⃣ msg_12h
-        # -----------------------
+        # msg_12h
+        rig_snap["msg_12h"] = None
         for r in running_msgs:
-            age = now - r["msgtime_dt"]
-            if age >= timedelta(hours=12):
+            if now - r["msgtime_dt"] >= timedelta(hours=12):
                 rig_snap["msg_12h"] = r["msg"]
                 break
 
-        # -----------------------
-        # 4️⃣ Remove old messages >12h
-        # -----------------------
+        # Remove messages older than 12h
         running_msgs[:] = [r for r in running_msgs if now - r["msgtime_dt"] < timedelta(hours=12)]
 
-    # -----------------------
-    # 5️⃣ msg_1d and msg_2d update at midnight UTC
-    # -----------------------
+    # Update msg_1d / msg_2d at midnight UTC
     if now.hour == 0 and now.minute < 60:
         for rig_snap in snapshots.values():
             rig_snap["msg_2d"] = rig_snap.get("msg_1d")
             rig_snap["msg_1d"] = rig_snap.get("msg_12h")
 
-    # Remove internal datetime before saving
+    # Clean internal datetime
     for rig_snap in snapshots.values():
         for r in rig_snap.get("running_msgs", []):
             r.pop("msgtime_dt", None)
 
-    # Save updated snapshots
-    save_snapshots(snapshots, SNAPSHOT_PATH)
+    # Save snapshots
+    save_json_safely(snapshots, SNAPSHOT_PATH)
 
-    # -----------------------
-    # Update main AIS message doc
-    # -----------------------
-    main_doc = {}
-    for mmsi, rig_snap in snapshots.items():
-        main_doc[mmsi] = {
+    # Build main AIS message doc
+    main_doc = {
+        mmsi: {
             "msg_recent": rig_snap.get("msg_recent"),
             "msg_12h": rig_snap.get("msg_12h"),
             "msg_1d": rig_snap.get("msg_1d"),
             "msg_2d": rig_snap.get("msg_2d"),
         }
+        for mmsi, rig_snap in snapshots.items()
+        if rig_snap.get("msg_recent") is not None
+    }
 
-    MAIN_MSG_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with MAIN_MSG_PATH.open("w", encoding="utf-8") as f:
-        json.dump(main_doc, f, indent=2)
-    print(f"✅ Updated main AIS message doc: {MAIN_MSG_PATH}")
+    save_json_safely(main_doc, MAIN_MSG_PATH)
 
 
 if __name__ == "__main__":
