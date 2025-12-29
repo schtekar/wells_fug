@@ -48,22 +48,29 @@ def load_json(path):
         return json.load(f)
 
 # =========================
-# Reference position helper
+# Reference position helper 
+# Indexes selected position in rw_analysis_config.py
 # =========================
 
-def get_reference_position(rig_snap, source="12h"):
+from scripts.config.rw_analysis_config import REFERENCE_POSITION_OPTIONS
+
+def get_reference_position(rig_snap, period="12h"):
     """
     Return reference position dict for movement comparison.
-    source: "12h", "1d", "2d", or "kdh"
+    period: "12h", "1d", "2d", "5d", "1w", "1mo"
     """
-    if source == "12h" and rig_snap.get("msg_12h"):
-        return rig_snap["msg_12h"]
-    elif source == "1d" and rig_snap.get("msg_1d"):
-        return rig_snap["msg_1d"]
-    elif source == "2d" and rig_snap.get("msg_2d"):
-        return rig_snap["msg_2d"]
-    elif rig_snap.get("kdh_last"):  # optional KDH fallback
-        return rig_snap["kdh_last"]
+    config = REFERENCE_POSITION_OPTIONS.get(period)
+    if not config:
+        return None
+
+    source = config["source"]
+    tag = config["tag"]
+
+    if source == "bw_snapshots":
+        return rig_snap.get(tag)
+    elif source == "kdh_filtered":
+        # fallback key for KDH data; ensure rig_snap has it populated
+        return rig_snap.get(tag)
     return None
 
 # =========================
