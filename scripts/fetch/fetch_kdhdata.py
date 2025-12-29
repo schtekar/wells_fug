@@ -26,7 +26,7 @@ from scripts.config.rig_registry import RIG_MMSI
 
 AUTH_URL = "https://kystdatahuset.no/ws/api/auth/login"
 AIS_URL = "https://kystdatahuset.no/ws/api/ais/positions/for-mmsis-time"
-DATA_URL = "https://schtekar.github.io/wells_fug/sodirdata.json"
+DATA_URL = "https://schtekar.github.io/wells_fug/data/sodirdata.json"
 
 USERNAME = os.getenv("KDH_USERNAME")
 PASSWORD = os.getenv("KDH_PW")
