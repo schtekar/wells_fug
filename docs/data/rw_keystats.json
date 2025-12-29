@@ -5,6 +5,68 @@
   "not_entered_wells": 451,
   "stationary_rigs": 21,
   "moving_rigs": 0,
-  "jackups": 0,
-  "semisubs": 0
+  "jackups": 7,
+  "semisubs": 0,
+  "hottest_wells": [
+    {
+      "wellbore_name": "33/12-N-3 HH",
+      "rig_name": "ASKELADDEN",
+      "entry_date": "2025-12-26",
+      "days_since_entry": null
+    },
+    {
+      "wellbore_name": "6407/9-D-1 BH",
+      "rig_name": "DEEPSEA YANTAI",
+      "entry_date": "2025-12-25",
+      "days_since_entry": null
+    },
+    {
+      "wellbore_name": "6507/4-X-1 H",
+      "rig_name": "TRANSOCEAN NORGE",
+      "entry_date": "2025-12-22",
+      "days_since_entry": null
+    },
+    {
+      "wellbore_name": "25/11-FT-2 Y2H",
+      "rig_name": "COSLPIONEER",
+      "entry_date": "2025-12-16",
+      "days_since_entry": null
+    },
+    {
+      "wellbore_name": "33/9-C-31 C",
+      "rig_name": "STATFJORD C",
+      "entry_date": "2025-12-13",
+      "days_since_entry": null
+    },
+    {
+      "wellbore_name": "34/8-V-4 DH",
+      "rig_name": "DEEPSEA BOLLSTA",
+      "entry_date": "2025-12-13",
+      "days_since_entry": null
+    },
+    {
+      "wellbore_name": "15/8-3 S",
+      "rig_name": "DEEPSEA ATLANTIC",
+      "entry_date": "2025-12-11",
+      "days_since_entry": null
+    },
+    {
+      "wellbore_name": "6507/2-O-2 H",
+      "rig_name": "SCARABEO 8",
+      "entry_date": "2025-12-11",
+      "days_since_entry": null
+    },
+    {
+      "wellbore_name": "6507/2-O-1 H",
+      "rig_name": "SCARABEO 8",
+      "entry_date": "2025-12-10",
+      "days_since_entry": null
+    },
+    {
+      "wellbore_name": "31/2-W-42 H",
+      "rig_name": "DEEPSEA ABERDEEN",
+      "entry_date": "2025-12-09",
+      "days_since_entry": null
+    }
+  ]
 }
