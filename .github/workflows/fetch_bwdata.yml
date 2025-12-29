@@ -28,9 +28,9 @@ jobs:
 
       - name: Fetch and filter BW AIS data
         run: python -m scripts.fetch.fetch_bwdata
-          # -m tells python to run this as a package,
-          # required when fetch_bwdata.py is stored in scripts/fetch, 
-          # and references scripts/config/rig_registry.py (file in separate path)
+        # -m tells python to run this as a package,
+        # required when fetch_bwdata.py is stored in scripts/fetch, 
+        # and references scripts/config/rig_registry.py (file in separate path)
         env:
           BWAPI_CLIENTID_URLENCODED: ${{ secrets.BWAPI_CLIENTID_URLENCODED }}
           BWAPI_PWSECRET: ${{ secrets.BWAPI_PWSECRET }}
