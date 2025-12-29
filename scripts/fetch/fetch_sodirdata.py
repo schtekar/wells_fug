@@ -164,7 +164,7 @@ def filter_features(features: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
             "well": attributes.get("wlbWell"),
             "status": status,
             "entryDate": entry_date.strftime("%Y-%m-%d") if entry_date else "",
-            "rig_name": attributes.get("wlbDrillingFacility") or "UNKNOWN",
+            "rig_name": (attributes.get("wlbDrillingFacility") or "UNKNOWN").upper(),  # normalize
             "rig_type": attributes.get("wlbDrillingFacilityFixedOrMove") or "UNKNOWN",
             "operator": attributes.get("wlbDrillingOperator") or "UNKNOWN",
             "well_type": attributes.get("wlbWellType") or "UNKNOWN",
@@ -210,4 +210,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
