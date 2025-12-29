@@ -1,5 +1,3 @@
-# .github/workflows/update_bw_snapshots.yml
-
 name: Update BW Snapshots
 
 on:
@@ -8,7 +6,7 @@ on:
     - cron: "0 * * * *"    # every hour at minute 0 UTC
 
 permissions:
-  contents: write           # needed to commit snapshot JSON back to repo
+  contents: write           # required to commit JSON back to repo
 
 jobs:
   update-bw-snapshots:
@@ -28,9 +26,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Update BW snapshots
+      - name: Run BW snapshots update
         run: python -m scripts.fetch.update_bw_snapshots
-        # -m allows running as a module with package imports
 
       - name: Commit and push updated snapshots
         run: |
