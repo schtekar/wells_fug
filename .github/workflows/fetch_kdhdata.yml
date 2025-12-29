@@ -1,0 +1,52 @@
+# data is saved to data/raw/kdhdata.json
+# accessible from (docs/) data/kdhdata.json
+
+name: Fetch Kystdatahuset AIS data
+
+on:
+  workflow_dispatch:        # manual trigger
+  schedule:
+    - cron: "0 6 * * *"    # every day at 06:00 UTC
+
+permissions:
+  contents: write           # required to commit JSON back to repo
+
+jobs:
+  fetch-kdh-ais:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Fetch and filter KDH AIS data
+        run: python -m scripts.fetch.fetch_kdhdata
+        # -m tells python to run this as a package,
+        # required when fetch_kdhdata.py is stored in scripts/fetch
+        env:
+          KDH_USERNAME: ${{ secrets.KDH_USERNAME }}
+          KDH_PW: ${{ secrets.KDH_PW }}
+
+      - name: Prepare docs data directory
+        run: |
+          mkdir -p docs/data
+          cp data/raw/kdhdata.json docs/data/kdhdata.json
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add docs/data/kdhdata.json
+          git commit -m "Update KDH AIS data" || echo "No changes to commit"
+          git push
