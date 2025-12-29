@@ -34,11 +34,14 @@ jobs:
       - name: Run Rig–Well Analysis
         run: python -m scripts.analyze.rig_well_analysis
 
+      - name: Run Key Stats Analysis
+        run: python -m scripts.analyze.rw_keystats
+
       - name: Commit and push updated JSONs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add docs/data/ais_msg_main2.json docs/data/rig_well_analysis.json
-          git commit -m "Update merged AIS and rig–well analysis" || echo "No changes to commit"
+          git add docs/data/ais_msg_main2.json docs/data/rig_well_analysis.json docs/data/rw_keystats.json
+          git commit -m "Update merged AIS, rig–well analysis, and key stats" || echo "No changes to commit"
           git push
