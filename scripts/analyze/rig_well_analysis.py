@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 # Paths
 # =========================
 SODIR_PATH = Path("docs/data/sodirdata.json")
-AIS_MAIN_PATH = Path("docs/data/ais_msg_main.json")  # includes BW + KDH messages
+AIS_MAIN_PATH = Path("docs/data/ais_msg_main2.json")  # merged BW + KDH messages
 OUTPUT_PATH = Path("docs/data/rig_well_analysis.json")
 
 # =========================
@@ -49,7 +49,7 @@ def save_json_atomic(data: dict, path: Path):
     with tmp.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
     tmp.replace(path)
-    print(f"✅ Rig–well analysis written to {path} ({len(data) if isinstance(data, dict) else 'list'})")
+    print(f"✅ Rig–well analysis written to {path} ({len(data.get('rigs', {}))} rigs)")
 
 # =========================
 # Reference helper
@@ -60,8 +60,7 @@ def get_reference_position(rig_data, period="12h"):
     config = REFERENCE_POSITION_OPTIONS.get(period)
     if not config:
         return None
-    tag = config["tag"]
-    return rig_data.get(tag)
+    return rig_data.get(config["tag"])
 
 # =========================
 # Main
@@ -81,7 +80,7 @@ def main():
     rig_results = {}
 
     for mmsi_key, rig_snap in main_data.items():
-        mmsi = str(mmsi_key)  # normalize MMSI
+        mmsi = str(mmsi_key)
 
         recent = rig_snap.get("msg_recent")
         if not recent or not valid_coords(recent.get("latitude"), recent.get("longitude")):
@@ -114,7 +113,7 @@ def main():
             if reference_pos:
                 ref_distance_km = haversine_km(reference_pos["latitude"], reference_pos["longitude"], w_lat, w_lon)
                 distance_moved_km = movement_km if movement_km else 0.001
-                approach_ratio = max(0, (ref_distance_km - distance_km) / distance_moved_km)
+                approach_ratio = max(0, (ref_distance_km - distance_m) / distance_moved_km)
 
             assigned_wells.append({
                 "wellbore_name": w["wellbore_name"],
