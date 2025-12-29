@@ -14,14 +14,22 @@ def load_bw_messages(path: Path):
     if not path.exists():
         print(f"⚠️ {path} not found, returning empty list")
         return []
+
     try:
         with path.open("r", encoding="utf-8") as f:
             data = json.load(f)
-            if not isinstance(data, list):
-                print(f"⚠️ Expected a list in {path}, got {type(data)}, returning empty list")
+            # If it's a dict, try to get 'rigs' key
+            if isinstance(data, dict):
+                messages = data.get("rigs", [])
+            elif isinstance(data, list):
+                messages = data
+            else:
+                print(f"⚠️ Unexpected JSON structure in {path}, returning empty list")
                 return []
+
             # Keep only dicts
-            return [m for m in data if isinstance(m, dict)]
+            messages = [m for m in messages if isinstance(m, dict)]
+            return messages
     except json.JSONDecodeError:
         print(f"⚠️ Could not decode JSON in {path}, returning empty list")
         return []
@@ -43,6 +51,10 @@ def save_snapshots(data: dict, path: Path):
     with path.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
     print(f"✅ Saved snapshots to {path}")
+
+# =========================
+# Main
+# =========================
 
 def main():
     now = datetime.now(timezone.utc)
@@ -80,7 +92,6 @@ def main():
         # -----------------------
         # 2️⃣ Maintain running messages (max 12)
         # -----------------------
-        # Add new message
         rig_snap.setdefault("running_msgs", [])
         running_msgs = rig_snap["running_msgs"]
 
@@ -97,12 +108,11 @@ def main():
         # -----------------------
         # 3️⃣ msg_12h
         # -----------------------
-        # Find first message >=12h old
         for r in running_msgs:
             age = now - r["msgtime_dt"]
             if age >= timedelta(hours=12):
                 rig_snap["msg_12h"] = r["msg"]
-                break  # only first to reach 12h
+                break
 
         # -----------------------
         # 4️⃣ Remove old messages >12h
@@ -123,6 +133,7 @@ def main():
             r.pop("msgtime_dt", None)
 
     save_snapshots(snapshots, SNAPSHOT_PATH)
+
 
 if __name__ == "__main__":
     main()
