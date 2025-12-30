@@ -72,12 +72,13 @@ fetch('data/sodirdata.json')
   .then(res => res.json())
   .then(wells => {
     wells.forEach(w => {
-      if (!w.lat || !w.lon) return;
+      if (w.lat == null || w.lon == null || isNaN(w.lat) || isNaN(w.lon)) return;
+
       wellsByName[w.wellbore_name] = w;
 
       const marker = L.circleMarker([w.lat, w.lon], {
         radius: 6,
-        fillColor: wellColor(w),
+        fillColor: w.entryDate && w.entryDate !== "" ? 'green' : 'gray',
         color: 'white',
         weight: 1,
         fillOpacity: 0.8
