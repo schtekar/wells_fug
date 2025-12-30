@@ -5,57 +5,61 @@
   <title>Wells & Rigs Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <style>
-    #stats-bar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 5cm;
-      background: rgba(255,255,255,0.95);
-      z-index: 1000;
-      padding: 10px;
-      box-sizing: border-box;
+    #top-banner {
+      height: 2.5cm;
+      background: #f8f8f8;
+      border-bottom: 1px solid #ccc;
+      padding: 6px;
       font-family: sans-serif;
-      overflow-y: auto;
+      overflow-x: auto;
     }
-    #map { height: 100vh; width: 100%; }
+    #map { height: calc(100vh - 2.5cm); width: 100%; }
     .legend { background: white; padding: 6px; border-radius: 4px; }
   </style>
 </head>
 <body>
-<div id="stats-bar">
-  <h3>Key Stats</h3>
-  <div id="stats-content">Loading stats...</div>
-</div>
+<div id="top-banner">Loading key stats...</div>
 <div id="map"></div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
 // Initialize map
-const map = L.map('map').setView([60, 3], 5); // center over Norway
+const map = L.map('map').setView([60, 3], 5);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Load key stats
+// =========================
+// Load key stats into top banner
+// =========================
 fetch('data/rw_keystats.json')
   .then(res => res.json())
   .then(stats => {
-    const content = `
-      <b>Rigs:</b> ${stats.num_rigs} | 
-      <b>Wells:</b> ${stats.num_wells} | 
-      <b>Entered:</b> ${stats.entered_wells} | 
-      <b>Not Entered:</b> ${stats.not_entered_wells} | 
-      <b>Stationary:</b> ${stats.stationary_rigs} | 
-      <b>Moving:</b> ${stats.moving_rigs} | 
-      <b>Jackups:</b> ${stats.jackups} | 
+    const banner = document.getElementById('top-banner');
+    banner.innerHTML = `
+      <b>Rigs:</b> ${stats.num_rigs} |
+      <b>Wells:</b> ${stats.num_wells} |
+      <b>Entered:</b> ${stats.entered_wells} |
+      <b>Not Entered:</b> ${stats.not_entered_wells} |
+      <b>Stationary Rigs:</b> ${stats.stationary_rigs} |
+      <b>Moving Rigs:</b> ${stats.moving_rigs} |
+      <b>Jack-ups:</b> ${stats.jackups} |
       <b>Semi-subs:</b> ${stats.semisubs}
     `;
-    document.getElementById('stats-content').innerHTML = content;
   });
 
-// Load wells
+// =========================
+// Helper: color rigs
+// =========================
+function rigColor(rig) {
+  if (rig.rig_type === 'UNKNOWN') return 'gray';
+  return rig.rig_moving ? 'yellow' : 'blue';
+}
+
+// =========================
+// Load well data
+// =========================
 let wellsByName = {};
 fetch('data/sodirdata.json')
   .then(res => res.json())
@@ -64,9 +68,7 @@ fetch('data/sodirdata.json')
       if (!w.lat || !w.lon || w.lat === "NaN" || w.lon === "NaN") return;
       wellsByName[w.wellbore_name] = w;
 
-      // Determine color based on entry status
-      const fillColor = w.entry_date ? 'green' : 'gray';
-
+      const fillColor = w.entryDate ? 'green' : 'gray';
       const popupContent = `
         <b>Well:</b> ${w.wellbore_name}<br>
         <b>Rig:</b> ${w.rig_name}<br>
@@ -74,70 +76,63 @@ fetch('data/sodirdata.json')
         <b>Operator:</b> ${w.operator}<br>
         <a href="${w.fact_page_url}" target="_blank">Fact Page</a>
       `;
+
       L.circleMarker([w.lat, w.lon], {
         radius: 6,
-        fillColor: fillColor,
+        fillColor,
         color: 'white',
         weight: 1,
         fillOpacity: 0.8
       }).bindPopup(popupContent).addTo(map);
     });
+
+    // =========================
+    // Load rig-well analysis after wells are loaded
+    // =========================
+    fetch('data/rig_well_analysis.json')
+      .then(res => res.json())
+      .then(data => {
+        const rigs = data.rigs;
+        Object.values(rigs).forEach(rig => {
+          if (!rig.lat || !rig.lon) return;
+
+          const popupContent = `
+            <b>Rig:</b> ${rig.mmsi} (${rig.likely_target_well})<br>
+            <b>Moving:</b> ${rig.rig_moving}<br>
+            <b>Last seen:</b> ${rig.last_seen}<br>
+          `;
+          const marker = L.circleMarker([rig.lat, rig.lon], {
+            radius: 7,
+            fillColor: rigColor(rig),
+            color: 'white',
+            weight: 1,
+            fillOpacity: 0.9
+          }).bindPopup(popupContent).addTo(map);
+
+          // Draw line to likely target well
+          const targetWell = wellsByName[rig.likely_target_well];
+          if (targetWell) {
+            L.polyline([
+              [rig.lat, rig.lon],
+              [targetWell.lat, targetWell.lon]
+            ], {color: 'green', weight: 2, dashArray: '4,4'}).addTo(map);
+          }
+        });
+      });
   });
 
-
-// Dynamic rig icon function
-function getRigColor(rig) {
-  if (rig.rig_moving) return 'yellow';
-  if (rig.rig_type && (rig.rig_type.toUpperCase() === 'JACK-UP' || rig.rig_type.toUpperCase() === 'SEMI-SUB')) return 'blue';
-  return '#E0E0E0';
-}
-
-function createRigIcon(rig) {
-  const dynamicColor = getRigColor(rig);
-  return L.divIcon({
-    className: "",
-    html: `<svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7 14 15 1h-3l-1.7 13H5v4H1v3h4v9h5.4v-9h6.2v9H22v-9h4v-3h-4v-4h-5.3Z" fill="${dynamicColor}"/>
-      <path fill-rule="evenodd" clip-rule="evenodd" d="m15.8 0 1.8 13H23v4h4v5h-4v9h-7.4v-9h-4.2v9H4v-9H0v-5h4v-4h5.4L11 0h4.8Zm-5.6 14H5v4H1v3h4v9h5.4v-9h6.2v9H22v-9h4v-3h-4v-4h-5.3L15 1h-3l-1.7 13Z" fill="#191919"/>
-      <path d="M10.4 16v14H5V16h5.4ZM22 16v14h-5.4V16H22Z" fill="${dynamicColor}"/>
-      <path d="M22 14v7H5v-7h17Z" fill="${dynamicColor}"/> 
-      <path d="M1 18h25v3H1v-3Z" fill="${dynamicColor}"/>
-      <path d="m15 1 2 15h-7l1.9-15h3Z" fill="${dynamicColor}"/>
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M23 18H4.5v-1H23v1Z" fill="#191919"/>
-    </svg>`,
-    iconSize: [27, 31],
-    iconAnchor: [13.5, 31]
-  });
-}
-
-// Load rig-well analysis
-fetch('data/rig_well_analysis.json')
-  .then(res => res.json())
-  .then(data => {
-    const rigs = data.rigs;
-    Object.values(rigs).forEach(rig => {
-      if (!rig.lat || !rig.lon) return;
-      const marker = L.marker([rig.lat, rig.lon], {icon: createRigIcon(rig)}).addTo(map);
-
-      // Draw line to likely target well
-      const targetWell = wellsByName[rig.likely_target_well];
-      if (targetWell) {
-        L.polyline([
-          [rig.lat, rig.lon],
-          [targetWell.lat, targetWell.lon]
-        ], {color: 'green', weight: 2, dashArray: '4,4'}).addTo(map);
-      }
-    });
-  });
-
+// =========================
 // Legend
+// =========================
 const legend = L.control({position: 'bottomright'});
 legend.onAdd = function(map) {
   const div = L.DomUtil.create('div', 'legend');
   div.innerHTML = `
     <b>Legend</b><br>
-    <span style="color: blue;">●</span> Wells / Stationary rigs<br>
-    <span style="color: yellow;">●</span> Moving rigs<br>
+    <span style="color: gray;">●</span> Not Entered Well<br>
+    <span style="color: green;">●</span> Entered Well<br>
+    <span style="color: blue;">●</span> Stationary Rig<br>
+    <span style="color: yellow;">●</span> Moving Rig<br>
     <span style="color: green;">─</span> Path to likely target well
   `;
   return div;
