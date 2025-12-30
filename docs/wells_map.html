@@ -31,7 +31,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // =========================
-// Load key stats into top banner
+// Load key stats
 // =========================
 fetch('data/rw_keystats.json')
   .then(res => res.json())
@@ -50,22 +50,42 @@ fetch('data/rw_keystats.json')
   });
 
 // =========================
-// Helper: color rigs
+// Helper: rig icon
 // =========================
-function rigColor(rig) {
-  if (rig.rig_type === 'UNKNOWN') return 'gray';
-  return rig.rig_moving ? 'yellow' : 'blue';
+function getRigIcon(rig) {
+  let fillColor = 'gray';  // default
+  if (rig.rig_type && rig.rig_type !== 'UNKNOWN') {
+    fillColor = rig.rig_moving ? 'yellow' : 'blue';
+  }
+
+  const svg = `
+    <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7 14 15 1h-3l-1.7 13H5v4H1v3h4v9h5.4v-9h6.2v9H22v-9h4v-3h-4v-4h-5.3Z" fill="${fillColor}"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="m15.8 0 1.8 13H23v4h4v5h-4v9h-7.4v-9h-4.2v9H4v-9H0v-5h4v-4h5.4L11 0h4.8Zm-5.6 14H5v4H1v3h4v9h5.4v-9h6.2v9H22v-9h4v-3h-4v-4h-5.3L15 1h-3l-1.7 13Z" fill="#191919"/>
+      <path d="M10.4 16v14H5V16h5.4ZM22 16v14h-5.4V16H22Z" fill="${fillColor}"/>
+      <path d="M22 14v7H5v-7h17Z" fill="${fillColor}"/>
+      <path d="M1 18h25v3H1v-3Z" fill="${fillColor}"/>
+      <path d="m15 1 2 15h-7l1.9-15h3Z" fill="${fillColor}"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M23 18H4.5v-1H23v1Z" fill="#191919"/>
+    </svg>
+  `;
+  return L.divIcon({
+    className: '',
+    html: svg,
+    iconSize: [27, 31],
+    iconAnchor: [13.5, 31]
+  });
 }
 
 // =========================
-// Load well data
+// Load wells
 // =========================
 let wellsByName = {};
 fetch('data/sodirdata.json')
   .then(res => res.json())
   .then(wells => {
     wells.forEach(w => {
-      if (!w.lat || !w.lon || w.lat === "NaN" || w.lon === "NaN") return;
+      if (!w.lat || !w.lon) return;
       wellsByName[w.wellbore_name] = w;
 
       const fillColor = w.entryDate ? 'green' : 'gray';
@@ -87,7 +107,7 @@ fetch('data/sodirdata.json')
     });
 
     // =========================
-    // Load rig-well analysis after wells are loaded
+    // Load rigs after wells
     // =========================
     fetch('data/rig_well_analysis.json')
       .then(res => res.json())
@@ -96,20 +116,15 @@ fetch('data/sodirdata.json')
         Object.values(rigs).forEach(rig => {
           if (!rig.lat || !rig.lon) return;
 
-          const popupContent = `
+          const marker = L.marker([rig.lat, rig.lon], {
+            icon: getRigIcon(rig)
+          }).bindPopup(`
             <b>Rig:</b> ${rig.mmsi} (${rig.likely_target_well})<br>
             <b>Moving:</b> ${rig.rig_moving}<br>
             <b>Last seen:</b> ${rig.last_seen}<br>
-          `;
-          const marker = L.circleMarker([rig.lat, rig.lon], {
-            radius: 7,
-            fillColor: rigColor(rig),
-            color: 'white',
-            weight: 1,
-            fillOpacity: 0.9
-          }).bindPopup(popupContent).addTo(map);
+          `).addTo(map);
 
-          // Draw line to likely target well
+          // Line to likely target well
           const targetWell = wellsByName[rig.likely_target_well];
           if (targetWell) {
             L.polyline([
@@ -133,6 +148,7 @@ legend.onAdd = function(map) {
     <span style="color: green;">●</span> Entered Well<br>
     <span style="color: blue;">●</span> Stationary Rig<br>
     <span style="color: yellow;">●</span> Moving Rig<br>
+    <span style="color: gray;">●</span> Unknown Rig<br>
     <span style="color: green;">─</span> Path to likely target well
   `;
   return div;
