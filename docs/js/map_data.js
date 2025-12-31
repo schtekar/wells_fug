@@ -44,7 +44,9 @@ try {
       if(rig.lat == null || rig.lon == null) return;
       const marker = L.marker([rig.lat, rig.lon], { icon: rigIcon(rigMainColor(rig)) })
         .bindPopup(`
-          <b>Rig:</b> ${rig.mmsi}<br>
+          <b>Rig:</b> ${rig.rig_name}<br>
+          <b>MMSI:</b> ${rig.mmsi}<br>
+          <b>Type:</b> ${rig.rig_type}<br>
           <b>Likely target:</b> ${rig.likely_target_well||"—"}<br>
           <b>Moving:</b> ${rig.rig_moving}<br>
           <b>Last seen:</b> ${rig.last_seen}
