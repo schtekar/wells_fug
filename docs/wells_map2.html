@@ -4,35 +4,11 @@
   <meta charset="UTF-8">
   <title>Wells & Rigs Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-
   <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-    }
-
-    #topbar {
-      height: 60px;
-      background: #0b1d2a;
-      color: white;
-      display: flex;
-      align-items: center;
-      padding: 0 16px;
-      font-size: 14px;
-      gap: 24px;
-    }
-
-    #map {
-      height: calc(100vh - 60px);
-      width: 100%;
-    }
-
-    .legend {
-      background: white;
-      padding: 6px;
-      border-radius: 4px;
-      font-size: 12px;
-    }
+    body { margin:0; font-family:sans-serif; }
+    #topbar { height:30px; background:#0b1d2a; color:white; display:flex; align-items:center; padding:0 16px; font-size:14px; gap:24px; }
+    #map { height: calc(100vh - 30px); width: 100%; }
+    .legend { background:white; padding:6px; border-radius:4px; font-size:12px; }
   </style>
 </head>
 <body>
@@ -46,76 +22,23 @@
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script type="module">
-  import { rigIcon, rigMainColor, wellColor, createLegend } from "./js/icons.js";
+  import { createLegend } from "./js/icons.js";
+  import { loadKeyStats } from "./js/stats.js";
+  import { loadMapData } from "./js/map_data.js";
 
-  /* Map init */
-  const map = L.map('map').setView([60, 3], 5);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; OpenStreetMap contributors'
+  // Initialize map
+  const map = L.map('map').setView([60,3],5);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+    maxZoom:19,
+    attribution:'&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  /* Helper */
-  const validCoord = v => Number.isFinite(Number(v));
+  // Load modules
+  loadKeyStats("stats");
+  loadMapData(map);
 
-  /* Load key stats */
-  fetch('data/rw_keystats.json').then(r=>r.json()).then(s=>{
-    document.getElementById('stats').innerHTML = `
-      Rigs: ${s.num_rigs} |
-      Wells: ${s.num_wells} |
-      Entered: ${s.entered_wells} |
-      Not entered: ${s.not_entered_wells} |
-      Moving rigs: ${s.moving_rigs} |
-      Stationary rigs: ${s.stationary_rigs}
-    `;
-  });
-
-  /* Load wells */
-  const wellsByName = {};
-  fetch('data/sodirdata.json').then(r=>r.json()).then(wells=>{
-    wells.forEach(w=>{
-      if(!validCoord(w.lat)||!validCoord(w.lon)) return;
-      wellsByName[w.wellbore_name] = w;
-      L.circleMarker([w.lat,w.lon],{
-        radius:6,
-        fillColor: wellColor(w),
-        color:"white",
-        weight:1,
-        fillOpacity:0.8
-      }).bindPopup(`
-        <b>Well:</b> ${w.wellbore_name}<br>
-        <b>Rig:</b> ${w.rig_name}<br>
-        <b>Status:</b> ${w.status}<br>
-        <b>Entry date:</b> ${w.entryDate||"—"}<br>
-        <b>Operator:</b> ${w.operator}<br>
-        <a href="${w.fact_page_url}" target="_blank">Fact page</a>
-      `).addTo(map);
-    });
-  });
-
-  /* Load rigs */
-  fetch('data/rig_well_analysis.json').then(r=>r.json()).then(data=>{
-    if(!data.rigs) return;
-    Object.values(data.rigs).forEach(rig=>{
-      if(!validCoord(rig.lat)||!validCoord(rig.lon)) return;
-      const icon = rigIcon(rigMainColor(rig));
-      L.marker([rig.lat,rig.lon],{icon}).bindPopup(`
-        <b>Rig:</b> ${rig.mmsi}<br>
-        <b>Likely target:</b> ${rig.likely_target_well||"—"}<br>
-        <b>Moving:</b> ${rig.rig_moving}<br>
-        <b>Last seen:</b> ${rig.last_seen}
-      `).addTo(map);
-      const target = wellsByName[rig.likely_target_well];
-      if(target && validCoord(target.lat) && validCoord(target.lon)){
-        L.polyline([[rig.lat,rig.lon],[target.lat,target.lon]],{color:"green",weight:2,dashArray:"4,4"}).addTo(map);
-      }
-    });
-  });
-
-  /* Add legend */
+  // Add legend
   createLegend().addTo(map);
 </script>
-
-
 </body>
 </html>
