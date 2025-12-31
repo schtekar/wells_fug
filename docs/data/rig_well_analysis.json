@@ -1,7 +1,9 @@
 {
-  "generated_at": "2025-12-31T11:53:32.146421+00:00",
+  "generated_at": "2025-12-31T12:22:39.999325+00:00",
   "rigs": {
     "ASKELADDEN": {
+      "rig_name": "ASKELADDEN",
+      "rig_type": "JACK-UP",
       "mmsi": "257452000",
       "lat": 61.077527,
       "lon": 1.988218,
@@ -25,9 +27,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 3,
       "likely_target_well": "33/12-N-3 GH"
     },
     "DEEPSEA ABERDEEN": {
+      "rig_name": "DEEPSEA ABERDEEN",
+      "rig_type": "SEMISUB",
       "mmsi": "310713000",
       "lat": 60.838437,
       "lon": 3.581877,
@@ -101,9 +106,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 13,
       "likely_target_well": "31/2-W-41 H"
     },
     "ASKEPOTT": {
+      "rig_name": "ASKEPOTT",
+      "rig_type": "JACK-UP",
       "mmsi": "257459000",
       "lat": 60.505585,
       "lon": 2.015193,
@@ -122,9 +130,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 2,
       "likely_target_well": "30/4-A-20"
     },
     "COSLPROSPECTOR": {
+      "rig_name": "COSLPROSPECTOR",
+      "rig_type": "SEMISUB",
       "mmsi": "565369000",
       "lat": 70.674322,
       "lon": 18.429508,
@@ -158,9 +169,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 5,
       "likely_target_well": "7018/5-2"
     },
     "LINUS": {
+      "rig_name": "LINUS",
+      "rig_type": "JACK-UP",
       "mmsi": "257095000",
       "lat": 56.423177,
       "lon": 3.210562,
@@ -189,9 +203,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 4,
       "likely_target_well": "2/7-NA-1 H"
     },
     "TRANSOCEAN SPITSBERGEN": {
+      "rig_name": "TRANSOCEAN SPITSBERGEN",
+      "rig_type": "SEMISUB",
       "mmsi": "538004905",
       "lat": 65.143918,
       "lon": 7.431342,
@@ -220,9 +237,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 4,
       "likely_target_well": "6507/11-WA-1 H"
     },
     "COSLPIONEER": {
+      "rig_name": "COSLPIONEER",
+      "rig_type": "SEMISUB",
       "mmsi": "563050900",
       "lat": 59.218,
       "lon": 2.4235,
@@ -241,9 +261,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 2,
       "likely_target_well": "25/11-FT-2 Y2H"
     },
     "NOBLE INTEGRATOR": {
+      "rig_name": "NOBLE INTEGRATOR",
+      "rig_type": "JACK-UP",
       "mmsi": "538010630",
       "lat": 59.871463,
       "lon": 2.567682,
@@ -312,9 +335,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 12,
       "likely_target_well": "25/2-D-14"
     },
     "NOBLE INVINCIBLE": {
+      "rig_name": "NOBLE INVINCIBLE",
+      "rig_type": "JACK-UP",
       "mmsi": "538010632",
       "lat": 56.274665,
       "lon": 3.399598,
@@ -322,9 +348,12 @@
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [],
+      "num_assigned_wells": 0,
       "likely_target_well": null
     },
     "TRANSOCEAN ENABLER": {
+      "rig_name": "TRANSOCEAN ENABLER",
+      "rig_type": "SEMISUB",
       "mmsi": "258615000",
       "lat": 72.454065,
       "lon": 20.148283,
@@ -358,9 +387,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 5,
       "likely_target_well": "7220/7-CB-1 Y2H"
     },
     "SCARABEO 8": {
+      "rig_name": "SCARABEO 8",
+      "rig_type": "SEMISUB",
       "mmsi": "308928000",
       "lat": 65.862002,
       "lon": 7.397265,
@@ -384,9 +416,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 3,
       "likely_target_well": "6507/2-O-1 H"
     },
     "TRANSOCEAN ENCOURAGE": {
+      "rig_name": "TRANSOCEAN ENCOURAGE",
+      "rig_type": "SEMISUB",
       "mmsi": "258627000",
       "lat": 65.031395,
       "lon": 6.873755,
@@ -400,9 +435,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 1,
       "likely_target_well": "6506/12-PB-4 AH"
     },
     "COSLINNOVATOR": {
+      "rig_name": "COSLINNOVATOR",
+      "rig_type": "SEMISUB",
       "mmsi": "566391000",
       "lat": 65.411753,
       "lon": 7.397253,
@@ -436,9 +474,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 5,
       "likely_target_well": "6507/8-12 S"
     },
     "SHELF DRILLING BARSK": {
+      "rig_name": "SHELF DRILLING BARSK",
+      "rig_type": "JACK-UP",
       "mmsi": "636016111",
       "lat": 58.41806,
       "lon": 1.715798,
@@ -452,9 +493,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 1,
       "likely_target_well": "15/9-B-23"
     },
     "COSLPROMOTER": {
+      "rig_name": "COSLPROMOTER",
+      "rig_type": "SEMISUB",
       "mmsi": "565798000",
       "lat": 61.275052,
       "lon": 2.114625,
@@ -498,9 +542,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 7,
       "likely_target_well": "34/7-I-4 BH"
     },
     "DEEPSEA ATLANTIC": {
+      "rig_name": "DEEPSEA ATLANTIC",
+      "rig_type": "SEMISUB",
       "mmsi": "310766000",
       "lat": 58.33046,
       "lon": 1.590947,
@@ -534,9 +581,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 5,
       "likely_target_well": "15/8-3 S"
     },
     "DEEPSEA STAVANGER": {
+      "rig_name": "DEEPSEA STAVANGER",
+      "rig_type": "SEMISUB",
       "mmsi": "310767000",
       "lat": 60.111013,
       "lon": 2.591983,
@@ -615,9 +665,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 14,
       "likely_target_well": "30/11-W-1 H"
     },
     "DEEPSEA BOLLSTA": {
+      "rig_name": "DEEPSEA BOLLSTA",
+      "rig_type": "SEMISUB",
       "mmsi": "257440000",
       "lat": 61.299867,
       "lon": 2.361002,
@@ -636,9 +689,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 2,
       "likely_target_well": "34/8-V-1 BH"
     },
     "DEEPSEA YANTAI": {
+      "rig_name": "DEEPSEA YANTAI",
+      "rig_type": "SEMISUB",
       "mmsi": "311000483",
       "lat": 64.341835,
       "lon": 7.721395,
@@ -677,9 +733,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 6,
       "likely_target_well": "6407/9-D-1 BH"
     },
     "WEST ELARA": {
+      "rig_name": "WEST ELARA",
+      "rig_type": "JACK-UP",
       "mmsi": "259783000",
       "lat": 56.548298,
       "lon": 3.213807,
@@ -693,9 +752,12 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 1,
       "likely_target_well": "2/7-S-35 A"
     },
     "DEEPSEA NORDKAPP": {
+      "rig_name": "DEEPSEA NORDKAPP",
+      "rig_type": "SEMISUB",
       "mmsi": "310776000",
       "lat": 58.672485,
       "lon": 2.234758,
@@ -724,6 +786,7 @@
           "approach_ratio": null
         }
       ],
+      "num_assigned_wells": 4,
       "likely_target_well": "16/4-BF-4 H"
     }
   }
