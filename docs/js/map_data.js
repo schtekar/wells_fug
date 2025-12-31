@@ -22,10 +22,11 @@ try {
       fillOpacity: 0.8
     }).bindPopup(`
       <b>Well:</b> ${w.wellbore_name}<br>
-      <b>Rig:</b> ${w.rig_name}<br>
-      <b>Status:</b> ${w.status}<br>
-      <b>Entry date:</b> ${w.entryDate||"—"}<br>
+      <b>Field:</b> ${w.field}<br>
       <b>Operator:</b> ${w.operator}<br>
+      <b>Entry date:</b> ${w.entryDate||"—"}<br>
+      <b>Status:</b> ${w.status}<br>
+      <b>Assigned Rig:</b> ${w.rig_name}<br>
       <a href="${w.fact_page_url}" target="_blank">Fact page</a>
     `).addTo(map);
   });
