@@ -8,10 +8,13 @@ export async function loadMapData(map) {
 try {
   const wells = await fetch('data/sodirdata.json').then(r => r.json());
   wells.forEach(w => {
-    if(!validCoord(w.lat) || !validCoord(w.lon)) return;  // <-- fixed
+    const lat = Number(w.lat);
+    const lon = Number(w.lon);
+    if (isNaN(lat) || isNaN(lon)) return;
+    
     wellsByName[w.wellbore_name] = w;
 
-    L.circleMarker([w.lat, w.lon], {
+    L.circleMarker([lat, lon], {
       radius: 6,
       fillColor: wellColor(w),
       color: "white",
