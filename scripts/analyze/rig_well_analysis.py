@@ -55,6 +55,7 @@ def save_json_atomic(data: dict, path: Path):
 # Reference helper
 # =========================
 from scripts.config.rw_analysis_config import REFERENCE_POSITION_OPTIONS
+from scripts.config.rig_registry import RIG_REGISTRY  # import the registry
 
 def get_reference_position(rig_data, period="12h"):
     config = REFERENCE_POSITION_OPTIONS.get(period)
@@ -124,8 +125,10 @@ def main():
             if min_distance is None or distance_m < min_distance:
                 min_distance = distance_m
                 likely_target_well = w["wellbore_name"]
-
+        
         rig_results[rig_name] = {
+            "rig_name": rig_name,  # <-- add rig name
+            "rig_type": RIG_REGISTRY.get(rig_name, {}).get("type", "UNKNOWN"),  # <-- rig type from registry
             "mmsi": mmsi,
             "lat": lat,
             "lon": lon,
@@ -133,6 +136,7 @@ def main():
             "rig_moving": rig_moving,
             "movement_m": None if movement_m is None else round(movement_m, 1),
             "assigned_wells": assigned_wells,
+            "num_assigned_wells": len(assigned_wells),  # <-- count of assigned wells
             "likely_target_well": likely_target_well
         }
 
