@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
   "num_wells": 507,
-  "entered_wells": 56,
-  "not_entered_wells": 451,
+  "entered_wells": 57,
+  "not_entered_wells": 450,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "7018/5-U-9",
+      "rig_name": "COSLPROSPECTOR",
+      "entry_date": "2025-12-30",
+      "days_since_entry": 2
+    },
     {
       "wellbore_name": "33/12-N-3 HH",
       "rig_name": "ASKELADDEN",
