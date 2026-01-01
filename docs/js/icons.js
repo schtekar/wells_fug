@@ -31,8 +31,8 @@ export function wellColor(well) {
 export function rigIcon(color) {
   return L.divIcon({
     className: "",
-    html: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8.2 9.2" fill="none"> 
-  <path d="M0.1 5.1 0.1 7.1 h1 v2 h2 v-2 h2 v2 h2 v-2 h1 v-2 h-2 l-1 -5 h-2 l-1 5 h-2 Z" fill="${color}" stroke="#191919" stroke-width="0.3"/>
+    html: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8.4 9.4" fill="none"> 
+  <path d="M0.2 5.2 0.2 7.2 h1 v2 h2 v-2 h2 v2 h2 v-2 h1 v-2 h-2 l-1 -5 h-2 l-1 5 h-2 Z" fill="${color}" stroke="#191919" stroke-width="0.4"/>
     </svg>`,
     iconSize: [24, 24],
     iconAnchor: [13.5, 24]
