@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 499,
-  "entered_wells": 50,
-  "not_entered_wells": 449,
+  "num_wells": 497,
+  "entered_wells": 52,
+  "not_entered_wells": 445,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "6507/7-A-32 B",
+      "rig_name": "HEIDRUN",
+      "entry_date": "2026-01-04",
+      "days_since_entry": 5
+    },
     {
       "wellbore_name": "7018/5-2",
       "rig_name": "COSLPROSPECTOR",
@@ -21,6 +27,24 @@
       "days_since_entry": 10
     },
     {
+      "wellbore_name": "2/7-NA-1 H",
+      "rig_name": "LINUS",
+      "entry_date": "2025-12-29",
+      "days_since_entry": 11
+    },
+    {
+      "wellbore_name": "16/4-BF-4 H",
+      "rig_name": "DEEPSEA NORDKAPP",
+      "entry_date": "2025-12-29",
+      "days_since_entry": 11
+    },
+    {
+      "wellbore_name": "6507/4-X-3 H",
+      "rig_name": "TRANSOCEAN NORGE",
+      "entry_date": "2025-12-26",
+      "days_since_entry": 14
+    },
+    {
       "wellbore_name": "33/12-N-3 HH",
       "rig_name": "ASKELADDEN",
       "entry_date": "2025-12-26",
@@ -31,6 +55,12 @@
       "rig_name": "DEEPSEA YANTAI",
       "entry_date": "2025-12-25",
       "days_since_entry": 15
+    },
+    {
+      "wellbore_name": "6507/4-X-2 H",
+      "rig_name": "TRANSOCEAN NORGE",
+      "entry_date": "2025-12-24",
+      "days_since_entry": 16
     },
     {
       "wellbore_name": "6507/4-X-1 H",
@@ -289,24 +319,6 @@
       "rig_name": "NOBLE INTEGRATOR",
       "entry_date": "2025-10-04",
       "days_since_entry": 97
-    },
-    {
-      "wellbore_name": "15/5-8 A",
-      "rig_name": "DEEPSEA ATLANTIC",
-      "entry_date": "2025-10-01",
-      "days_since_entry": 100
-    },
-    {
-      "wellbore_name": "6507/11-WA-1 H",
-      "rig_name": "TRANSOCEAN SPITSBERGEN",
-      "entry_date": "2025-09-30",
-      "days_since_entry": 101
-    },
-    {
-      "wellbore_name": "25/2-D-3 Y1",
-      "rig_name": "NOBLE INTEGRATOR",
-      "entry_date": "2025-09-30",
-      "days_since_entry": 101
     }
   ]
 }

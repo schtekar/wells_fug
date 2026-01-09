@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-09T05:52:55.365491+00:00",
+  "generated_at": "2026-01-09T07:47:36.730776+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
@@ -220,15 +220,10 @@
           "wellbore_name": "6406/2-L-4 Y2H",
           "distance_m": 53081.3,
           "approach_ratio": null
-        },
-        {
-          "wellbore_name": "6507/11-WA-1 H",
-          "distance_m": 14025.5,
-          "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 4,
-      "likely_target_well": "6507/11-WA-1 H"
+      "num_assigned_wells": 3,
+      "likely_target_well": "6406/2-L-1 Y2H"
     },
     "COSLPIONEER": {
       "rig_name": "COSLPIONEER",
@@ -264,11 +259,6 @@
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
-        {
-          "wellbore_name": "25/2-D-3 Y1",
-          "distance_m": 112.3,
-          "approach_ratio": null
-        },
         {
           "wellbore_name": "25/2-D-4 Y1",
           "distance_m": 114.8,
@@ -315,8 +305,8 @@
           "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 10,
-      "likely_target_well": "25/2-D-3 Y1"
+      "num_assigned_wells": 9,
+      "likely_target_well": "25/2-D-3 Y2"
     },
     "NOBLE INVINCIBLE": {
       "rig_name": "NOBLE INVINCIBLE",
@@ -360,10 +350,15 @@
           "wellbore_name": "7220/5-EB-1 Y2H",
           "distance_m": 10193.1,
           "approach_ratio": null
+        },
+        {
+          "wellbore_name": "7220/7-CA-4 Y2H",
+          "distance_m": 32.7,
+          "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 4,
-      "likely_target_well": "7220/7-CB-1 Y2H"
+      "num_assigned_wells": 5,
+      "likely_target_well": "7220/7-CA-4 Y2H"
     },
     "SCARABEO 8": {
       "rig_name": "SCARABEO 8",
@@ -535,11 +530,6 @@
           "approach_ratio": null
         },
         {
-          "wellbore_name": "15/5-8 A",
-          "distance_m": 41720.3,
-          "approach_ratio": null
-        },
-        {
           "wellbore_name": "15/8-3 S",
           "distance_m": 38.0,
           "approach_ratio": null
@@ -550,7 +540,7 @@
           "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 5,
+      "num_assigned_wells": 4,
       "likely_target_well": "15/8-3 S"
     },
     "DEEPSEA STAVANGER": {
