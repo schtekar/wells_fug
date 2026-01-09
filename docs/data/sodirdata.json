@@ -5614,20 +5614,6 @@
     "lon": 3.217612797000072
   },
   {
-    "wellbore_name": "15/5-8 A",
-    "well": "15/5-8",
-    "status": "P&A",
-    "entryDate": "2025-10-01",
-    "rig_name": "DEEPSEA ATLANTIC",
-    "rig_type": "MOVEABLE",
-    "operator": "Equinor Energy AS",
-    "well_type": "EXPLORATION",
-    "field": "UNKNOWN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10295",
-    "lat": 58.70548905700008,
-    "lon": 1.612154591000035
-  },
-  {
     "wellbore_name": "34/7-I-4 BH",
     "well": "34/7-I-4",
     "status": "ONLINE/OPERATIONAL",
@@ -5838,20 +5824,6 @@
     "lon": 2.5881491000000665
   },
   {
-    "wellbore_name": "6507/11-WA-1 H",
-    "well": "6507/11-WA-1",
-    "status": "PRODUCING",
-    "entryDate": "2025-09-30",
-    "rig_name": "TRANSOCEAN SPITSBERGEN",
-    "rig_type": "MOVEABLE",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "HALTEN \u00d8ST",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10382",
-    "lat": 65.01969938200006,
-    "lon": 7.379491289000043
-  },
-  {
     "wellbore_name": "7220/5-EB-1 Y1H",
     "well": "7220/5-EB-1",
     "status": "",
@@ -5948,20 +5920,6 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10392",
     "lat": 58.28438467700005,
     "lon": 2.042174146000036
-  },
-  {
-    "wellbore_name": "25/2-D-3 Y1",
-    "well": "25/2-D-3",
-    "status": "CLOSED",
-    "entryDate": "2025-09-30",
-    "rig_name": "NOBLE INTEGRATOR",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "HUGIN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10401",
-    "lat": 59.87095266800003,
-    "lon": 2.5659974450000504
   },
   {
     "wellbore_name": "25/2-D-4 Y1",
@@ -6106,7 +6064,7 @@
   {
     "wellbore_name": "34/10-B-18 B",
     "well": "34/10-B-18",
-    "status": "CLOSED",
+    "status": "ONLINE/OPERATIONAL",
     "entryDate": "2025-11-11",
     "rig_name": "GULLFAKS B",
     "rig_type": "FIXED",
@@ -6148,8 +6106,8 @@
   {
     "wellbore_name": "6507/7-A-32 B",
     "well": "6507/7-A-32",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-01-04",
     "rig_name": "HEIDRUN",
     "rig_type": "FIXED",
     "operator": "Equinor Energy AS",
@@ -6302,8 +6260,8 @@
   {
     "wellbore_name": "6507/4-X-2 H",
     "well": "6507/4-X-2",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2025-12-24",
     "rig_name": "TRANSOCEAN NORGE",
     "rig_type": "MOVEABLE",
     "operator": "Harbour Energy Norge AS",
@@ -6316,8 +6274,8 @@
   {
     "wellbore_name": "6507/4-X-3 H",
     "well": "6507/4-X-3",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2025-12-26",
     "rig_name": "TRANSOCEAN NORGE",
     "rig_type": "MOVEABLE",
     "operator": "Harbour Energy Norge AS",
@@ -6596,8 +6554,8 @@
   {
     "wellbore_name": "2/7-NA-1 H",
     "well": "2/7-NA-1",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2025-12-29",
     "rig_name": "LINUS",
     "rig_type": "MOVEABLE",
     "operator": "ConocoPhillips Skandinavia AS",
@@ -6918,8 +6876,8 @@
   {
     "wellbore_name": "16/4-BF-4 H",
     "well": "16/4-BF-4",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2025-12-29",
     "rig_name": "DEEPSEA NORDKAPP",
     "rig_type": "MOVEABLE",
     "operator": "Aker BP ASA",
@@ -6984,5 +6942,19 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10538",
     "lat": 61.20224481300005,
     "lon": 2.199949226000058
+  },
+  {
+    "wellbore_name": "7220/7-CA-4 Y2H",
+    "well": "7220/7-CA-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN ENABLER",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "JOHAN CASTBERG",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10539",
+    "lat": 72.45383928400008,
+    "lon": 20.148806653000065
   }
 ]
