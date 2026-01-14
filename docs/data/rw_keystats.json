@@ -1,13 +1,37 @@
 {
   "num_rigs": 21,
-  "num_wells": 496,
-  "entered_wells": 51,
+  "num_wells": 501,
+  "entered_wells": 56,
   "not_entered_wells": 445,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "16/3-U-2",
+      "rig_name": "COSLPROMOTER",
+      "entry_date": "2026-01-13",
+      "days_since_entry": 1
+    },
+    {
+      "wellbore_name": "2/7-NA-6 H",
+      "rig_name": "LINUS",
+      "entry_date": "2026-01-08",
+      "days_since_entry": 6
+    },
+    {
+      "wellbore_name": "6506/12-PB-4 AH",
+      "rig_name": "TRANSOCEAN ENCOURAGE",
+      "entry_date": "2026-01-08",
+      "days_since_entry": 6
+    },
+    {
+      "wellbore_name": "16/4-BF-2 Y1H",
+      "rig_name": "DEEPSEA NORDKAPP",
+      "entry_date": "2026-01-08",
+      "days_since_entry": 6
+    },
     {
       "wellbore_name": "6507/7-A-32 B",
       "rig_name": "HEIDRUN",
@@ -23,6 +47,12 @@
     {
       "wellbore_name": "7018/5-U-9",
       "rig_name": "COSLPROSPECTOR",
+      "entry_date": "2025-12-30",
+      "days_since_entry": 15
+    },
+    {
+      "wellbore_name": "7220/7-CA-4 Y2H",
+      "rig_name": "TRANSOCEAN ENABLER",
       "entry_date": "2025-12-30",
       "days_since_entry": 15
     },
