@@ -5936,20 +5936,6 @@
     "lon": 2.5659944440000686
   },
   {
-    "wellbore_name": "25/2-D-12",
-    "well": "25/2-D-12",
-    "status": "ONLINE/OPERATIONAL",
-    "entryDate": "2025-10-08",
-    "rig_name": "NOBLE INTEGRATOR",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "HUGIN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10405",
-    "lat": 59.870983670000044,
-    "lon": 2.5660134440000206
-  },
-  {
     "wellbore_name": "25/2-D-14",
     "well": "25/2-D-14",
     "status": "ONLINE/OPERATIONAL",
@@ -6428,7 +6414,7 @@
   {
     "wellbore_name": "16/3-U-2",
     "well": "16/3-U-2",
-    "status": "DRILLING",
+    "status": "PLUGGED",
     "entryDate": "2026-01-13",
     "rig_name": "COSLPROMOTER",
     "rig_type": "MOVEABLE",
@@ -7012,5 +6998,19 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10544",
     "lat": 59.87101467000008,
     "lon": 2.5659474410000485
+  },
+  {
+    "wellbore_name": "34/8-A-37 H",
+    "well": "34/8-A-37",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "VISUND",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "EXPLORATION",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10545",
+    "lat": 61.36973760300003,
+    "lon": 2.45820111200004
   }
 ]
