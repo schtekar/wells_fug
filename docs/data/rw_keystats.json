@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 501,
+  "num_wells": 500,
   "entered_wells": 56,
-  "not_entered_wells": 445,
+  "not_entered_wells": 444,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "16/2-U-8",
+      "rig_name": "COSLPROMOTER",
+      "entry_date": "2026-01-15",
+      "days_since_entry": 2
+    },
     {
       "wellbore_name": "16/3-U-2",
       "rig_name": "COSLPROMOTER",
@@ -337,12 +343,6 @@
       "rig_name": "NOBLE INTEGRATOR",
       "entry_date": "2025-10-10",
       "days_since_entry": 99
-    },
-    {
-      "wellbore_name": "25/11-G-1 AY2",
-      "rig_name": "GRANE",
-      "entry_date": "2025-10-09",
-      "days_since_entry": 100
     }
   ]
 }
