@@ -6330,7 +6330,7 @@
   {
     "wellbore_name": "16/2-U-8",
     "well": "16/2-U-8",
-    "status": "DRILLING",
+    "status": "PLUGGED",
     "entryDate": "2026-01-15",
     "rig_name": "COSLPROMOTER",
     "rig_type": "MOVEABLE",
@@ -6535,7 +6535,7 @@
     "field": "UNKNOWN",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10514",
     "lat": 61.07854533200003,
-    "lon": 1.9881554210000445
+    "lon": 1.9881604210000319
   },
   {
     "wellbore_name": "33/12-N-3 IH",
@@ -6610,8 +6610,8 @@
   {
     "wellbore_name": "6610/7-U-3",
     "well": "6610/7-U-3",
-    "status": "",
-    "entryDate": "",
+    "status": "PLUGGED",
+    "entryDate": "2026-01-17",
     "rig_name": "COSLINNOVATOR",
     "rig_type": "MOVEABLE",
     "operator": "Equinor Energy AS",
@@ -6960,8 +6960,8 @@
   {
     "wellbore_name": "34/8-A-37 H",
     "well": "34/8-A-37",
-    "status": "",
-    "entryDate": "",
+    "status": "DRILLING",
+    "entryDate": "2026-01-17",
     "rig_name": "VISUND",
     "rig_type": "FIXED",
     "operator": "Equinor Energy AS",
@@ -6970,5 +6970,19 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10545",
     "lat": 61.36973760300003,
     "lon": 2.45820111200004
+  },
+  {
+    "wellbore_name": "16/4-BF-2 Y2H",
+    "well": "16/4-BF-2",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA NORDKAPP",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "SOLVEIG",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10546",
+    "lat": 58.67207338000003,
+    "lon": 2.235070447000055
   }
 ]
