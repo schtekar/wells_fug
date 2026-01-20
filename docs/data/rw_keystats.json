@@ -1,13 +1,25 @@
 {
   "num_rigs": 21,
-  "num_wells": 498,
-  "entered_wells": 54,
-  "not_entered_wells": 444,
+  "num_wells": 499,
+  "entered_wells": 56,
+  "not_entered_wells": 443,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "6610/7-U-3",
+      "rig_name": "COSLINNOVATOR",
+      "entry_date": "2026-01-17",
+      "days_since_entry": 3
+    },
+    {
+      "wellbore_name": "34/8-A-37 H",
+      "rig_name": "VISUND",
+      "entry_date": "2026-01-17",
+      "days_since_entry": 3
+    },
     {
       "wellbore_name": "16/2-U-8",
       "rig_name": "COSLPROMOTER",
