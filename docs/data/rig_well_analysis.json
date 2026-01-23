@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-23T05:46:22.722935+00:00",
+  "generated_at": "2026-01-23T07:02:39.665977+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
@@ -408,9 +408,19 @@
           "wellbore_name": "6506/12-PB-4 AH",
           "distance_m": 34.0,
           "approach_ratio": null
+        },
+        {
+          "wellbore_name": "6507/8-D-4 CH",
+          "distance_m": 42543.0,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "6507/8-D-4 DH",
+          "distance_m": 42543.0,
+          "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 1,
+      "num_assigned_wells": 3,
       "likely_target_well": "6506/12-PB-4 AH"
     },
     "COSLINNOVATOR": {
