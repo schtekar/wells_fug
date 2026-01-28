@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 501,
-  "entered_wells": 55,
-  "not_entered_wells": 446,
+  "num_wells": 503,
+  "entered_wells": 56,
+  "not_entered_wells": 447,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "35/11-32 S",
+      "rig_name": "COSLINNOVATOR",
+      "entry_date": "2026-01-26",
+      "days_since_entry": 2
+    },
     {
       "wellbore_name": "34/4-19 S",
       "rig_name": "DEEPSEA ATLANTIC",
