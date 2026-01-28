@@ -6736,8 +6736,8 @@
   {
     "wellbore_name": "35/11-32 S",
     "well": "35/11-32",
-    "status": "",
-    "entryDate": "",
+    "status": "DRILLING",
+    "entryDate": "2026-01-26",
     "rig_name": "COSLINNOVATOR",
     "rig_type": "MOVEABLE",
     "operator": "Equinor Energy AS",
@@ -7012,5 +7012,33 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10550",
     "lat": 58.83544429800003,
     "lon": 2.551911073000042
+  },
+  {
+    "wellbore_name": "35/10-16 S",
+    "well": "35/10-16",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA YANTAI",
+    "rig_type": "MOVEABLE",
+    "operator": "Wellesley Petroleum AS",
+    "well_type": "EXPLORATION",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10551",
+    "lat": 61.00113134000003,
+    "lon": 3.1304299970000216
+  },
+  {
+    "wellbore_name": "25/7-13",
+    "well": "25/7-13",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "COSLINNOVATOR",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "EXPLORATION",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10552",
+    "lat": 59.34091534000004,
+    "lon": 2.2235126540000465
   }
 ]
