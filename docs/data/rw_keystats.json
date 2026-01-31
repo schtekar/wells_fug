@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
   "num_wells": 503,
-  "entered_wells": 56,
-  "not_entered_wells": 447,
+  "entered_wells": 57,
+  "not_entered_wells": 446,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "25/8-N-1 Y1H",
+      "rig_name": "COSLPIONEER",
+      "entry_date": "2026-01-29",
+      "days_since_entry": 2
+    },
     {
       "wellbore_name": "35/11-32 S",
       "rig_name": "COSLINNOVATOR",
