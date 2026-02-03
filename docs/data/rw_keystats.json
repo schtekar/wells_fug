@@ -1,18 +1,54 @@
 {
   "num_rigs": 21,
   "num_wells": 502,
-  "entered_wells": 56,
-  "not_entered_wells": 446,
+  "entered_wells": 66,
+  "not_entered_wells": 436,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
     {
+      "wellbore_name": "7220/5-EB-1 Y1H",
+      "rig_name": "TRANSOCEAN ENABLER",
+      "entry_date": "2026-02-01",
+      "days_since_entry": 2
+    },
+    {
+      "wellbore_name": "30/11-W-3 BH",
+      "rig_name": "DEEPSEA STAVANGER",
+      "entry_date": "2026-01-30",
+      "days_since_entry": 4
+    },
+    {
+      "wellbore_name": "33/12-B-1 E",
+      "rig_name": "STATFJORD B",
+      "entry_date": "2026-01-29",
+      "days_since_entry": 5
+    },
+    {
       "wellbore_name": "25/8-N-1 Y1H",
       "rig_name": "COSLPIONEER",
       "entry_date": "2026-01-29",
       "days_since_entry": 5
+    },
+    {
+      "wellbore_name": "25/11-G-2 DY1",
+      "rig_name": "GRANE",
+      "entry_date": "2026-01-28",
+      "days_since_entry": 6
+    },
+    {
+      "wellbore_name": "33/12-N-3 IH",
+      "rig_name": "ASKELADDEN",
+      "entry_date": "2026-01-26",
+      "days_since_entry": 8
+    },
+    {
+      "wellbore_name": "34/8-V-1 BH",
+      "rig_name": "DEEPSEA BOLLSTA",
+      "entry_date": "2026-01-26",
+      "days_since_entry": 8
     },
     {
       "wellbore_name": "35/11-32 S",
@@ -21,10 +57,34 @@
       "days_since_entry": 8
     },
     {
+      "wellbore_name": "34/4-K-3 BH",
+      "rig_name": "SNORRE B",
+      "entry_date": "2026-01-24",
+      "days_since_entry": 10
+    },
+    {
+      "wellbore_name": "7220/5-EB-4 H",
+      "rig_name": "TRANSOCEAN ENABLER",
+      "entry_date": "2026-01-24",
+      "days_since_entry": 10
+    },
+    {
       "wellbore_name": "34/4-19 S",
       "rig_name": "DEEPSEA ATLANTIC",
       "entry_date": "2026-01-23",
       "days_since_entry": 11
+    },
+    {
+      "wellbore_name": "30/11-W-3 AH",
+      "rig_name": "DEEPSEA STAVANGER",
+      "entry_date": "2026-01-22",
+      "days_since_entry": 12
+    },
+    {
+      "wellbore_name": "30/9-B-5 F",
+      "rig_name": "OSEBERG B",
+      "entry_date": "2026-01-17",
+      "days_since_entry": 17
     },
     {
       "wellbore_name": "6610/7-U-3",
