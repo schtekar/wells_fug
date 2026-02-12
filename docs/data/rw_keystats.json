@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 500,
-  "entered_wells": 64,
-  "not_entered_wells": 436,
+  "num_wells": 504,
+  "entered_wells": 65,
+  "not_entered_wells": 439,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "25/11-G-2 DY2",
+      "rig_name": "GRANE",
+      "entry_date": "2026-02-09",
+      "days_since_entry": 3
+    },
     {
       "wellbore_name": "7220/5-EB-1 Y1H",
       "rig_name": "TRANSOCEAN ENABLER",
