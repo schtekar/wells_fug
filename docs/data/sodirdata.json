@@ -2598,7 +2598,7 @@
     "rig_type": "MOVEABLE",
     "operator": "Det norske oljeselskap ASA",
     "well_type": "OTHER",
-    "field": "HUGIN SATELLITTER",
+    "field": "UNKNOWN",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/other/otherall/6384",
     "lat": 59.73873660700008,
     "lon": 2.5654087550000213
@@ -2612,7 +2612,7 @@
     "rig_type": "MOVEABLE",
     "operator": "Det norske oljeselskap ASA",
     "well_type": "OTHER",
-    "field": "HUGIN SATELLITTER",
+    "field": "UNKNOWN",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/other/otherall/6385",
     "lat": 59.73847559700005,
     "lon": 2.5654117670000574
@@ -2626,7 +2626,7 @@
     "rig_type": "MOVEABLE",
     "operator": "Det norske oljeselskap ASA",
     "well_type": "OTHER",
-    "field": "HUGIN SATELLITTER",
+    "field": "UNKNOWN",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/other/otherall/6386",
     "lat": 59.73873661300007,
     "lon": 2.565922770000043
@@ -2640,7 +2640,7 @@
     "rig_type": "MOVEABLE",
     "operator": "Det norske oljeselskap ASA",
     "well_type": "OTHER",
-    "field": "HUGIN SATELLITTER",
+    "field": "UNKNOWN",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/other/otherall/6387",
     "lat": 59.73899761700005,
     "lon": 2.5654057420000527
@@ -2654,7 +2654,7 @@
     "rig_type": "MOVEABLE",
     "operator": "Det norske oljeselskap ASA",
     "well_type": "OTHER",
-    "field": "HUGIN SATELLITTER",
+    "field": "UNKNOWN",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/other/otherall/6388",
     "lat": 59.73873460100003,
     "lon": 2.5648927400000616
@@ -5476,8 +5476,8 @@
   {
     "wellbore_name": "25/11-G-2 DY2",
     "well": "25/11-G-2",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-02-09",
     "rig_name": "GRANE",
     "rig_type": "FIXED",
     "operator": "Equinor Energy AS",
@@ -6092,7 +6092,7 @@
   {
     "wellbore_name": "25/8-C-23 D",
     "well": "25/8-C-23",
-    "status": "DRILLING",
+    "status": "PLUGGED",
     "entryDate": "2025-12-07",
     "rig_name": "RINGHORNE",
     "rig_type": "FIXED",
@@ -6998,5 +6998,61 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10552",
     "lat": 59.34091534000004,
     "lon": 2.2235126540000465
+  },
+  {
+    "wellbore_name": "25/8-C-23 E",
+    "well": "25/8-C-23",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "RINGHORNE",
+    "rig_type": "FIXED",
+    "operator": "V\u00e5r Energi ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10553",
+    "lat": 59.26547321600003,
+    "lon": 2.4481945730000234
+  },
+  {
+    "wellbore_name": "25/11-J-4 H",
+    "well": "25/11-J-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA ABERDEEN",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "BREIDABLIKK",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10554",
+    "lat": 59.23065119000006,
+    "lon": 2.5547792260000506
+  },
+  {
+    "wellbore_name": "25/11-J-4 AH",
+    "well": "25/11-J-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA ABERDEEN",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "BREIDABLIKK",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10555",
+    "lat": 59.23065119000006,
+    "lon": 2.5547792260000506
+  },
+  {
+    "wellbore_name": "34/10-G-4 DH",
+    "well": "34/10-G-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "ASKELADDEN",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "GULLFAKS S\u00d8R",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10556",
+    "lat": 61.09681660500007,
+    "lon": 2.2750740800000244
   }
 ]
