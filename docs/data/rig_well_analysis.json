@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-13T06:14:23.256435+00:00",
+  "generated_at": "2026-02-13T07:29:06.476590+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
@@ -274,9 +274,14 @@
           "wellbore_name": "25/8-N-1 Y3H",
           "distance_m": 9151.8,
           "approach_ratio": null
+        },
+        {
+          "wellbore_name": "25/11-HT-4 Y2H",
+          "distance_m": 6104.1,
+          "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 5,
+      "num_assigned_wells": 6,
       "likely_target_well": "25/11-FT-2 Y2H"
     },
     "NOBLE INTEGRATOR": {
