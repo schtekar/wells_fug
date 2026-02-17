@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-17T06:11:38.015355+00:00",
+  "generated_at": "2026-02-17T07:17:32.632055+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
@@ -521,11 +521,6 @@
           "approach_ratio": null
         },
         {
-          "wellbore_name": "34/7-I-4 BH",
-          "distance_m": 179.4,
-          "approach_ratio": null
-        },
-        {
           "wellbore_name": "15/9-E-2 AH",
           "distance_m": 309788.7,
           "approach_ratio": null
@@ -551,7 +546,7 @@
           "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 7,
+      "num_assigned_wells": 6,
       "likely_target_well": "34/7-I-1 AH"
     },
     "DEEPSEA ATLANTIC": {
@@ -624,11 +619,6 @@
           "approach_ratio": null
         },
         {
-          "wellbore_name": "30/11-C-6 Y1H",
-          "distance_m": 7674.6,
-          "approach_ratio": null
-        },
-        {
           "wellbore_name": "30/11-V-6 H",
           "distance_m": 26.6,
           "approach_ratio": null
@@ -664,7 +654,7 @@
           "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 13,
+      "num_assigned_wells": 12,
       "likely_target_well": "30/11-V-6 H"
     },
     "DEEPSEA BOLLSTA": {
@@ -686,9 +676,24 @@
           "wellbore_name": "34/8-V-1 BH",
           "distance_m": 47.7,
           "approach_ratio": null
+        },
+        {
+          "wellbore_name": "16/2-H-4 H",
+          "distance_m": 269127.6,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "16/3-P-3 H",
+          "distance_m": 277942.5,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "16/3-Q-3 H",
+          "distance_m": 282323.8,
+          "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 2,
+      "num_assigned_wells": 5,
       "likely_target_well": "34/8-V-1 BH"
     },
     "DEEPSEA YANTAI": {
@@ -760,11 +765,6 @@
       "movement_m": null,
       "assigned_wells": [
         {
-          "wellbore_name": "16/4-BG-1 Y1H",
-          "distance_m": 4736.1,
-          "approach_ratio": null
-        },
-        {
           "wellbore_name": "16/4-BG-1 Y2H",
           "distance_m": 4736.1,
           "approach_ratio": null
@@ -785,7 +785,7 @@
           "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 5,
+      "num_assigned_wells": 4,
       "likely_target_well": "16/4-BF-4 H"
     }
   }
