@@ -5558,20 +5558,6 @@
     "lon": 3.217612797000072
   },
   {
-    "wellbore_name": "34/7-I-4 BH",
-    "well": "34/7-I-4",
-    "status": "CLOSED",
-    "entryDate": "2025-11-08",
-    "rig_name": "COSLPROMOTER",
-    "rig_type": "MOVEABLE",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "TORDIS",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10299",
-    "lat": 61.27529663100006,
-    "lon": 2.1150037560000214
-  },
-  {
     "wellbore_name": "15/8-3 S",
     "well": "15/8-3",
     "status": "P&A",
@@ -5908,20 +5894,6 @@
     "lon": 2.1996211940000308
   },
   {
-    "wellbore_name": "16/4-BG-1 Y1H",
-    "well": "16/4-BG-1",
-    "status": "PRODUCING",
-    "entryDate": "2025-11-08",
-    "rig_name": "DEEPSEA NORDKAPP",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "SOLVEIG",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10426",
-    "lat": 58.71264157500008,
-    "lon": 2.208859905000054
-  },
-  {
     "wellbore_name": "16/4-BG-1 Y2H",
     "well": "16/4-BG-1",
     "status": "ONLINE/OPERATIONAL",
@@ -6132,20 +6104,6 @@
     "lon": 2.498394370000028
   },
   {
-    "wellbore_name": "30/11-C-6 Y1H",
-    "well": "30/11-C-6",
-    "status": "ONLINE/OPERATIONAL",
-    "entryDate": "2025-11-09",
-    "rig_name": "DEEPSEA STAVANGER",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "MUNIN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10443",
-    "lat": 60.17947679000008,
-    "lon": 2.588405111000043
-  },
-  {
     "wellbore_name": "30/11-V-6 H",
     "well": "30/11-V-6",
     "status": "",
@@ -6246,7 +6204,7 @@
   {
     "wellbore_name": "7018/5-2",
     "well": "7018/5-2",
-    "status": "DRILLING",
+    "status": "P&A",
     "entryDate": "2026-01-01",
     "rig_name": "COSLPROSPECTOR",
     "rig_type": "MOVEABLE",
@@ -7040,5 +6998,47 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10559",
     "lat": 58.89912317300008,
     "lon": 2.4265636680000284
+  },
+  {
+    "wellbore_name": "16/2-H-4 H",
+    "well": "16/2-H-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA BOLLSTA",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "JOHAN SVERDRUP",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10560",
+    "lat": 58.88030619600005,
+    "lon": 2.486971224000058
+  },
+  {
+    "wellbore_name": "16/3-P-3 H",
+    "well": "16/3-P-3",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA BOLLSTA",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "JOHAN SVERDRUP",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10561",
+    "lat": 58.80624509100005,
+    "lon": 2.708919821000052
+  },
+  {
+    "wellbore_name": "16/3-Q-3 H",
+    "well": "16/3-Q-3",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA BOLLSTA",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "JOHAN SVERDRUP",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10562",
+    "lat": 58.76866130700006,
+    "lon": 2.760786961000065
   }
 ]
