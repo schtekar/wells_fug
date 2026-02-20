@@ -1,13 +1,25 @@
 {
   "num_rigs": 21,
   "num_wells": 500,
-  "entered_wells": 56,
-  "not_entered_wells": 444,
+  "entered_wells": 58,
+  "not_entered_wells": 442,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "34/10-A-30 D",
+      "rig_name": "GULLFAKS A",
+      "entry_date": "2026-02-18",
+      "days_since_entry": 2
+    },
+    {
+      "wellbore_name": "30/6-C-16 B",
+      "rig_name": "OSEBERG C",
+      "entry_date": "2026-02-16",
+      "days_since_entry": 4
+    },
     {
       "wellbore_name": "25/11-G-2 DY2",
       "rig_name": "GRANE",
