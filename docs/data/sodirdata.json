@@ -5726,20 +5726,6 @@
     "lon": 2.5520470770000543
   },
   {
-    "wellbore_name": "30/9-B-46 F",
-    "well": "30/9-B-46",
-    "status": "CLOSED",
-    "entryDate": "2025-11-13",
-    "rig_name": "OSEBERG B",
-    "rig_type": "FIXED",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "OSEBERG",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10390",
-    "lat": 60.49277480900008,
-    "lon": 2.8269636600000467
-  },
-  {
     "wellbore_name": "30/6-C-16 B",
     "well": "30/6-C-16",
     "status": "ONLINE/OPERATIONAL",
@@ -6046,20 +6032,6 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10440",
     "lat": 65.51687956900008,
     "lon": 7.203068739000059
-  },
-  {
-    "wellbore_name": "30/11-Y-1 H",
-    "well": "30/11-Y-1",
-    "status": "ONLINE/OPERATIONAL",
-    "entryDate": "2025-11-13",
-    "rig_name": "DEEPSEA STAVANGER",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "MUNIN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10441",
-    "lat": 60.22196032900007,
-    "lon": 2.498394370000028
   },
   {
     "wellbore_name": "30/11-V-6 H",
@@ -6666,8 +6638,8 @@
   {
     "wellbore_name": "34/10-B-29 D",
     "well": "34/10-B-29",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-02-19",
     "rig_name": "GULLFAKS B",
     "rig_type": "FIXED",
     "operator": "Equinor Energy AS",
