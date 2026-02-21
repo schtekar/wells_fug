@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 500,
-  "entered_wells": 58,
-  "not_entered_wells": 442,
+  "num_wells": 498,
+  "entered_wells": 57,
+  "not_entered_wells": 441,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "34/10-B-29 D",
+      "rig_name": "GULLFAKS B",
+      "entry_date": "2026-02-19",
+      "days_since_entry": 2
+    },
     {
       "wellbore_name": "34/10-A-30 D",
       "rig_name": "GULLFAKS A",
@@ -343,18 +349,6 @@
       "rig_name": "DEEPSEA STAVANGER",
       "entry_date": "2025-11-16",
       "days_since_entry": 97
-    },
-    {
-      "wellbore_name": "30/9-B-46 F",
-      "rig_name": "OSEBERG B",
-      "entry_date": "2025-11-13",
-      "days_since_entry": 100
-    },
-    {
-      "wellbore_name": "30/11-Y-1 H",
-      "rig_name": "DEEPSEA STAVANGER",
-      "entry_date": "2025-11-13",
-      "days_since_entry": 100
     }
   ]
 }
