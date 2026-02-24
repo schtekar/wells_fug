@@ -5656,20 +5656,6 @@
     "lon": 2.4985553670000513
   },
   {
-    "wellbore_name": "30/11-Y-6 H",
-    "well": "30/11-Y-6",
-    "status": "ONLINE/OPERATIONAL",
-    "entryDate": "2025-11-16",
-    "rig_name": "DEEPSEA STAVANGER",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "UNKNOWN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10365",
-    "lat": 60.221990333000065,
-    "lon": 2.4986173750000376
-  },
-  {
     "wellbore_name": "30/11-C-3 Y2H",
     "well": "30/11-C-3",
     "status": "",
@@ -6970,5 +6956,33 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10562",
     "lat": 58.76866130700006,
     "lon": 2.760786961000065
+  },
+  {
+    "wellbore_name": "30/4-A-18",
+    "well": "30/4-A-18",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "ASKEPOTT",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "MARTIN LINGE",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10563",
+    "lat": 60.505665330000056,
+    "lon": 2.0130888740000614
+  },
+  {
+    "wellbore_name": "7122/10-E-1 Y2H",
+    "well": "7122/10-E-1",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "COSLPROSPECTOR",
+    "rig_type": "MOVEABLE",
+    "operator": "V\u00e5r Energi ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "GOLIAT",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10564",
+    "lat": 71.24343251000005,
+    "lon": 22.248638500000027
   }
 ]
