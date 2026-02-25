@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-25T06:10:33.672671+00:00",
+  "generated_at": "2026-02-25T07:18:07.774168+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
@@ -459,11 +459,6 @@
           "approach_ratio": null
         },
         {
-          "wellbore_name": "6507/8-12 S",
-          "distance_m": 512025.9,
-          "approach_ratio": null
-        },
-        {
           "wellbore_name": "6610/7-U-3",
           "distance_m": 674553.3,
           "approach_ratio": null
@@ -494,7 +489,7 @@
           "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 8,
+      "num_assigned_wells": 7,
       "likely_target_well": "35/11-32 S"
     },
     "SHELF DRILLING BARSK": {
@@ -599,11 +594,6 @@
       "movement_m": null,
       "assigned_wells": [
         {
-          "wellbore_name": "30/11-Y-4 H",
-          "distance_m": 13396.5,
-          "approach_ratio": null
-        },
-        {
           "wellbore_name": "30/11-C-3 Y2H",
           "distance_m": 7627.2,
           "approach_ratio": null
@@ -644,7 +634,7 @@
           "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 9,
+      "num_assigned_wells": 8,
       "likely_target_well": "30/11-W-1 H"
     },
     "DEEPSEA BOLLSTA": {

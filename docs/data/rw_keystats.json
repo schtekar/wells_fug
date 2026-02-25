@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 499,
-  "entered_wells": 57,
-  "not_entered_wells": 442,
+  "num_wells": 497,
+  "entered_wells": 56,
+  "not_entered_wells": 441,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "34/7-I-1 AH",
+      "rig_name": "COSLPROMOTER",
+      "entry_date": "2026-02-23",
+      "days_since_entry": 2
+    },
     {
       "wellbore_name": "7220/7-5",
       "rig_name": "COSLPROSPECTOR",
@@ -337,18 +343,6 @@
       "rig_name": "NOBLE INTEGRATOR",
       "entry_date": "2025-11-21",
       "days_since_entry": 96
-    },
-    {
-      "wellbore_name": "30/11-Y-4 H",
-      "rig_name": "DEEPSEA STAVANGER",
-      "entry_date": "2025-11-17",
-      "days_since_entry": 100
-    },
-    {
-      "wellbore_name": "6507/8-12 S",
-      "rig_name": "COSLINNOVATOR",
-      "entry_date": "2025-11-17",
-      "days_since_entry": 100
     }
   ]
 }
