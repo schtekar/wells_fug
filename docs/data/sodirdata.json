@@ -5642,20 +5642,6 @@
     "lon": 2.6014322330000255
   },
   {
-    "wellbore_name": "30/11-Y-4 H",
-    "well": "30/11-Y-4",
-    "status": "ONLINE/OPERATIONAL",
-    "entryDate": "2025-11-17",
-    "rig_name": "DEEPSEA STAVANGER",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "MUNIN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10364",
-    "lat": 60.222102336000034,
-    "lon": 2.4985553670000513
-  },
-  {
     "wellbore_name": "30/11-C-3 Y2H",
     "well": "30/11-C-3",
     "status": "",
@@ -5742,8 +5728,8 @@
   {
     "wellbore_name": "34/7-I-1 AH",
     "well": "34/7-I-1",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-02-23",
     "rig_name": "COSLPROMOTER",
     "rig_type": "MOVEABLE",
     "operator": "Equinor Energy AS",
@@ -5794,20 +5780,6 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10418",
     "lat": 61.44866779800003,
     "lon": 2.1419762230000288
-  },
-  {
-    "wellbore_name": "6507/8-12 S",
-    "well": "6507/8-12",
-    "status": "P&A",
-    "entryDate": "2025-11-17",
-    "rig_name": "COSLINNOVATOR",
-    "rig_type": "MOVEABLE",
-    "operator": "Equinor Energy AS",
-    "well_type": "EXPLORATION",
-    "field": "UNKNOWN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10421",
-    "lat": 65.41165832800004,
-    "lon": 7.397994208000057
   },
   {
     "wellbore_name": "34/4-19 S",
@@ -5882,7 +5854,7 @@
   {
     "wellbore_name": "31/2-W-41 H",
     "well": "31/2-W-41",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "PLUGGED",
     "entryDate": "2025-12-07",
     "rig_name": "DEEPSEA ABERDEEN",
     "rig_type": "MOVEABLE",
@@ -5896,7 +5868,7 @@
   {
     "wellbore_name": "31/2-W-42 H",
     "well": "31/2-W-42",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2025-12-09",
     "rig_name": "DEEPSEA ABERDEEN",
     "rig_type": "MOVEABLE",
@@ -6148,7 +6120,7 @@
   {
     "wellbore_name": "30/11-W-3 AH",
     "well": "30/11-W-3",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "PLUGGED",
     "entryDate": "2026-01-22",
     "rig_name": "DEEPSEA STAVANGER",
     "rig_type": "MOVEABLE",
@@ -6162,7 +6134,7 @@
   {
     "wellbore_name": "30/11-W-3 BH",
     "well": "30/11-W-3",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "PLUGGED",
     "entryDate": "2026-01-30",
     "rig_name": "DEEPSEA STAVANGER",
     "rig_type": "MOVEABLE",
@@ -6470,7 +6442,7 @@
   {
     "wellbore_name": "34/8-V-1 BH",
     "well": "34/8-V-1",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-01-26",
     "rig_name": "DEEPSEA BOLLSTA",
     "rig_type": "MOVEABLE",
@@ -6484,7 +6456,7 @@
   {
     "wellbore_name": "33/12-B-1 E",
     "well": "33/12-B-1",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-01-29",
     "rig_name": "STATFJORD B",
     "rig_type": "FIXED",
