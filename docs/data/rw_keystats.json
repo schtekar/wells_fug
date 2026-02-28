@@ -1,13 +1,43 @@
 {
   "num_rigs": 21,
-  "num_wells": 497,
-  "entered_wells": 56,
-  "not_entered_wells": 441,
+  "num_wells": 498,
+  "entered_wells": 61,
+  "not_entered_wells": 437,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "31/2-W-32 H",
+      "rig_name": "DEEPSEA ABERDEEN",
+      "entry_date": "2026-02-26",
+      "days_since_entry": 2
+    },
+    {
+      "wellbore_name": "16/2-H-4 H",
+      "rig_name": "DEEPSEA BOLLSTA",
+      "entry_date": "2026-02-26",
+      "days_since_entry": 2
+    },
+    {
+      "wellbore_name": "31/2-W-33 H",
+      "rig_name": "DEEPSEA ABERDEEN",
+      "entry_date": "2026-02-25",
+      "days_since_entry": 3
+    },
+    {
+      "wellbore_name": "25/11-G-2 DY3",
+      "rig_name": "GRANE",
+      "entry_date": "2026-02-24",
+      "days_since_entry": 4
+    },
+    {
+      "wellbore_name": "31/2-W-31 H",
+      "rig_name": "DEEPSEA ABERDEEN",
+      "entry_date": "2026-02-24",
+      "days_since_entry": 4
+    },
     {
       "wellbore_name": "34/7-I-1 AH",
       "rig_name": "COSLPROMOTER",
