@@ -1,34 +1,34 @@
 {
-  "generated_at": "2026-03-06T14:02:25.666991+00:00",
+  "generated_at": "2026-03-06T14:58:18.012805+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
       "rig_type": "JACK-UP",
       "mmsi": "257452000",
-      "lat": 61.078492,
+      "lat": 61.078507,
       "lon": 1.988208,
-      "last_seen": "2026-03-06T13:03:41+00:00",
+      "last_seen": "2026-03-06T14:39:52+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "33/12-N-3 GH",
-          "distance_m": 6.5,
+          "distance_m": 5.0,
           "approach_ratio": null
         },
         {
           "wellbore_name": "33/12-N-3 HH",
-          "distance_m": 6.5,
+          "distance_m": 5.0,
           "approach_ratio": null
         },
         {
           "wellbore_name": "33/12-N-3 IH",
-          "distance_m": 6.5,
+          "distance_m": 5.0,
           "approach_ratio": null
         },
         {
           "wellbore_name": "34/10-G-4 DH",
-          "distance_m": 15555.8,
+          "distance_m": 15555.6,
           "approach_ratio": null
         }
       ],
@@ -39,75 +39,75 @@
       "rig_name": "DEEPSEA ABERDEEN",
       "rig_type": "SEMISUB",
       "mmsi": "310713000",
-      "lat": 60.837657,
-      "lon": 3.550753,
-      "last_seen": "2026-03-06T13:03:48+00:00",
+      "lat": 60.837648,
+      "lon": 3.550718,
+      "last_seen": "2026-03-06T14:39:58+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "25/8-M-3 AH",
-          "distance_m": 182455.3,
+          "distance_m": 182453.8,
           "approach_ratio": null
         },
         {
           "wellbore_name": "25/8-M-3 BH",
-          "distance_m": 182455.3,
+          "distance_m": 182453.8,
           "approach_ratio": null
         },
         {
           "wellbore_name": "25/11-J-5 H",
-          "distance_m": 187069.1,
+          "distance_m": 187067.6,
           "approach_ratio": null
         },
         {
           "wellbore_name": "31/2-W-41 H",
-          "distance_m": 1684.9,
+          "distance_m": 1686.9,
           "approach_ratio": null
         },
         {
           "wellbore_name": "31/2-W-42 H",
-          "distance_m": 1671.4,
+          "distance_m": 1673.4,
           "approach_ratio": null
         },
         {
           "wellbore_name": "31/2-W-43 H",
-          "distance_m": 1672.0,
+          "distance_m": 1674.0,
           "approach_ratio": null
         },
         {
           "wellbore_name": "31/2-W-44 H",
-          "distance_m": 1685.3,
+          "distance_m": 1687.3,
           "approach_ratio": null
         },
         {
           "wellbore_name": "31/2-W-31 H",
-          "distance_m": 26.0,
+          "distance_m": 27.2,
           "approach_ratio": null
         },
         {
           "wellbore_name": "31/2-W-32 H",
-          "distance_m": 29.2,
+          "distance_m": 29.3,
           "approach_ratio": null
         },
         {
           "wellbore_name": "31/2-W-33 H",
-          "distance_m": 34.6,
+          "distance_m": 34.9,
           "approach_ratio": null
         },
         {
           "wellbore_name": "31/2-W-34 H",
-          "distance_m": 32.3,
+          "distance_m": 33.4,
           "approach_ratio": null
         },
         {
           "wellbore_name": "25/11-J-4 H",
-          "distance_m": 187051.5,
+          "distance_m": 187050.0,
           "approach_ratio": null
         },
         {
           "wellbore_name": "25/11-J-4 AH",
-          "distance_m": 187051.5,
+          "distance_m": 187050.0,
           "approach_ratio": null
         }
       ],
@@ -118,9 +118,9 @@
       "rig_name": "ASKEPOTT",
       "rig_type": "JACK-UP",
       "mmsi": "257459000",
-      "lat": 60.50557,
-      "lon": 2.015145,
-      "last_seen": "2026-03-06T13:01:23.992822+00:00",
+      "lat": 60.505585,
+      "lon": 2.015163,
+      "last_seen": "2026-03-06T14:37:29.2521295+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
@@ -131,12 +131,12 @@
         },
         {
           "wellbore_name": "30/4-A-20",
-          "distance_m": 112.6,
+          "distance_m": 113.5,
           "approach_ratio": null
         },
         {
           "wellbore_name": "30/4-A-18",
-          "distance_m": 113.1,
+          "distance_m": 113.9,
           "approach_ratio": null
         }
       ],
@@ -147,30 +147,30 @@
       "rig_name": "COSLPROSPECTOR",
       "rig_type": "SEMISUB",
       "mmsi": "565369000",
-      "lat": 72.36658,
-      "lon": 20.124177,
-      "last_seen": "2026-03-06T13:03:45+00:00",
+      "lat": 72.366607,
+      "lon": 20.124363,
+      "last_seen": "2026-03-06T14:39:57.6642616+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "7018/5-U-9",
-          "distance_m": 197432.9,
+          "distance_m": 197437.7,
           "approach_ratio": null
         },
         {
           "wellbore_name": "7018/5-2",
-          "distance_m": 197402.0,
+          "distance_m": 197406.8,
           "approach_ratio": null
         },
         {
           "wellbore_name": "7220/7-5",
-          "distance_m": 98.9,
+          "distance_m": 103.3,
           "approach_ratio": null
         },
         {
           "wellbore_name": "7122/10-E-1 Y2H",
-          "distance_m": 145025.9,
+          "distance_m": 145025.1,
           "approach_ratio": null
         }
       ],
@@ -181,9 +181,9 @@
       "rig_name": "LINUS",
       "rig_type": "JACK-UP",
       "mmsi": "257095000",
-      "lat": 56.423173,
+      "lat": 56.423178,
       "lon": 3.210535,
-      "last_seen": "2026-03-06T13:03:11.8764846+00:00",
+      "last_seen": "2026-03-06T14:39:16.1912691+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
@@ -194,17 +194,17 @@
         },
         {
           "wellbore_name": "2/7-S-30 B",
-          "distance_m": 6416.3,
+          "distance_m": 6416.8,
           "approach_ratio": null
         },
         {
           "wellbore_name": "2/7-NA-1 H",
-          "distance_m": 108.1,
+          "distance_m": 107.7,
           "approach_ratio": null
         },
         {
           "wellbore_name": "2/7-NA-6 H",
-          "distance_m": 110.5,
+          "distance_m": 110.0,
           "approach_ratio": null
         }
       ],
@@ -215,25 +215,25 @@
       "rig_name": "TRANSOCEAN SPITSBERGEN",
       "rig_type": "SEMISUB",
       "mmsi": "538004905",
-      "lat": 63.090342,
-      "lon": 7.695537,
-      "last_seen": "2026-03-06T13:03:40+00:00",
+      "lat": 63.090367,
+      "lon": 7.695582,
+      "last_seen": "2026-03-06T14:39:51+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "6406/2-L-1 Y2H",
-          "distance_m": 202916.8,
+          "distance_m": 202914.8,
           "approach_ratio": null
         },
         {
           "wellbore_name": "6406/2-L-3 Y2H",
-          "distance_m": 202923.5,
+          "distance_m": 202921.4,
           "approach_ratio": null
         },
         {
           "wellbore_name": "6406/2-L-4 Y2H",
-          "distance_m": 202926.3,
+          "distance_m": 202924.3,
           "approach_ratio": null
         }
       ],
@@ -246,7 +246,7 @@
       "mmsi": "563050900",
       "lat": 59.246333,
       "lon": 2.462667,
-      "last_seen": "2026-03-06T13:03:44.9031376+00:00",
+      "last_seen": "2026-03-06T14:39:56.4429941+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
@@ -332,9 +332,9 @@
       "rig_name": "NOBLE INVINCIBLE",
       "rig_type": "JACK-UP",
       "mmsi": "538010632",
-      "lat": 56.274618,
-      "lon": 3.399598,
-      "last_seen": "2026-03-06T13:03:47.1043505+00:00",
+      "lat": 56.274605,
+      "lon": 3.399668,
+      "last_seen": "2026-03-06T14:39:46.1469387+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [],
@@ -345,30 +345,30 @@
       "rig_name": "TRANSOCEAN ENABLER",
       "rig_type": "SEMISUB",
       "mmsi": "258615000",
-      "lat": 72.536717,
-      "lon": 20.385563,
-      "last_seen": "2026-03-06T13:03:44+00:00",
+      "lat": 72.536595,
+      "lon": 20.38543,
+      "last_seen": "2026-03-06T14:39:57.6635623+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "7220/5-EB-1 Y1H",
-          "distance_m": 1959.8,
+          "distance_m": 1947.0,
           "approach_ratio": null
         },
         {
           "wellbore_name": "7220/5-EB-4 H",
-          "distance_m": 1954.1,
+          "distance_m": 1941.3,
           "approach_ratio": null
         },
         {
           "wellbore_name": "7220/5-EB-1 Y2H",
-          "distance_m": 1959.8,
+          "distance_m": 1947.0,
           "approach_ratio": null
         },
         {
           "wellbore_name": "7220/7-CA-4 Y2H",
-          "distance_m": 12150.3,
+          "distance_m": 12137.1,
           "approach_ratio": null
         }
       ],
@@ -380,24 +380,24 @@
       "rig_type": "SEMISUB",
       "mmsi": "308928000",
       "lat": 65.861783,
-      "lon": 7.396787,
-      "last_seen": "2026-03-06T13:03:47.1043219+00:00",
+      "lon": 7.396822,
+      "last_seen": "2026-03-06T14:39:57.6642908+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "16/1-U-12",
-          "distance_m": 809808.9,
+          "distance_m": 809809.4,
           "approach_ratio": null
         },
         {
           "wellbore_name": "6507/2-O-2 H",
-          "distance_m": 40.4,
+          "distance_m": 39.2,
           "approach_ratio": null
         },
         {
           "wellbore_name": "6507/2-O-1 H",
-          "distance_m": 34.8,
+          "distance_m": 33.7,
           "approach_ratio": null
         }
       ],
@@ -437,45 +437,45 @@
       "rig_name": "COSLINNOVATOR",
       "rig_type": "SEMISUB",
       "mmsi": "566391000",
-      "lat": 61.157085,
-      "lon": 3.468635,
-      "last_seen": "2026-03-06T13:03:38+00:00",
+      "lat": 61.157102,
+      "lon": 3.468642,
+      "last_seen": "2026-03-06T14:39:59+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "34/8-20 A",
-          "distance_m": 58988.5,
+          "distance_m": 58987.7,
           "approach_ratio": null
         },
         {
           "wellbore_name": "6610/7-U-3",
-          "distance_m": 674538.1,
+          "distance_m": 674536.3,
           "approach_ratio": null
         },
         {
           "wellbore_name": "35/11-32 S",
-          "distance_m": 50.8,
+          "distance_m": 51.6,
           "approach_ratio": null
         },
         {
           "wellbore_name": "30/2-U-2",
-          "distance_m": 51940.8,
+          "distance_m": 51942.0,
           "approach_ratio": null
         },
         {
           "wellbore_name": "25/7-13",
-          "distance_m": 213305.9,
+          "distance_m": 213307.8,
           "approach_ratio": null
         },
         {
           "wellbore_name": "16/2-24",
-          "distance_m": 257652.1,
+          "distance_m": 257654.1,
           "approach_ratio": null
         },
         {
           "wellbore_name": "16/2-24 A",
-          "distance_m": 257652.1,
+          "distance_m": 257654.1,
           "approach_ratio": null
         }
       ],
@@ -486,9 +486,9 @@
       "rig_name": "SHELF DRILLING BARSK",
       "rig_type": "JACK-UP",
       "mmsi": "636016111",
-      "lat": 58.41806,
-      "lon": 1.71583,
-      "last_seen": "2026-03-06T13:01:03.9706003+00:00",
+      "lat": 58.418053,
+      "lon": 1.715827,
+      "last_seen": "2026-03-06T14:37:07.4248671+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [],
@@ -499,40 +499,40 @@
       "rig_name": "COSLPROMOTER",
       "rig_type": "SEMISUB",
       "mmsi": "565798000",
-      "lat": 61.275303,
-      "lon": 2.118382,
-      "last_seen": "2026-03-06T13:03:36.6911041+00:00",
+      "lat": 61.275298,
+      "lon": 2.118352,
+      "last_seen": "2026-03-06T14:38:38.9037665+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "15/5-C-2 H",
-          "distance_m": 293594.2,
+          "distance_m": 293593.5,
           "approach_ratio": null
         },
         {
           "wellbore_name": "15/9-E-2 AH",
-          "distance_m": 309789.3,
+          "distance_m": 309788.6,
           "approach_ratio": null
         },
         {
           "wellbore_name": "16/7-A-2 AH",
-          "distance_m": 332602.2,
+          "distance_m": 332601.7,
           "approach_ratio": null
         },
         {
           "wellbore_name": "34/7-I-1 AH",
-          "distance_m": 39.8,
+          "distance_m": 38.4,
           "approach_ratio": null
         },
         {
           "wellbore_name": "16/2-U-8",
-          "distance_m": 267066.4,
+          "distance_m": 267066.0,
           "approach_ratio": null
         },
         {
           "wellbore_name": "16/3-U-2",
-          "distance_m": 280971.2,
+          "distance_m": 280970.9,
           "approach_ratio": null
         }
       ],
@@ -543,30 +543,30 @@
       "rig_name": "DEEPSEA ATLANTIC",
       "rig_type": "SEMISUB",
       "mmsi": "310766000",
-      "lat": 61.527287,
-      "lon": 2.317192,
-      "last_seen": "2026-03-06T13:03:16+00:00",
+      "lat": 61.527293,
+      "lon": 2.317203,
+      "last_seen": "2026-03-06T14:39:06+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "6610/7-3",
-          "distance_m": 667838.3,
+          "distance_m": 667837.5,
           "approach_ratio": null
         },
         {
           "wellbore_name": "25/11-30 A",
-          "distance_m": 268388.7,
+          "distance_m": 268389.3,
           "approach_ratio": null
         },
         {
           "wellbore_name": "15/8-3 S",
-          "distance_m": 357733.8,
+          "distance_m": 357734.6,
           "approach_ratio": null
         },
         {
           "wellbore_name": "34/4-19 S",
-          "distance_m": 59.7,
+          "distance_m": 59.2,
           "approach_ratio": null
         }
       ],
@@ -577,50 +577,50 @@
       "rig_name": "DEEPSEA STAVANGER",
       "rig_type": "SEMISUB",
       "mmsi": "310767000",
-      "lat": 60.11096,
-      "lon": 2.592192,
-      "last_seen": "2026-03-06T13:01:31.1966995+00:00",
+      "lat": 60.110987,
+      "lon": 2.592212,
+      "last_seen": "2026-03-06T14:37:36.5341794+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "30/11-C-3 Y2H",
-          "distance_m": 7630.9,
+          "distance_m": 7627.9,
           "approach_ratio": null
         },
         {
           "wellbore_name": "30/11-V-6 H",
-          "distance_m": 75.7,
+          "distance_m": 78.1,
           "approach_ratio": null
         },
         {
           "wellbore_name": "30/11-W-1 H",
-          "distance_m": 39.7,
+          "distance_m": 39.4,
           "approach_ratio": null
         },
         {
           "wellbore_name": "30/11-W-4 H",
-          "distance_m": 45.1,
+          "distance_m": 43.6,
           "approach_ratio": null
         },
         {
           "wellbore_name": "30/11-Z-1 H",
-          "distance_m": 13409.6,
+          "distance_m": 13407.3,
           "approach_ratio": null
         },
         {
           "wellbore_name": "30/11-Z-6 H",
-          "distance_m": 13407.9,
+          "distance_m": 13405.6,
           "approach_ratio": null
         },
         {
           "wellbore_name": "30/11-W-3 AH",
-          "distance_m": 50.1,
+          "distance_m": 49.3,
           "approach_ratio": null
         },
         {
           "wellbore_name": "30/11-W-3 BH",
-          "distance_m": 50.1,
+          "distance_m": 49.3,
           "approach_ratio": null
         }
       ],
@@ -631,35 +631,35 @@
       "rig_name": "DEEPSEA BOLLSTA",
       "rig_type": "SEMISUB",
       "mmsi": "257440000",
-      "lat": 58.806068,
-      "lon": 2.709698,
-      "last_seen": "2026-03-06T13:03:47.1044115+00:00",
+      "lat": 58.806067,
+      "lon": 2.709585,
+      "last_seen": "2026-03-06T14:39:55.4026322+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "34/8-V-4 DH",
-          "distance_m": 277987.9,
+          "distance_m": 277987.6,
           "approach_ratio": null
         },
         {
           "wellbore_name": "34/8-V-1 BH",
-          "distance_m": 277983.8,
+          "distance_m": 277983.5,
           "approach_ratio": null
         },
         {
           "wellbore_name": "16/2-H-4 H",
-          "distance_m": 15242.4,
+          "distance_m": 15237.0,
           "approach_ratio": null
         },
         {
           "wellbore_name": "16/3-P-3 H",
-          "distance_m": 49.0,
+          "distance_m": 43.1,
           "approach_ratio": null
         },
         {
           "wellbore_name": "16/3-Q-3 H",
-          "distance_m": 5095.8,
+          "distance_m": 5099.5,
           "approach_ratio": null
         }
       ],
@@ -670,35 +670,35 @@
       "rig_name": "DEEPSEA YANTAI",
       "rig_type": "SEMISUB",
       "mmsi": "311000483",
-      "lat": 59.705337,
-      "lon": 2.308593,
-      "last_seen": "2026-03-06T13:02:35.2418064+00:00",
+      "lat": 59.705485,
+      "lon": 2.308858,
+      "last_seen": "2026-03-06T14:38:35.766161+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "6406/12-G-4 H",
-          "distance_m": 534005.3,
+          "distance_m": 533984.2,
           "approach_ratio": null
         },
         {
           "wellbore_name": "6506/11-U-5",
-          "distance_m": 647244.2,
+          "distance_m": 647224.1,
           "approach_ratio": null
         },
         {
           "wellbore_name": "6506/11-U-6",
-          "distance_m": 647283.8,
+          "distance_m": 647263.7,
           "approach_ratio": null
         },
         {
           "wellbore_name": "6407/9-D-1 BH",
-          "distance_m": 587376.9,
+          "distance_m": 587355.6,
           "approach_ratio": null
         },
         {
           "wellbore_name": "35/10-16 S",
-          "distance_m": 151007.0,
+          "distance_m": 150986.9,
           "approach_ratio": null
         }
       ],
@@ -709,15 +709,15 @@
       "rig_name": "WEST ELARA",
       "rig_type": "JACK-UP",
       "mmsi": "259783000",
-      "lat": 56.662957,
-      "lon": 3.307345,
-      "last_seen": "2026-03-06T13:03:49.1038679+00:00",
+      "lat": 56.728198,
+      "lon": 3.35328,
+      "last_seen": "2026-03-06T14:39:48.1474674+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "2/7-S-35 A",
-          "distance_m": 32384.4,
+          "distance_m": 39915.0,
           "approach_ratio": null
         }
       ],
@@ -728,30 +728,30 @@
       "rig_name": "DEEPSEA NORDKAPP",
       "rig_type": "SEMISUB",
       "mmsi": "310776000",
-      "lat": 58.672198,
-      "lon": 2.234583,
-      "last_seen": "2026-03-06T13:03:44.9004965+00:00",
+      "lat": 58.672187,
+      "lon": 2.234592,
+      "last_seen": "2026-03-06T14:39:54.347463+00:00",
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
         {
           "wellbore_name": "16/4-BG-1 Y2H",
-          "distance_m": 4736.4,
+          "distance_m": 4737.7,
           "approach_ratio": null
         },
         {
           "wellbore_name": "16/4-BF-2 Y1H",
-          "distance_m": 31.4,
+          "distance_m": 30.4,
           "approach_ratio": null
         },
         {
           "wellbore_name": "16/4-BF-4 H",
-          "distance_m": 17.0,
+          "distance_m": 16.1,
           "approach_ratio": null
         },
         {
           "wellbore_name": "16/4-BF-2 Y2H",
-          "distance_m": 31.4,
+          "distance_m": 30.4,
           "approach_ratio": null
         }
       ],
