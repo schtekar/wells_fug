@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-09T06:05:42.449755+00:00",
+  "generated_at": "2026-03-09T07:18:32.908814+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
@@ -11,11 +11,6 @@
       "rig_moving": false,
       "movement_m": null,
       "assigned_wells": [
-        {
-          "wellbore_name": "33/12-N-3 GH",
-          "distance_m": 2.6,
-          "approach_ratio": null
-        },
         {
           "wellbore_name": "33/12-N-3 HH",
           "distance_m": 2.6,
@@ -32,8 +27,8 @@
           "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 4,
-      "likely_target_well": "33/12-N-3 GH"
+      "num_assigned_wells": 3,
+      "likely_target_well": "33/12-N-3 HH"
     },
     "DEEPSEA ABERDEEN": {
       "rig_name": "DEEPSEA ABERDEEN",
