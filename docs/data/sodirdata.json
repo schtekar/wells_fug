@@ -5784,7 +5784,7 @@
   {
     "wellbore_name": "34/4-19 S",
     "well": "34/4-19",
-    "status": "DRILLING",
+    "status": "PLUGGED",
     "entryDate": "2026-01-23",
     "rig_name": "DEEPSEA ATLANTIC",
     "rig_type": "MOVEABLE",
@@ -5906,20 +5906,6 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10434",
     "lat": 60.838714433000064,
     "lon": 3.5817820630000483
-  },
-  {
-    "wellbore_name": "25/2-D-3 Y3",
-    "well": "25/2-D-3",
-    "status": "CLOSED",
-    "entryDate": "2025-11-30",
-    "rig_name": "NOBLE INTEGRATOR",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "HUGIN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10436",
-    "lat": 59.87095266800003,
-    "lon": 2.5659974450000504
   },
   {
     "wellbore_name": "25/8-C-23 D",
@@ -6428,7 +6414,7 @@
   {
     "wellbore_name": "35/11-32 S",
     "well": "35/11-32",
-    "status": "DRILLING",
+    "status": "PLUGGED",
     "entryDate": "2026-01-26",
     "rig_name": "COSLINNOVATOR",
     "rig_type": "MOVEABLE",
@@ -6484,8 +6470,8 @@
   {
     "wellbore_name": "30/2-U-2",
     "well": "30/2-U-2",
-    "status": "",
-    "entryDate": "",
+    "status": "DRILLING",
+    "entryDate": "2026-03-08",
     "rig_name": "COSLINNOVATOR",
     "rig_type": "MOVEABLE",
     "operator": "Equinor Energy AS",
