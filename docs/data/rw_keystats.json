@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 495,
+  "num_wells": 494,
   "entered_wells": 59,
-  "not_entered_wells": 436,
+  "not_entered_wells": 435,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "30/2-U-2",
+      "rig_name": "COSLINNOVATOR",
+      "entry_date": "2026-03-08",
+      "days_since_entry": 2
+    },
     {
       "wellbore_name": "16/3-P-3 H",
       "rig_name": "DEEPSEA BOLLSTA",
@@ -355,12 +361,6 @@
       "rig_name": "DEEPSEA ABERDEEN",
       "entry_date": "2025-12-06",
       "days_since_entry": 94
-    },
-    {
-      "wellbore_name": "25/2-D-3 Y3",
-      "rig_name": "NOBLE INTEGRATOR",
-      "entry_date": "2025-11-30",
-      "days_since_entry": 100
     }
   ]
 }
