@@ -1,13 +1,25 @@
 {
   "num_rigs": 21,
-  "num_wells": 487,
+  "num_wells": 489,
   "entered_wells": 53,
-  "not_entered_wells": 434,
+  "not_entered_wells": 436,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "34/10-C-27 A",
+      "rig_name": "GULLFAKS C",
+      "entry_date": "2026-03-17",
+      "days_since_entry": 4
+    },
+    {
+      "wellbore_name": "16/2-24",
+      "rig_name": "COSLINNOVATOR",
+      "entry_date": "2026-03-14",
+      "days_since_entry": 7
+    },
     {
       "wellbore_name": "16/3-Q-3 H",
       "rig_name": "DEEPSEA BOLLSTA",
@@ -313,18 +325,6 @@
       "rig_name": "DEEPSEA BOLLSTA",
       "entry_date": "2025-12-13",
       "days_since_entry": 98
-    },
-    {
-      "wellbore_name": "15/8-3 S",
-      "rig_name": "DEEPSEA ATLANTIC",
-      "entry_date": "2025-12-11",
-      "days_since_entry": 100
-    },
-    {
-      "wellbore_name": "6507/2-O-2 H",
-      "rig_name": "SCARABEO 8",
-      "entry_date": "2025-12-11",
-      "days_since_entry": 100
     }
   ]
 }
