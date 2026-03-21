@@ -5462,7 +5462,7 @@
   {
     "wellbore_name": "25/11-G-2 DY2",
     "well": "25/11-G-2",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-02-09",
     "rig_name": "GRANE",
     "rig_type": "FIXED",
@@ -5518,7 +5518,7 @@
   {
     "wellbore_name": "33/9-C-31 C",
     "well": "33/9-C-31",
-    "status": "CLOSED",
+    "status": "PRODUCING",
     "entryDate": "2025-12-13",
     "rig_name": "STATFJORD C",
     "rig_type": "FIXED",
@@ -5556,20 +5556,6 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10285",
     "lat": 56.54711564100006,
     "lon": 3.217612797000072
-  },
-  {
-    "wellbore_name": "15/8-3 S",
-    "well": "15/8-3",
-    "status": "P&A",
-    "entryDate": "2025-12-11",
-    "rig_name": "DEEPSEA ATLANTIC",
-    "rig_type": "MOVEABLE",
-    "operator": "Equinor Energy AS",
-    "well_type": "EXPLORATION",
-    "field": "UNKNOWN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10332",
-    "lat": 58.33067492100008,
-    "lon": 1.5914377180000656
   },
   {
     "wellbore_name": "6406/2-L-3 Y2H",
@@ -5840,7 +5826,7 @@
   {
     "wellbore_name": "6507/4-X-1 H",
     "well": "6507/4-X-1",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "PLUGGED",
     "entryDate": "2025-12-22",
     "rig_name": "TRANSOCEAN NORGE",
     "rig_type": "MOVEABLE",
@@ -5888,7 +5874,7 @@
     "rig_type": "MOVEABLE",
     "operator": "Aker BP ASA",
     "well_type": "DEVELOPMENT",
-    "field": "UNKNOWN",
+    "field": "MUNIN",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10444",
     "lat": 60.11063517100007,
     "lon": 2.5909915600000204
@@ -6036,7 +6022,7 @@
   {
     "wellbore_name": "7220/7-5",
     "well": "7220/7-5",
-    "status": "DRILLING",
+    "status": "PLUGGED",
     "entryDate": "2026-02-20",
     "rig_name": "COSLPROSPECTOR",
     "rig_type": "MOVEABLE",
@@ -6060,20 +6046,6 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10509",
     "lat": 64.34209662200004,
     "lon": 7.72204643200007
-  },
-  {
-    "wellbore_name": "6507/2-O-2 H",
-    "well": "6507/2-O-2",
-    "status": "ONLINE/OPERATIONAL",
-    "entryDate": "2025-12-11",
-    "rig_name": "SCARABEO 8",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "\u00d8RN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10510",
-    "lat": 65.86202466700007,
-    "lon": 7.397449504000065
   },
   {
     "wellbore_name": "2/7-NA-1 H",
@@ -6274,7 +6246,7 @@
   {
     "wellbore_name": "33/12-B-1 E",
     "well": "33/12-B-1",
-    "status": "CLOSED",
+    "status": "PRODUCING",
     "entryDate": "2026-01-29",
     "rig_name": "STATFJORD B",
     "rig_type": "FIXED",
@@ -6302,8 +6274,8 @@
   {
     "wellbore_name": "34/10-C-27 A",
     "well": "34/10-C-27",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-03-17",
     "rig_name": "GULLFAKS C",
     "rig_type": "FIXED",
     "operator": "Equinor Energy AS",
@@ -6428,7 +6400,7 @@
   {
     "wellbore_name": "7220/7-CA-4 Y2H",
     "well": "7220/7-CA-4",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2025-12-30",
     "rig_name": "TRANSOCEAN ENABLER",
     "rig_type": "MOVEABLE",
@@ -6680,8 +6652,8 @@
   {
     "wellbore_name": "16/2-24",
     "well": "16/2-24",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-03-14",
     "rig_name": "COSLINNOVATOR",
     "rig_type": "MOVEABLE",
     "operator": "Equinor Energy AS",
@@ -6816,5 +6788,61 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10567",
     "lat": 72.54072816300004,
     "lon": 20.35717510300003
+  },
+  {
+    "wellbore_name": "16/1-EA-1 Y1H",
+    "well": "16/1-EA-1",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA NORDKAPP",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "SYMRA",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10568",
+    "lat": 58.96938505700007,
+    "lon": 2.2817363970000315
+  },
+  {
+    "wellbore_name": "16/1-EA-1 Y2H",
+    "well": "16/1-EA-1",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA NORDKAPP",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "SYMRA",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10569",
+    "lat": 58.96938505700007,
+    "lon": 2.2817363970000315
+  },
+  {
+    "wellbore_name": "16/1-EA-1 Y3H",
+    "well": "16/1-EA-1",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA NORDKAPP",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "SYMRA",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10570",
+    "lat": 58.96938505700007,
+    "lon": 2.2817363970000315
+  },
+  {
+    "wellbore_name": "6507/4-X-1 AH",
+    "well": "6507/4-X-1",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN NORGE",
+    "rig_type": "MOVEABLE",
+    "operator": "Harbour Energy Norge AS",
+    "well_type": "DEVELOPMENT",
+    "field": "DVALIN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10571",
+    "lat": 65.51693256700008,
+    "lon": 7.202737723000041
   }
 ]
