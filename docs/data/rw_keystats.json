@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 488,
+  "num_wells": 487,
   "entered_wells": 51,
-  "not_entered_wells": 437,
+  "not_entered_wells": 436,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "25/2-D-6 Y2",
+      "rig_name": "NOBLE INTEGRATOR",
+      "entry_date": "2026-03-23",
+      "days_since_entry": 3
+    },
     {
       "wellbore_name": "34/10-C-27 A",
       "rig_name": "GULLFAKS C",
@@ -307,12 +313,6 @@
       "rig_name": "TRANSOCEAN NORGE",
       "entry_date": "2025-12-22",
       "days_since_entry": 94
-    },
-    {
-      "wellbore_name": "25/11-FT-2 Y2H",
-      "rig_name": "COSLPIONEER",
-      "entry_date": "2025-12-16",
-      "days_since_entry": 100
     }
   ]
 }
