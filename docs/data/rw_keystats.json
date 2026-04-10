@@ -1,13 +1,37 @@
 {
   "num_rigs": 21,
   "num_wells": 480,
-  "entered_wells": 42,
-  "not_entered_wells": 438,
+  "entered_wells": 46,
+  "not_entered_wells": 434,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "16/1-EA-1 Y1H",
+      "rig_name": "DEEPSEA NORDKAPP",
+      "entry_date": "2026-04-07",
+      "days_since_entry": 3
+    },
+    {
+      "wellbore_name": "30/4-A-18",
+      "rig_name": "ASKEPOTT",
+      "entry_date": "2026-04-04",
+      "days_since_entry": 6
+    },
+    {
+      "wellbore_name": "25/2-D-6 Y3",
+      "rig_name": "NOBLE INTEGRATOR",
+      "entry_date": "2026-04-02",
+      "days_since_entry": 8
+    },
+    {
+      "wellbore_name": "7122/10-E-1 Y2H",
+      "rig_name": "COSLPROSPECTOR",
+      "entry_date": "2026-03-30",
+      "days_since_entry": 11
+    },
     {
       "wellbore_name": "25/2-D-6 Y2",
       "rig_name": "NOBLE INTEGRATOR",
