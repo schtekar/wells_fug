@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-11T06:40:03.017736+00:00",
+  "generated_at": "2026-04-11T07:38:46.268099+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
@@ -119,11 +119,6 @@
       "movement_m": null,
       "assigned_wells": [
         {
-          "wellbore_name": "7018/5-2",
-          "distance_m": 152245.3,
-          "approach_ratio": null
-        },
-        {
           "wellbore_name": "7220/7-5",
           "distance_m": 145130.6,
           "approach_ratio": null
@@ -139,7 +134,7 @@
           "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 4,
+      "num_assigned_wells": 3,
       "likely_target_well": "7122/10-E-1 Y2H"
     },
     "LINUS": {
