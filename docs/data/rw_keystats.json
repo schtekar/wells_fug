@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
   "num_wells": 479,
-  "entered_wells": 44,
-  "not_entered_wells": 435,
+  "entered_wells": 45,
+  "not_entered_wells": 434,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "16/2-D-5 Y2",
+      "rig_name": "JOHAN SVERDRUP DP",
+      "entry_date": "2026-04-09",
+      "days_since_entry": 6
+    },
     {
       "wellbore_name": "16/1-EA-1 Y1H",
       "rig_name": "DEEPSEA NORDKAPP",
