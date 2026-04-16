@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T06:07:02.387296+00:00",
+  "generated_at": "2026-04-16T08:04:51.956937+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
@@ -436,9 +436,15 @@
       "last_seen": "2026-04-16T05:34:51.1352452+00:00",
       "rig_moving": false,
       "movement_m": null,
-      "assigned_wells": [],
-      "num_assigned_wells": 0,
-      "likely_target_well": null
+      "assigned_wells": [
+        {
+          "wellbore_name": "15/3-A-3",
+          "distance_m": 47448.0,
+          "approach_ratio": null
+        }
+      ],
+      "num_assigned_wells": 1,
+      "likely_target_well": "15/3-A-3"
     },
     "COSLPROMOTER": {
       "rig_name": "COSLPROMOTER",
