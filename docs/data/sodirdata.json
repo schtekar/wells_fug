@@ -5824,20 +5824,6 @@
     "lon": 2.4961833190000675
   },
   {
-    "wellbore_name": "16/2-U-8",
-    "well": "16/2-U-8",
-    "status": "PLUGGED",
-    "entryDate": "2026-01-15",
-    "rig_name": "COSLPROMOTER",
-    "rig_type": "MOVEABLE",
-    "operator": "Equinor Energy AS",
-    "well_type": "OTHER",
-    "field": "JOHAN SVERDRUP",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/other/otherall/10449",
-    "lat": 58.880551205000074,
-    "lon": 2.4868882100000747
-  },
-  {
     "wellbore_name": "30/11-W-3 AH",
     "well": "30/11-W-3",
     "status": "PLUGGED",
@@ -6648,5 +6634,33 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10576",
     "lat": 58.84456782900003,
     "lon": 1.7422359130000586
+  },
+  {
+    "wellbore_name": "7220/5-EC-2 H",
+    "well": "7220/5-EC-2",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN ENABLER",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "EXPLORATION",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10577",
+    "lat": 72.54079816400008,
+    "lon": 20.35683007500006
+  },
+  {
+    "wellbore_name": "7220/5-EC-2 AH",
+    "well": "7220/5-EC-2",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN ENABLER",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "JOHAN CASTBERG",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10578",
+    "lat": 72.54079816400008,
+    "lon": 20.35683007500006
   }
 ]
