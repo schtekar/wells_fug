@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T06:41:40.690096+00:00",
+  "generated_at": "2026-05-03T08:27:21.249709+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
@@ -494,15 +494,10 @@
           "wellbore_name": "25/11-30 A",
           "distance_m": 165201.4,
           "approach_ratio": null
-        },
-        {
-          "wellbore_name": "34/4-19 S",
-          "distance_m": 106899.1,
-          "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 3,
-      "likely_target_well": "34/4-19 S"
+      "num_assigned_wells": 2,
+      "likely_target_well": "25/11-30 A"
     },
     "DEEPSEA STAVANGER": {
       "rig_name": "DEEPSEA STAVANGER",
