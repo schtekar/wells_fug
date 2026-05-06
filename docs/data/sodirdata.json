@@ -5406,8 +5406,8 @@
   {
     "wellbore_name": "25/11-HT-3 Y2H",
     "well": "25/11-HT-3",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-04-29",
     "rig_name": "COSLPIONEER",
     "rig_type": "MOVEABLE",
     "operator": "V\u00e5r Energi ASA",
@@ -5560,8 +5560,8 @@
   {
     "wellbore_name": "6407/7-A-11 BH",
     "well": "6407/7-A-11",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-05-01",
     "rig_name": "NJORD A",
     "rig_type": "FIXED",
     "operator": "Equinor Energy AS",
@@ -5796,20 +5796,6 @@
     "lon": 20.121549122000033
   },
   {
-    "wellbore_name": "33/12-N-3 IH",
-    "well": "33/12-N-3",
-    "status": "PRODUCING",
-    "entryDate": "2026-01-26",
-    "rig_name": "ASKELADDEN",
-    "rig_type": "MOVEABLE",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "GULLFAKS S\u00d8R",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10515",
-    "lat": 61.07854533200003,
-    "lon": 1.9881604210000319
-  },
-  {
     "wellbore_name": "25/2-D-11 AY1",
     "well": "25/2-D-11",
     "status": "ONLINE/OPERATIONAL",
@@ -5908,20 +5894,6 @@
     "lon": 3.550770155000066
   },
   {
-    "wellbore_name": "34/8-V-1 BH",
-    "well": "34/8-V-1",
-    "status": "PRODUCING",
-    "entryDate": "2026-01-26",
-    "rig_name": "DEEPSEA BOLLSTA",
-    "rig_type": "MOVEABLE",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "VISUND S\u00d8R",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10527",
-    "lat": 61.30001466600004,
-    "lon": 2.3620269190000727
-  },
-  {
     "wellbore_name": "33/12-B-1 E",
     "well": "33/12-B-1",
     "status": "PRODUCING",
@@ -5962,20 +5934,6 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10530",
     "lat": 61.214676197000074,
     "lon": 2.272225749000029
-  },
-  {
-    "wellbore_name": "35/11-32 S",
-    "well": "35/11-32",
-    "status": "PLUGGED",
-    "entryDate": "2026-01-26",
-    "rig_name": "COSLINNOVATOR",
-    "rig_type": "MOVEABLE",
-    "operator": "Equinor Energy AS",
-    "well_type": "EXPLORATION",
-    "field": "UNKNOWN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10531",
-    "lat": 61.15683057400008,
-    "lon": 3.4694213330000707
   },
   {
     "wellbore_name": "33/9-C-18 C",
@@ -6204,8 +6162,8 @@
   {
     "wellbore_name": "25/7-13",
     "well": "25/7-13",
-    "status": "",
-    "entryDate": "",
+    "status": "DRILLING",
+    "entryDate": "2026-05-04",
     "rig_name": "COSLINNOVATOR",
     "rig_type": "MOVEABLE",
     "operator": "Equinor Energy AS",
@@ -6578,5 +6536,33 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10579",
     "lat": 64.27082964000004,
     "lon": 7.200984809000033
+  },
+  {
+    "wellbore_name": "25/8-L-4 H",
+    "well": "25/8-L-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA ABERDEEN",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "BREIDABLIKK",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10580",
+    "lat": 59.25356862800004,
+    "lon": 2.602243531000056
+  },
+  {
+    "wellbore_name": "25/8-L-4 AH",
+    "well": "25/8-L-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA ABERDEEN",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "BREIDABLIKK",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10581",
+    "lat": 59.25356862800004,
+    "lon": 2.602243531000056
   }
 ]
