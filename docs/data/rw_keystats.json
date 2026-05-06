@@ -1,13 +1,31 @@
 {
   "num_rigs": 21,
-  "num_wells": 470,
+  "num_wells": 469,
   "entered_wells": 37,
-  "not_entered_wells": 433,
+  "not_entered_wells": 432,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "25/7-13",
+      "rig_name": "COSLINNOVATOR",
+      "entry_date": "2026-05-04",
+      "days_since_entry": 2
+    },
+    {
+      "wellbore_name": "6407/7-A-11 BH",
+      "rig_name": "NJORD A",
+      "entry_date": "2026-05-01",
+      "days_since_entry": 5
+    },
+    {
+      "wellbore_name": "25/11-HT-3 Y2H",
+      "rig_name": "COSLPIONEER",
+      "entry_date": "2026-04-29",
+      "days_since_entry": 7
+    },
     {
       "wellbore_name": "25/2-D-11 AY1",
       "rig_name": "NOBLE INTEGRATOR",
@@ -211,24 +229,6 @@
       "rig_name": "GRANE",
       "entry_date": "2026-01-28",
       "days_since_entry": 98
-    },
-    {
-      "wellbore_name": "33/12-N-3 IH",
-      "rig_name": "ASKELADDEN",
-      "entry_date": "2026-01-26",
-      "days_since_entry": 100
-    },
-    {
-      "wellbore_name": "34/8-V-1 BH",
-      "rig_name": "DEEPSEA BOLLSTA",
-      "entry_date": "2026-01-26",
-      "days_since_entry": 100
-    },
-    {
-      "wellbore_name": "35/11-32 S",
-      "rig_name": "COSLINNOVATOR",
-      "entry_date": "2026-01-26",
-      "days_since_entry": 100
     }
   ]
 }
