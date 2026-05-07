@@ -5672,8 +5672,8 @@
   {
     "wellbore_name": "16/2-D-35 A",
     "well": "16/2-D-35",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-05-03",
     "rig_name": "JOHAN SVERDRUP DP",
     "rig_type": "FIXED",
     "operator": "Equinor Energy AS",
@@ -6246,7 +6246,7 @@
   {
     "wellbore_name": "16/2-24 A",
     "well": "16/2-24",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "PLUGGED",
     "entryDate": "2026-04-20",
     "rig_name": "COSLINNOVATOR",
     "rig_type": "MOVEABLE",
@@ -6564,5 +6564,19 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10581",
     "lat": 59.25356862800004,
     "lon": 2.602243531000056
+  },
+  {
+    "wellbore_name": "34/10-B-41 C",
+    "well": "34/10-B-41",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "GULLFAKS B",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "GULLFAKS",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10582",
+    "lat": 61.202569821000054,
+    "lon": 2.199549196000021
   }
 ]
