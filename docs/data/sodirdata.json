@@ -5880,20 +5880,6 @@
     "lon": 3.550770155000066
   },
   {
-    "wellbore_name": "33/12-B-1 E",
-    "well": "33/12-B-1",
-    "status": "PRODUCING",
-    "entryDate": "2026-01-29",
-    "rig_name": "STATFJORD B",
-    "rig_type": "FIXED",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "STATFJORD",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10528",
-    "lat": 61.20652337400003,
-    "lon": 1.8294518420000259
-  },
-  {
     "wellbore_name": "33/12-B-3 D",
     "well": "33/12-B-3",
     "status": "",
@@ -5990,20 +5976,6 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10538",
     "lat": 61.20224481300005,
     "lon": 2.199949226000058
-  },
-  {
-    "wellbore_name": "25/8-N-1 Y1H",
-    "well": "25/8-N-1",
-    "status": "ONLINE/OPERATIONAL",
-    "entryDate": "2026-01-29",
-    "rig_name": "COSLPIONEER",
-    "rig_type": "MOVEABLE",
-    "operator": "V\u00e5r Energi ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "BALDER",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10540",
-    "lat": 59.26095384900003,
-    "lon": 2.5146826830000464
   },
   {
     "wellbore_name": "25/8-N-1 Y2H",
@@ -6578,5 +6550,33 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10583",
     "lat": 61.019447986000046,
     "lon": 2.146768297000051
+  },
+  {
+    "wellbore_name": "33/9-C-26 E",
+    "well": "33/9-C-26",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "STATFJORD C",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "STATFJORD",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10584",
+    "lat": 61.295872778000046,
+    "lon": 1.901038192000044
+  },
+  {
+    "wellbore_name": "15/3-A-6 A",
+    "well": "15/3-A-6",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "SHELF DRILLING BARSK",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "GUDRUN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10585",
+    "lat": 58.84453782700007,
+    "lon": 1.7422189140000341
   }
 ]
