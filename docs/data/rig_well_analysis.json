@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T07:11:38.613778+00:00",
+  "generated_at": "2026-05-09T08:53:37.552612+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
@@ -211,11 +211,6 @@
           "approach_ratio": null
         },
         {
-          "wellbore_name": "25/8-N-1 Y1H",
-          "distance_m": 3382.7,
-          "approach_ratio": null
-        },
-        {
           "wellbore_name": "25/8-N-1 Y2H",
           "distance_m": 3382.7,
           "approach_ratio": null
@@ -231,7 +226,7 @@
           "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 5,
+      "num_assigned_wells": 4,
       "likely_target_well": "25/11-HT-3 Y2H"
     },
     "NOBLE INTEGRATOR": {
@@ -436,10 +431,15 @@
           "wellbore_name": "15/3-A-3",
           "distance_m": 47451.0,
           "approach_ratio": null
+        },
+        {
+          "wellbore_name": "15/3-A-6 A",
+          "distance_m": 47447.6,
+          "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 1,
-      "likely_target_well": "15/3-A-3"
+      "num_assigned_wells": 2,
+      "likely_target_well": "15/3-A-6 A"
     },
     "COSLPROMOTER": {
       "rig_name": "COSLPROMOTER",
