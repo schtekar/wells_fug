@@ -1,13 +1,25 @@
 {
   "num_rigs": 21,
-  "num_wells": 469,
-  "entered_wells": 34,
-  "not_entered_wells": 435,
+  "num_wells": 468,
+  "entered_wells": 35,
+  "not_entered_wells": 433,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "6507/8-D-4 CH",
+      "rig_name": "TRANSOCEAN ENCOURAGE",
+      "entry_date": "2026-05-09",
+      "days_since_entry": 3
+    },
+    {
+      "wellbore_name": "34/10-G-4 DH",
+      "rig_name": "ASKELADDEN",
+      "entry_date": "2026-05-08",
+      "days_since_entry": 4
+    },
     {
       "wellbore_name": "25/7-13",
       "rig_name": "COSLINNOVATOR",
@@ -205,12 +217,6 @@
       "rig_name": "GRANE",
       "entry_date": "2026-02-09",
       "days_since_entry": 92
-    },
-    {
-      "wellbore_name": "7220/5-EB-1 Y1H",
-      "rig_name": "TRANSOCEAN ENABLER",
-      "entry_date": "2026-02-01",
-      "days_since_entry": 100
     }
   ]
 }
