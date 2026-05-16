@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 469,
-  "entered_wells": 35,
-  "not_entered_wells": 434,
+  "num_wells": 473,
+  "entered_wells": 36,
+  "not_entered_wells": 437,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "25/2-D-11 AY2",
+      "rig_name": "NOBLE INTEGRATOR",
+      "entry_date": "2026-05-11",
+      "days_since_entry": 5
+    },
     {
       "wellbore_name": "6507/8-D-4 CH",
       "rig_name": "TRANSOCEAN ENCOURAGE",
