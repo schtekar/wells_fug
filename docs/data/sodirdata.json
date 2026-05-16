@@ -5756,7 +5756,7 @@
   {
     "wellbore_name": "25/2-D-11 AY1",
     "well": "25/2-D-11",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-04-26",
     "rig_name": "NOBLE INTEGRATOR",
     "rig_type": "MOVEABLE",
@@ -5770,8 +5770,8 @@
   {
     "wellbore_name": "25/2-D-11 AY2",
     "well": "25/2-D-11",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-05-11",
     "rig_name": "NOBLE INTEGRATOR",
     "rig_type": "MOVEABLE",
     "operator": "Aker BP ASA",
@@ -6564,5 +6564,61 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10586",
     "lat": 58.88030619600005,
     "lon": 2.486971224000058
+  },
+  {
+    "wellbore_name": "25/2-D-14 AY1",
+    "well": "25/2-D-14",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "NOBLE INTEGRATOR",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "HUGIN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10587",
+    "lat": 59.87102567100004,
+    "lon": 2.565986442000053
+  },
+  {
+    "wellbore_name": "25/2-D-14 AY2",
+    "well": "25/2-D-14",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "NOBLE INTEGRATOR",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "HUGIN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10588",
+    "lat": 59.87102567100004,
+    "lon": 2.565986442000053
+  },
+  {
+    "wellbore_name": "25/2-D-14 AY3",
+    "well": "25/2-D-14",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "NOBLE INTEGRATOR",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "HUGIN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10589",
+    "lat": 59.87102567100004,
+    "lon": 2.565986442000053
+  },
+  {
+    "wellbore_name": "6507/7-A-52 B",
+    "well": "6507/7-A-52",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "HEIDRUN",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "HEIDRUN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10590",
+    "lat": 65.32540868400008,
+    "lon": 7.315835851000031
   }
 ]
