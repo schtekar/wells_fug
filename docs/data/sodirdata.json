@@ -4372,9 +4372,9 @@
     "well": "6406/12-G-4",
     "status": "PREDRILLED",
     "entryDate": "",
-    "rig_name": "DEEPSEA YANTAI",
+    "rig_name": "COSLPROSPECTOR",
     "rig_type": "MOVEABLE",
-    "operator": "Neptune Energy Norge AS",
+    "operator": "V\u00e5r Energi ASA",
     "well_type": "DEVELOPMENT",
     "field": "FENJA",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/9038",
@@ -5418,20 +5418,6 @@
     "lon": 2.463020871000026
   },
   {
-    "wellbore_name": "25/11-G-2 DY2",
-    "well": "25/11-G-2",
-    "status": "CLOSED",
-    "entryDate": "2026-02-09",
-    "rig_name": "GRANE",
-    "rig_type": "FIXED",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "GRANE",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10246",
-    "lat": 59.16473886700004,
-    "lon": 2.485605276000058
-  },
-  {
     "wellbore_name": "25/11-G-2 DY3",
     "well": "25/11-G-2",
     "status": "CLOSED",
@@ -5924,7 +5910,7 @@
   {
     "wellbore_name": "34/10-A-30 D",
     "well": "34/10-A-30",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "PRODUCING",
     "entryDate": "2026-02-18",
     "rig_name": "GULLFAKS A",
     "rig_type": "FIXED",
@@ -6620,5 +6606,33 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10590",
     "lat": 65.32540868400008,
     "lon": 7.315835851000031
+  },
+  {
+    "wellbore_name": "15/6-U-6",
+    "well": "15/6-U-6",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "SCARABEO 8",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "OTHER",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/other/otherall/10591",
+    "lat": 58.63639863600008,
+    "lon": 1.952895159000036
+  },
+  {
+    "wellbore_name": "15/6-17",
+    "well": "15/6-17",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "SCARABEO 8",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "EXPLORATION",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10592",
+    "lat": 58.63634663200003,
+    "lon": 1.9526951560000612
   }
 ]
