@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T08:37:39.178195+00:00",
+  "generated_at": "2026-05-21T11:54:23.218981+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
@@ -42,7 +42,7 @@
         },
         {
           "wellbore_name": "25/11-J-5 H",
-          "distance_m": 187072.5,
+          "distance_m": 187059.1,
           "approach_ratio": null
         },
         {
@@ -84,9 +84,19 @@
           "wellbore_name": "25/8-L-4 AH",
           "distance_m": 183844.6,
           "approach_ratio": null
+        },
+        {
+          "wellbore_name": "25/11-J-5 AY1H",
+          "distance_m": 187059.1,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "25/11-J-5 AY2H",
+          "distance_m": 187059.1,
+          "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 11,
+      "num_assigned_wells": 13,
       "likely_target_well": "31/2-W-31 H"
     },
     "ASKEPOTT": {
