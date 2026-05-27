@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T05:57:21.218918+00:00",
+  "generated_at": "2026-05-27T10:13:30.786433+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
@@ -573,9 +573,19 @@
           "wellbore_name": "30/11-Z-6 H",
           "distance_m": 13403.5,
           "approach_ratio": null
+        },
+        {
+          "wellbore_name": "30/11-W-4 AH",
+          "distance_m": 39.2,
+          "approach_ratio": null
+        },
+        {
+          "wellbore_name": "30/11-W-4 BH",
+          "distance_m": 75.8,
+          "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 6,
+      "num_assigned_wells": 8,
       "likely_target_well": "30/11-W-1 H"
     },
     "DEEPSEA BOLLSTA": {
