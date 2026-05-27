@@ -5572,20 +5572,6 @@
     "lon": 2.5881491000000665
   },
   {
-    "wellbore_name": "30/6-C-16 B",
-    "well": "30/6-C-16",
-    "status": "ONLINE/OPERATIONAL",
-    "entryDate": "2026-02-16",
-    "rig_name": "OSEBERG C",
-    "rig_type": "FIXED",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "OSEBERG",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10391",
-    "lat": 60.60763163000007,
-    "lon": 2.7743003160000512
-  },
-  {
     "wellbore_name": "16/7-A-2 AH",
     "well": "16/7-A-2",
     "status": "",
@@ -6008,7 +5994,7 @@
   {
     "wellbore_name": "6507/8-D-4 CH",
     "well": "6507/8-D-4",
-    "status": "DRILLING",
+    "status": "PLUGGED",
     "entryDate": "2026-05-09",
     "rig_name": "TRANSOCEAN ENCOURAGE",
     "rig_type": "MOVEABLE",
@@ -6676,5 +6662,33 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10595",
     "lat": 58.83540029900007,
     "lon": 2.5520920800000226
+  },
+  {
+    "wellbore_name": "30/11-W-4 AH",
+    "well": "30/11-W-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA STAVANGER",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10596",
+    "lat": 60.11127920400003,
+    "lon": 2.5916885490000254
+  },
+  {
+    "wellbore_name": "30/11-W-4 BH",
+    "well": "30/11-W-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA STAVANGER",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10597",
+    "lat": 60.11069616900005,
+    "lon": 2.590691548000052
   }
 ]
