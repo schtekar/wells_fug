@@ -1,13 +1,37 @@
 {
   "num_rigs": 21,
-  "num_wells": 475,
-  "entered_wells": 31,
-  "not_entered_wells": 444,
+  "num_wells": 474,
+  "entered_wells": 34,
+  "not_entered_wells": 440,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "34/7-P-9 A",
+      "rig_name": "SNORRE A",
+      "entry_date": "2026-05-26",
+      "days_since_entry": 8
+    },
+    {
+      "wellbore_name": "6507/8-D-4 DH",
+      "rig_name": "TRANSOCEAN ENCOURAGE",
+      "entry_date": "2026-05-26",
+      "days_since_entry": 8
+    },
+    {
+      "wellbore_name": "33/9-C-18 C",
+      "rig_name": "STATFJORD C",
+      "entry_date": "2026-05-23",
+      "days_since_entry": 11
+    },
+    {
+      "wellbore_name": "25/2-D-11 AY3",
+      "rig_name": "NOBLE INTEGRATOR",
+      "entry_date": "2026-05-22",
+      "days_since_entry": 12
+    },
     {
       "wellbore_name": "25/2-D-11 AY2",
       "rig_name": "NOBLE INTEGRATOR",
@@ -187,12 +211,6 @@
       "rig_name": "DEEPSEA ABERDEEN",
       "entry_date": "2026-02-24",
       "days_since_entry": 99
-    },
-    {
-      "wellbore_name": "34/7-I-1 AH",
-      "rig_name": "COSLPROMOTER",
-      "entry_date": "2026-02-23",
-      "days_since_entry": 100
     }
   ]
 }
