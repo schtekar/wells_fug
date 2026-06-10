@@ -5852,20 +5852,6 @@
     "lon": 2.5659474410000485
   },
   {
-    "wellbore_name": "16/4-BF-2 Y2H",
-    "well": "16/4-BF-2",
-    "status": "CLOSED",
-    "entryDate": "2026-03-02",
-    "rig_name": "DEEPSEA NORDKAPP",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "SOLVEIG",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10546",
-    "lat": 58.67207338000003,
-    "lon": 2.235070447000055
-  },
-  {
     "wellbore_name": "6507/8-D-4 CH",
     "well": "6507/8-D-4",
     "status": "PLUGGED",
@@ -6592,5 +6578,47 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10600",
     "lat": 61.20615935600006,
     "lon": 1.82911585100004
+  },
+  {
+    "wellbore_name": "7220/7-CC-1 Y1H",
+    "well": "7220/7-CC-1",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN ENABLER",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "JOHAN CASTBERG",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10601",
+    "lat": 72.39067212100008,
+    "lon": 20.127719288000037
+  },
+  {
+    "wellbore_name": "7220/7-CC-1 Y2H",
+    "well": "7220/7-CC-1",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN ENABLER",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "JOHAN CASTBERG",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10602",
+    "lat": 72.39067212100008,
+    "lon": 20.127719288000037
+  },
+  {
+    "wellbore_name": "7220/7-CC-3 H",
+    "well": "7220/7-CC-3",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN ENABLER",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "JOHAN CASTBERG",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10603",
+    "lat": 72.39055011500005,
+    "lon": 20.12775830100003
   }
 ]
