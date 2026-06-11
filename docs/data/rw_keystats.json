@@ -1,13 +1,37 @@
 {
   "num_rigs": 21,
-  "num_wells": 473,
-  "entered_wells": 27,
-  "not_entered_wells": 446,
+  "num_wells": 472,
+  "entered_wells": 31,
+  "not_entered_wells": 441,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "30/11-Z-1 H",
+      "rig_name": "DEEPSEA STAVANGER",
+      "entry_date": "2026-06-08",
+      "days_since_entry": 3
+    },
+    {
+      "wellbore_name": "25/11-J-5 H",
+      "rig_name": "DEEPSEA ABERDEEN",
+      "entry_date": "2026-06-07",
+      "days_since_entry": 4
+    },
+    {
+      "wellbore_name": "25/11-J-4 H",
+      "rig_name": "DEEPSEA ABERDEEN",
+      "entry_date": "2026-06-05",
+      "days_since_entry": 6
+    },
+    {
+      "wellbore_name": "7220/5-EC-4 Y1H",
+      "rig_name": "TRANSOCEAN ENABLER",
+      "entry_date": "2026-06-04",
+      "days_since_entry": 7
+    },
     {
       "wellbore_name": "34/7-P-9 A",
       "rig_name": "SNORRE A",
