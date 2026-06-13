@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 471,
-  "entered_wells": 30,
-  "not_entered_wells": 441,
+  "num_wells": 470,
+  "entered_wells": 32,
+  "not_entered_wells": 438,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "30/11-Z-6 H",
+      "rig_name": "DEEPSEA STAVANGER",
+      "entry_date": "2026-06-10",
+      "days_since_entry": 3
+    },
     {
       "wellbore_name": "30/11-Z-1 H",
       "rig_name": "DEEPSEA STAVANGER",
@@ -23,6 +29,12 @@
     {
       "wellbore_name": "25/11-J-4 H",
       "rig_name": "DEEPSEA ABERDEEN",
+      "entry_date": "2026-06-05",
+      "days_since_entry": 8
+    },
+    {
+      "wellbore_name": "25/11-HT-4 Y2H",
+      "rig_name": "COSLPIONEER",
       "entry_date": "2026-06-05",
       "days_since_entry": 8
     },
