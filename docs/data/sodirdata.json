@@ -4354,20 +4354,6 @@
     "lon": 3.2614675530000454
   },
   {
-    "wellbore_name": "6406/12-G-4 H",
-    "well": "6406/12-G-4",
-    "status": "PREDRILLED",
-    "entryDate": "",
-    "rig_name": "COSLPROSPECTOR",
-    "rig_type": "MOVEABLE",
-    "operator": "V\u00e5r Energi ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "FENJA",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/9038",
-    "lat": 64.03026431500007,
-    "lon": 6.749205194000069
-  },
-  {
     "wellbore_name": "6406/12-H-1 AH",
     "well": "6406/12-H-1",
     "status": "",
@@ -5392,7 +5378,7 @@
   {
     "wellbore_name": "25/11-HT-3 Y2H",
     "well": "25/11-HT-3",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-04-29",
     "rig_name": "COSLPIONEER",
     "rig_type": "MOVEABLE",
@@ -5574,7 +5560,7 @@
   {
     "wellbore_name": "16/2-D-35 A",
     "well": "16/2-D-35",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-05-03",
     "rig_name": "JOHAN SVERDRUP DP",
     "rig_type": "FIXED",
@@ -5658,8 +5644,8 @@
   {
     "wellbore_name": "30/11-Z-6 H",
     "well": "30/11-Z-6",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-06-10",
     "rig_name": "DEEPSEA STAVANGER",
     "rig_type": "MOVEABLE",
     "operator": "Aker BP ASA",
@@ -5700,7 +5686,7 @@
   {
     "wellbore_name": "25/2-D-11 AY3",
     "well": "25/2-D-11",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-05-22",
     "rig_name": "NOBLE INTEGRATOR",
     "rig_type": "MOVEABLE",
@@ -5826,7 +5812,7 @@
   {
     "wellbore_name": "25/2-D-6 Y3",
     "well": "25/2-D-6",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-04-02",
     "rig_name": "NOBLE INTEGRATOR",
     "rig_type": "MOVEABLE",
@@ -5966,8 +5952,8 @@
   {
     "wellbore_name": "25/11-HT-4 Y2H",
     "well": "25/11-HT-4",
-    "status": "",
-    "entryDate": "",
+    "status": "CLOSED",
+    "entryDate": "2026-06-05",
     "rig_name": "COSLPIONEER",
     "rig_type": "MOVEABLE",
     "operator": "V\u00e5r Energi ASA",
@@ -6092,7 +6078,7 @@
   {
     "wellbore_name": "16/1-EA-1 Y1H",
     "well": "16/1-EA-1",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-04-07",
     "rig_name": "DEEPSEA NORDKAPP",
     "rig_type": "MOVEABLE",
