@@ -5364,7 +5364,7 @@
   {
     "wellbore_name": "6507/7-A-38 A",
     "well": "6507/7-A-38",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-04-24",
     "rig_name": "HEIDRUN",
     "rig_type": "FIXED",
@@ -5490,7 +5490,7 @@
   {
     "wellbore_name": "6407/7-A-11 BH",
     "well": "6407/7-A-11",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-05-01",
     "rig_name": "NJORD A",
     "rig_type": "FIXED",
@@ -5588,8 +5588,8 @@
   {
     "wellbore_name": "30/11-V-6 H",
     "well": "30/11-V-6",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-06-15",
     "rig_name": "DEEPSEA STAVANGER",
     "rig_type": "MOVEABLE",
     "operator": "Aker BP ASA",
@@ -5826,7 +5826,7 @@
   {
     "wellbore_name": "6507/8-D-4 DH",
     "well": "6507/8-D-4",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-05-26",
     "rig_name": "TRANSOCEAN ENCOURAGE",
     "rig_type": "MOVEABLE",
@@ -5978,20 +5978,6 @@
     "lon": 2.4265636680000284
   },
   {
-    "wellbore_name": "16/3-Q-3 H",
-    "well": "16/3-Q-3",
-    "status": "ONLINE/OPERATIONAL",
-    "entryDate": "2026-03-09",
-    "rig_name": "DEEPSEA BOLLSTA",
-    "rig_type": "MOVEABLE",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "JOHAN SVERDRUP",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10562",
-    "lat": 58.76866130700006,
-    "lon": 2.760786961000065
-  },
-  {
     "wellbore_name": "30/4-A-18",
     "well": "30/4-A-18",
     "status": "ONLINE/OPERATIONAL",
@@ -6078,8 +6064,8 @@
   {
     "wellbore_name": "16/1-EA-1 Y2H",
     "well": "16/1-EA-1",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-06-13",
     "rig_name": "DEEPSEA NORDKAPP",
     "rig_type": "MOVEABLE",
     "operator": "Aker BP ASA",
@@ -6564,5 +6550,33 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10603",
     "lat": 72.39055011500005,
     "lon": 20.12775830100003
+  },
+  {
+    "wellbore_name": "36/4-2",
+    "well": "36/4-2",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "SCARABEO 8",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "EXPLORATION",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10604",
+    "lat": 61.64571910400008,
+    "lon": 4.146255820000022
+  },
+  {
+    "wellbore_name": "35/7-2",
+    "well": "35/7-2",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA YANTAI",
+    "rig_type": "MOVEABLE",
+    "operator": "Wellesley Petroleum AS",
+    "well_type": "EXPLORATION",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10605",
+    "lat": 61.25834302700008,
+    "lon": 3.0131100040000547
   }
 ]
