@@ -1,13 +1,25 @@
 {
   "num_rigs": 21,
-  "num_wells": 469,
-  "entered_wells": 31,
+  "num_wells": 470,
+  "entered_wells": 32,
   "not_entered_wells": 438,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "30/11-V-6 H",
+      "rig_name": "DEEPSEA STAVANGER",
+      "entry_date": "2026-06-15",
+      "days_since_entry": 2
+    },
+    {
+      "wellbore_name": "16/1-EA-1 Y2H",
+      "rig_name": "DEEPSEA NORDKAPP",
+      "entry_date": "2026-06-13",
+      "days_since_entry": 4
+    },
     {
       "wellbore_name": "30/11-Z-6 H",
       "rig_name": "DEEPSEA STAVANGER",
@@ -187,12 +199,6 @@
       "rig_name": "COSLINNOVATOR",
       "entry_date": "2026-03-14",
       "days_since_entry": 95
-    },
-    {
-      "wellbore_name": "16/3-Q-3 H",
-      "rig_name": "DEEPSEA BOLLSTA",
-      "entry_date": "2026-03-09",
-      "days_since_entry": 100
     }
   ]
 }
