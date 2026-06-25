@@ -5712,20 +5712,6 @@
     "lon": 1.8295268450000322
   },
   {
-    "wellbore_name": "34/10-C-27 A",
-    "well": "34/10-C-27",
-    "status": "CLOSED",
-    "entryDate": "2026-03-17",
-    "rig_name": "GULLFAKS C",
-    "rig_type": "FIXED",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "GULLFAKS",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10530",
-    "lat": 61.214676197000074,
-    "lon": 2.272225749000029
-  },
-  {
     "wellbore_name": "33/9-C-18 C",
     "well": "33/9-C-18",
     "status": "ONLINE/OPERATIONAL",
@@ -6690,5 +6676,47 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10614",
     "lat": 58.96936505900004,
     "lon": 2.2819674040000564
+  },
+  {
+    "wellbore_name": "34/10-A-21 B",
+    "well": "34/10-A-21",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "GULLFAKS A",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "GULLFAKS",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10615",
+    "lat": 61.17584662200005,
+    "lon": 2.187539255000047
+  },
+  {
+    "wellbore_name": "6705/10-A-2 H",
+    "well": "6705/10-A-2",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN NORGE",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "IRPA",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10616",
+    "lat": 67.02711116900008,
+    "lon": 5.304184066000062
+  },
+  {
+    "wellbore_name": "35/11-B-11 BH",
+    "well": "35/11-B-11",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "COSLPROMOTER",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "FRAM",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10617",
+    "lat": 61.038955197000064,
+    "lon": 3.5739166260000275
   }
 ]
