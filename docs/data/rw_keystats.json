@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
   "num_wells": 483,
-  "entered_wells": 30,
-  "not_entered_wells": 453,
+  "entered_wells": 31,
+  "not_entered_wells": 452,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "30/11-W-4 H",
+      "rig_name": "DEEPSEA STAVANGER",
+      "entry_date": "2026-06-18",
+      "days_since_entry": 12
+    },
     {
       "wellbore_name": "30/11-V-6 H",
       "rig_name": "DEEPSEA STAVANGER",
