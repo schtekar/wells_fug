@@ -5768,20 +5768,6 @@
     "lon": 2.5146826830000464
   },
   {
-    "wellbore_name": "25/2-D-6 Y2",
-    "well": "25/2-D-6",
-    "status": "ONLINE/OPERATIONAL",
-    "entryDate": "2026-03-23",
-    "rig_name": "NOBLE INTEGRATOR",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "HUGIN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10543",
-    "lat": 59.87101467000008,
-    "lon": 2.5659474410000485
-  },
-  {
     "wellbore_name": "25/2-D-6 Y3",
     "well": "25/2-D-6",
     "status": "CLOSED",
@@ -5840,7 +5826,7 @@
   {
     "wellbore_name": "16/2-D-5 Y2",
     "well": "16/2-D-5",
-    "status": "CLOSED",
+    "status": "PRODUCING",
     "entryDate": "2026-04-09",
     "rig_name": "JOHAN SVERDRUP DP",
     "rig_type": "FIXED",
@@ -6148,8 +6134,8 @@
   {
     "wellbore_name": "7220/5-EC-2 H",
     "well": "7220/5-EC-2",
-    "status": "",
-    "entryDate": "",
+    "status": "DRILLING",
+    "entryDate": "2026-06-01",
     "rig_name": "TRANSOCEAN ENABLER",
     "rig_type": "MOVEABLE",
     "operator": "Equinor Energy AS",
@@ -6760,5 +6746,19 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10620",
     "lat": 60.28989729700004,
     "lon": 2.6087582690000204
+  },
+  {
+    "wellbore_name": "33/12-B-11 E",
+    "well": "33/12-B-11",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "STATFJORD B",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "STATFJORD",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10621",
+    "lat": 61.206479373000036,
+    "lon": 1.8294518440000616
   }
 ]
