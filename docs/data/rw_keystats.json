@@ -1,18 +1,42 @@
 {
   "num_rigs": 21,
   "num_wells": 483,
-  "entered_wells": 32,
-  "not_entered_wells": 451,
+  "entered_wells": 36,
+  "not_entered_wells": 447,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
     {
+      "wellbore_name": "6506/12-K-2 AH",
+      "rig_name": "TRANSOCEAN ENCOURAGE",
+      "entry_date": "2026-07-02",
+      "days_since_entry": 1
+    },
+    {
+      "wellbore_name": "25/8-C-12 A",
+      "rig_name": "RINGHORNE",
+      "entry_date": "2026-06-30",
+      "days_since_entry": 3
+    },
+    {
       "wellbore_name": "36/4-2",
       "rig_name": "SCARABEO 8",
       "entry_date": "2026-06-29",
       "days_since_entry": 4
+    },
+    {
+      "wellbore_name": "15/9-E-2 AH",
+      "rig_name": "COSLPROMOTER",
+      "entry_date": "2026-06-22",
+      "days_since_entry": 11
+    },
+    {
+      "wellbore_name": "30/11-W-1 H",
+      "rig_name": "DEEPSEA STAVANGER",
+      "entry_date": "2026-06-20",
+      "days_since_entry": 13
     },
     {
       "wellbore_name": "30/11-W-4 H",
