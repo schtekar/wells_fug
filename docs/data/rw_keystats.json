@@ -1,16 +1,28 @@
 {
   "num_rigs": 21,
-  "num_wells": 488,
-  "entered_wells": 37,
-  "not_entered_wells": 451,
+  "num_wells": 487,
+  "entered_wells": 42,
+  "not_entered_wells": 445,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
     {
+      "wellbore_name": "6705/10-A-2 H",
+      "rig_name": "TRANSOCEAN NORGE",
+      "entry_date": "2026-07-06",
+      "days_since_entry": 2
+    },
+    {
       "wellbore_name": "35/10-U-1",
       "rig_name": "SCARABEO 8",
+      "entry_date": "2026-07-04",
+      "days_since_entry": 4
+    },
+    {
+      "wellbore_name": "6705/10-A-4 H",
+      "rig_name": "TRANSOCEAN NORGE",
       "entry_date": "2026-07-04",
       "days_since_entry": 4
     },
@@ -19,6 +31,12 @@
       "rig_name": "TRANSOCEAN ENCOURAGE",
       "entry_date": "2026-07-02",
       "days_since_entry": 6
+    },
+    {
+      "wellbore_name": "30/11-W-2 AH",
+      "rig_name": "DEEPSEA STAVANGER",
+      "entry_date": "2026-07-01",
+      "days_since_entry": 7
     },
     {
       "wellbore_name": "25/8-C-12 A",
@@ -31,6 +49,12 @@
       "rig_name": "SCARABEO 8",
       "entry_date": "2026-06-29",
       "days_since_entry": 9
+    },
+    {
+      "wellbore_name": "25/2-D-14 AY2",
+      "rig_name": "NOBLE INTEGRATOR",
+      "entry_date": "2026-06-28",
+      "days_since_entry": 10
     },
     {
       "wellbore_name": "15/9-E-2 AH",
@@ -61,6 +85,12 @@
       "rig_name": "DEEPSEA NORDKAPP",
       "entry_date": "2026-06-13",
       "days_since_entry": 25
+    },
+    {
+      "wellbore_name": "25/2-D-14 AY1",
+      "rig_name": "NOBLE INTEGRATOR",
+      "entry_date": "2026-06-11",
+      "days_since_entry": 27
     },
     {
       "wellbore_name": "30/11-Z-6 H",
@@ -127,6 +157,12 @@
       "rig_name": "NOBLE INTEGRATOR",
       "entry_date": "2026-05-22",
       "days_since_entry": 47
+    },
+    {
+      "wellbore_name": "34/10-A-31 B",
+      "rig_name": "GULLFAKS A",
+      "entry_date": "2026-05-18",
+      "days_since_entry": 51
     },
     {
       "wellbore_name": "25/2-D-11 AY2",
@@ -223,12 +259,6 @@
       "rig_name": "NOBLE INTEGRATOR",
       "entry_date": "2026-04-02",
       "days_since_entry": 97
-    },
-    {
-      "wellbore_name": "7122/10-E-1 Y2H",
-      "rig_name": "COSLPROSPECTOR",
-      "entry_date": "2026-03-30",
-      "days_since_entry": 100
     }
   ]
 }
