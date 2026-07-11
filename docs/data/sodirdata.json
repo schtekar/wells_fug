@@ -5768,20 +5768,6 @@
     "lon": 2.5146826830000464
   },
   {
-    "wellbore_name": "25/2-D-6 Y3",
-    "well": "25/2-D-6",
-    "status": "CLOSED",
-    "entryDate": "2026-04-02",
-    "rig_name": "NOBLE INTEGRATOR",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "HUGIN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10544",
-    "lat": 59.87101467000008,
-    "lon": 2.5659474410000485
-  },
-  {
     "wellbore_name": "6507/8-D-4 CH",
     "well": "6507/8-D-4",
     "status": "PLUGGED",
@@ -5798,7 +5784,7 @@
   {
     "wellbore_name": "6507/8-D-4 DH",
     "well": "6507/8-D-4",
-    "status": "CLOSED",
+    "status": "PRODUCING",
     "entryDate": "2026-05-26",
     "rig_name": "TRANSOCEAN ENCOURAGE",
     "rig_type": "MOVEABLE",
@@ -6316,8 +6302,8 @@
   {
     "wellbore_name": "15/6-U-6",
     "well": "15/6-U-6",
-    "status": "",
-    "entryDate": "",
+    "status": "DRILLING",
+    "entryDate": "2026-07-08",
     "rig_name": "SCARABEO 8",
     "rig_type": "MOVEABLE",
     "operator": "Aker BP ASA",
@@ -6900,5 +6886,47 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10632",
     "lat": 60.492907813000045,
     "lon": 2.826807648000056
+  },
+  {
+    "wellbore_name": "25/8-C-23 F",
+    "well": "25/8-C-23",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "RINGHORNE",
+    "rig_type": "FIXED",
+    "operator": "V\u00e5r Energi ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "RINGHORNE \u00d8ST",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10633",
+    "lat": 59.26547321600003,
+    "lon": 2.4481945730000234
+  },
+  {
+    "wellbore_name": "25/8-24 S",
+    "well": "25/8-24",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "COSLPIONEER",
+    "rig_type": "MOVEABLE",
+    "operator": "V\u00e5r Energi ASA",
+    "well_type": "EXPLORATION",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10634",
+    "lat": 59.41878268700003,
+    "lon": 2.3386873130000367
+  },
+  {
+    "wellbore_name": "35/6-7 S",
+    "well": "35/6-7",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "COSLPROSPECTOR",
+    "rig_type": "MOVEABLE",
+    "operator": "V\u00e5r Energi ASA",
+    "well_type": "EXPLORATION",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10635",
+    "lat": 61.55499409000004,
+    "lon": 3.946356323000032
   }
 ]
