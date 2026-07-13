@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T07:40:50.386498+00:00",
+  "generated_at": "2026-07-13T10:43:22.077716+00:00",
   "rigs": {
     "ASKELADDEN": {
       "rig_name": "ASKELADDEN",
@@ -93,15 +93,10 @@
           "wellbore_name": "30/9-K-13 BH",
           "distance_m": 48452.0,
           "approach_ratio": null
-        },
-        {
-          "wellbore_name": "30/4-A-18",
-          "distance_m": 1526.2,
-          "approach_ratio": null
         }
       ],
-      "num_assigned_wells": 2,
-      "likely_target_well": "30/4-A-18"
+      "num_assigned_wells": 1,
+      "likely_target_well": "30/9-K-13 BH"
     },
     "COSLPROSPECTOR": {
       "rig_name": "COSLPROSPECTOR",
