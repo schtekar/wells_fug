@@ -1,13 +1,25 @@
 {
   "num_rigs": 21,
-  "num_wells": 493,
-  "entered_wells": 44,
-  "not_entered_wells": 449,
+  "num_wells": 491,
+  "entered_wells": 45,
+  "not_entered_wells": 446,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "35/7-2",
+      "rig_name": "DEEPSEA YANTAI",
+      "entry_date": "2026-07-15",
+      "days_since_entry": 3
+    },
+    {
+      "wellbore_name": "25/2-D-14 AY3",
+      "rig_name": "NOBLE INTEGRATOR",
+      "entry_date": "2026-07-10",
+      "days_since_entry": 8
+    },
     {
       "wellbore_name": "15/6-U-6",
       "rig_name": "SCARABEO 8",
@@ -265,12 +277,6 @@
       "rig_name": "RINGHORNE",
       "entry_date": "2026-04-11",
       "days_since_entry": 98
-    },
-    {
-      "wellbore_name": "16/2-D-5 Y2",
-      "rig_name": "JOHAN SVERDRUP DP",
-      "entry_date": "2026-04-09",
-      "days_since_entry": 100
     }
   ]
 }
