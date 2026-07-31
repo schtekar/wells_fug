@@ -1,13 +1,43 @@
 {
   "num_rigs": 21,
   "num_wells": 487,
-  "entered_wells": 41,
-  "not_entered_wells": 446,
+  "entered_wells": 46,
+  "not_entered_wells": 441,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "30/11-W-4 AH",
+      "rig_name": "DEEPSEA STAVANGER",
+      "entry_date": "2026-07-26",
+      "days_since_entry": 5
+    },
+    {
+      "wellbore_name": "34/10-C-40 B",
+      "rig_name": "GULLFAKS C",
+      "entry_date": "2026-07-25",
+      "days_since_entry": 6
+    },
+    {
+      "wellbore_name": "15/3-A-3",
+      "rig_name": "SHELF DRILLING BARSK",
+      "entry_date": "2026-07-22",
+      "days_since_entry": 9
+    },
+    {
+      "wellbore_name": "7220/5-EC-2 AH",
+      "rig_name": "TRANSOCEAN ENABLER",
+      "entry_date": "2026-07-21",
+      "days_since_entry": 10
+    },
+    {
+      "wellbore_name": "16/2-D-23 A",
+      "rig_name": "JOHAN SVERDRUP DP",
+      "entry_date": "2026-07-18",
+      "days_since_entry": 13
+    },
     {
       "wellbore_name": "35/7-2",
       "rig_name": "DEEPSEA YANTAI",
