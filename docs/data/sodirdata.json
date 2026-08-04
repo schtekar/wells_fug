@@ -5642,20 +5642,6 @@
     "lon": 2.4961833190000675
   },
   {
-    "wellbore_name": "25/2-D-11 AY1",
-    "well": "25/2-D-11",
-    "status": "CLOSED",
-    "entryDate": "2026-04-26",
-    "rig_name": "NOBLE INTEGRATOR",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "HUGIN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10516",
-    "lat": 59.870964669000045,
-    "lon": 2.5660524460000715
-  },
-  {
     "wellbore_name": "25/2-D-11 AY2",
     "well": "25/2-D-11",
     "status": "CLOSED",
@@ -6064,8 +6050,8 @@
   {
     "wellbore_name": "34/10-B-41 C",
     "well": "34/10-B-41",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-08-02",
     "rig_name": "GULLFAKS B",
     "rig_type": "FIXED",
     "operator": "Equinor Energy AS",
@@ -6148,7 +6134,7 @@
   {
     "wellbore_name": "25/2-D-14 AY2",
     "well": "25/2-D-14",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-06-28",
     "rig_name": "NOBLE INTEGRATOR",
     "rig_type": "MOVEABLE",
@@ -6162,7 +6148,7 @@
   {
     "wellbore_name": "25/2-D-14 AY3",
     "well": "25/2-D-14",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-07-10",
     "rig_name": "NOBLE INTEGRATOR",
     "rig_type": "MOVEABLE",
