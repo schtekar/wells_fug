@@ -5740,20 +5740,6 @@
     "lon": 2.1418902030000595
   },
   {
-    "wellbore_name": "25/7-13",
-    "well": "25/7-13",
-    "status": "DRILLING",
-    "entryDate": "2026-05-04",
-    "rig_name": "COSLINNOVATOR",
-    "rig_type": "MOVEABLE",
-    "operator": "Equinor Energy AS",
-    "well_type": "EXPLORATION",
-    "field": "UNKNOWN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10552",
-    "lat": 59.34091534000004,
-    "lon": 2.2235126540000465
-  },
-  {
     "wellbore_name": "25/11-J-4 H",
     "well": "25/11-J-4",
     "status": "ONLINE/OPERATIONAL",
@@ -6746,5 +6732,61 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10635",
     "lat": 61.55499409000004,
     "lon": 3.946356323000032
+  },
+  {
+    "wellbore_name": "6507/2-N-3 H",
+    "well": "6507/2-N-3",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA YANTAI",
+    "rig_type": "MOVEABLE",
+    "operator": "DNO Norge AS",
+    "well_type": "DEVELOPMENT",
+    "field": "MARULK",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10636",
+    "lat": 65.93328441800003,
+    "lon": 7.5417641240000535
+  },
+  {
+    "wellbore_name": "6507/2-N-3 AH",
+    "well": "6507/2-N-3",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA YANTAI",
+    "rig_type": "MOVEABLE",
+    "operator": "DNO Norge AS",
+    "well_type": "DEVELOPMENT",
+    "field": "MARULK",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10637",
+    "lat": 65.93328441800003,
+    "lon": 7.5417641240000535
+  },
+  {
+    "wellbore_name": "34/10-D-4 BH",
+    "well": "34/10-D-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "ASKELADDEN",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "GULLFAKS S\u00d8R",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10638",
+    "lat": 61.123581253000054,
+    "lon": 2.2426326880000715
+  },
+  {
+    "wellbore_name": "34/10-D-4 CH",
+    "well": "34/10-D-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "ASKELADDEN",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "GULLFAKS S\u00d8R",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10639",
+    "lat": 61.123581253000054,
+    "lon": 2.2426326880000715
   }
 ]
