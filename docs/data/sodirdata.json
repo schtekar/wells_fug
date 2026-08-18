@@ -6568,8 +6568,8 @@
   {
     "wellbore_name": "6407/5-3 S",
     "well": "6407/5-3",
-    "status": "",
-    "entryDate": "",
+    "status": "DRILLING",
+    "entryDate": "2026-08-10",
     "rig_name": "COSLPROSPECTOR",
     "rig_type": "MOVEABLE",
     "operator": "V\u00e5r Energi ASA",
@@ -6746,5 +6746,47 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10639",
     "lat": 61.123581253000054,
     "lon": 2.2426326880000715
+  },
+  {
+    "wellbore_name": "16/1-D-12 AY1",
+    "well": "16/1-D-12",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "NOBLE INVINCIBLE",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "IVAR AASEN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10640",
+    "lat": 58.92171523900004,
+    "lon": 2.1965641550000328
+  },
+  {
+    "wellbore_name": "16/1-D-12 AY2",
+    "well": "16/1-D-12",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "NOBLE INVINCIBLE",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "IVAR AASEN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10641",
+    "lat": 58.92171523900004,
+    "lon": 2.1965641550000328
+  },
+  {
+    "wellbore_name": "7220/5-EC-3 H",
+    "well": "7220/5-EC-3",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN ENABLER",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "JOHAN CASTBERG",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10642",
+    "lat": 72.54082616600004,
+    "lon": 20.35698608200005
   }
 ]
