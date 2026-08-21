@@ -5630,7 +5630,7 @@
   {
     "wellbore_name": "33/9-C-18 C",
     "well": "33/9-C-18",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-05-23",
     "rig_name": "STATFJORD C",
     "rig_type": "FIXED",
@@ -6788,5 +6788,19 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/other/otherall/10643",
     "lat": 60.50011800800007,
     "lon": 2.247734081000033
+  },
+  {
+    "wellbore_name": "36/4-2 A",
+    "well": "36/4-2",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "SCARABEO 8",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "EXPLORATION",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10644",
+    "lat": 61.645716105000076,
+    "lon": 4.146280821000062
   }
 ]
