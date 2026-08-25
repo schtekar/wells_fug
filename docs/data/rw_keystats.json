@@ -1,8 +1,8 @@
 {
   "num_rigs": 21,
-  "num_wells": 486,
-  "entered_wells": 39,
-  "not_entered_wells": 447,
+  "num_wells": 488,
+  "entered_wells": 49,
+  "not_entered_wells": 439,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
@@ -15,10 +15,70 @@
       "days_since_entry": 3
     },
     {
+      "wellbore_name": "16/1-EA-4 AH",
+      "rig_name": "DEEPSEA NORDKAPP",
+      "entry_date": "2026-08-20",
+      "days_since_entry": 5
+    },
+    {
+      "wellbore_name": "25/11-J-4 AH",
+      "rig_name": "DEEPSEA ABERDEEN",
+      "entry_date": "2026-08-16",
+      "days_since_entry": 9
+    },
+    {
+      "wellbore_name": "34/10-A-21 B",
+      "rig_name": "GULLFAKS A",
+      "entry_date": "2026-08-16",
+      "days_since_entry": 9
+    },
+    {
+      "wellbore_name": "25/2-D-4 Y4",
+      "rig_name": "NOBLE INTEGRATOR",
+      "entry_date": "2026-08-16",
+      "days_since_entry": 9
+    },
+    {
+      "wellbore_name": "25/11-G-20 B",
+      "rig_name": "GRANE",
+      "entry_date": "2026-08-11",
+      "days_since_entry": 14
+    },
+    {
       "wellbore_name": "6407/5-3 S",
       "rig_name": "COSLPROSPECTOR",
       "entry_date": "2026-08-10",
       "days_since_entry": 15
+    },
+    {
+      "wellbore_name": "25/2-D-4 Y3",
+      "rig_name": "NOBLE INTEGRATOR",
+      "entry_date": "2026-08-10",
+      "days_since_entry": 15
+    },
+    {
+      "wellbore_name": "6507/7-A-22 A",
+      "rig_name": "HEIDRUN",
+      "entry_date": "2026-08-07",
+      "days_since_entry": 18
+    },
+    {
+      "wellbore_name": "7220/5-YB-2 H",
+      "rig_name": "TRANSOCEAN ENABLER",
+      "entry_date": "2026-08-06",
+      "days_since_entry": 19
+    },
+    {
+      "wellbore_name": "30/11-W-4 BH",
+      "rig_name": "DEEPSEA STAVANGER",
+      "entry_date": "2026-08-05",
+      "days_since_entry": 20
+    },
+    {
+      "wellbore_name": "25/2-D-4 Y2",
+      "rig_name": "NOBLE INTEGRATOR",
+      "entry_date": "2026-08-03",
+      "days_since_entry": 22
     },
     {
       "wellbore_name": "34/10-B-41 C",
