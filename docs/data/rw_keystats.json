@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 488,
+  "num_wells": 487,
   "entered_wells": 49,
-  "not_entered_wells": 439,
+  "not_entered_wells": 438,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "7220/5-EC-3 H",
+      "rig_name": "TRANSOCEAN ENABLER",
+      "entry_date": "2026-08-24",
+      "days_since_entry": 2
+    },
     {
       "wellbore_name": "36/4-2 A",
       "rig_name": "SCARABEO 8",
@@ -295,12 +301,6 @@
       "rig_name": "NOBLE INTEGRATOR",
       "entry_date": "2026-05-22",
       "days_since_entry": 96
-    },
-    {
-      "wellbore_name": "34/10-A-31 B",
-      "rig_name": "GULLFAKS A",
-      "entry_date": "2026-05-18",
-      "days_since_entry": 100
     }
   ]
 }
