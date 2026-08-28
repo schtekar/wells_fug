@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 487,
-  "entered_wells": 49,
+  "num_wells": 489,
+  "entered_wells": 51,
   "not_entered_wells": 438,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "34/10-56 S",
+      "rig_name": "COSLINNOVATOR",
+      "entry_date": "2026-08-25",
+      "days_since_entry": 3
+    },
     {
       "wellbore_name": "7220/5-EC-3 H",
       "rig_name": "TRANSOCEAN ENABLER",
@@ -25,6 +31,12 @@
       "rig_name": "DEEPSEA NORDKAPP",
       "entry_date": "2026-08-20",
       "days_since_entry": 8
+    },
+    {
+      "wellbore_name": "16/2-D-16 A",
+      "rig_name": "JOHAN SVERDRUP DP",
+      "entry_date": "2026-08-19",
+      "days_since_entry": 9
     },
     {
       "wellbore_name": "25/11-J-4 AH",
