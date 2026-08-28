@@ -5938,8 +5938,8 @@
   {
     "wellbore_name": "34/10-56 S",
     "well": "34/10-56",
-    "status": "",
-    "entryDate": "",
+    "status": "DRILLING",
+    "entryDate": "2026-08-25",
     "rig_name": "COSLINNOVATOR",
     "rig_type": "MOVEABLE",
     "operator": "Equinor Energy AS",
@@ -6792,8 +6792,8 @@
   {
     "wellbore_name": "16/2-D-16 A",
     "well": "16/2-D-16",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-08-19",
     "rig_name": "JOHAN SVERDRUP DP",
     "rig_type": "FIXED",
     "operator": "Equinor Energy AS",
@@ -6816,5 +6816,33 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10646",
     "lat": 58.83537529700004,
     "lon": 2.552003078000041
+  },
+  {
+    "wellbore_name": "15/6-U-7",
+    "well": "15/6-U-7",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA NORDKAPP",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "OTHER",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/other/otherall/10647",
+    "lat": 58.70618379900003,
+    "lon": 1.834888749000072
+  },
+  {
+    "wellbore_name": "15/6-18 S",
+    "well": "15/6-18",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA NORDKAPP",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "EXPLORATION",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10648",
+    "lat": 58.70635880300006,
+    "lon": 1.8347417370000585
   }
 ]
