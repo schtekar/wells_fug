@@ -1,13 +1,31 @@
 {
   "num_rigs": 21,
   "num_wells": 486,
-  "entered_wells": 48,
-  "not_entered_wells": 438,
+  "entered_wells": 51,
+  "not_entered_wells": 435,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "25/8-N-1 Y2H",
+      "rig_name": "COSLPIONEER",
+      "entry_date": "2026-08-31",
+      "days_since_entry": 2
+    },
+    {
+      "wellbore_name": "34/7-P-34 A",
+      "rig_name": "SNORRE A",
+      "entry_date": "2026-08-29",
+      "days_since_entry": 4
+    },
+    {
+      "wellbore_name": "16/2-D-16 B",
+      "rig_name": "JOHAN SVERDRUP DP",
+      "entry_date": "2026-08-29",
+      "days_since_entry": 4
+    },
     {
       "wellbore_name": "34/10-56 S",
       "rig_name": "COSLINNOVATOR",
