@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 483,
-  "entered_wells": 48,
+  "num_wells": 484,
+  "entered_wells": 49,
   "not_entered_wells": 435,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "34/10-D-4 BH",
+      "rig_name": "ASKELADDEN",
+      "entry_date": "2026-09-03",
+      "days_since_entry": 2
+    },
     {
       "wellbore_name": "25/8-N-1 Y2H",
       "rig_name": "COSLPIONEER",
