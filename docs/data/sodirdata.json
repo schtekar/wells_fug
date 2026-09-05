@@ -5770,7 +5770,7 @@
   {
     "wellbore_name": "6506/12-K-2 AH",
     "well": "6506/12-K-2",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-07-02",
     "rig_name": "TRANSOCEAN ENCOURAGE",
     "rig_type": "MOVEABLE",
@@ -6386,7 +6386,7 @@
   {
     "wellbore_name": "7220/5-YB-2 H",
     "well": "7220/5-YB-2",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-08-06",
     "rig_name": "TRANSOCEAN ENABLER",
     "rig_type": "MOVEABLE",
@@ -6512,7 +6512,7 @@
   {
     "wellbore_name": "25/2-D-4 Y4",
     "well": "25/2-D-4",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "CLOSED",
     "entryDate": "2026-08-16",
     "rig_name": "NOBLE INTEGRATOR",
     "rig_type": "MOVEABLE",
@@ -6610,8 +6610,8 @@
   {
     "wellbore_name": "34/10-D-4 BH",
     "well": "34/10-D-4",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-09-03",
     "rig_name": "ASKELADDEN",
     "rig_type": "MOVEABLE",
     "operator": "Equinor Energy AS",
@@ -6760,5 +6760,19 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10648",
     "lat": 58.70635880300006,
     "lon": 1.8347417370000585
+  },
+  {
+    "wellbore_name": "34/10-C-45 Y2",
+    "well": "34/10-C-45",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "GULLFAKS C",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "GULLFAKS",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10649",
+    "lat": 61.21441519200005,
+    "lon": 2.2726477750000527
   }
 ]
