@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 483,
-  "entered_wells": 49,
-  "not_entered_wells": 434,
+  "num_wells": 480,
+  "entered_wells": 47,
+  "not_entered_wells": 433,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "30/8-7 S",
+      "rig_name": "DEEPSEA BERGEN",
+      "entry_date": "2026-09-09",
+      "days_since_entry": 5
+    },
     {
       "wellbore_name": "30/11-F-3 H",
       "rig_name": "SCARABEO 8",
@@ -283,24 +289,6 @@
       "rig_name": "DEEPSEA ABERDEEN",
       "entry_date": "2026-06-07",
       "days_since_entry": 99
-    },
-    {
-      "wellbore_name": "25/11-J-4 H",
-      "rig_name": "DEEPSEA ABERDEEN",
-      "entry_date": "2026-06-05",
-      "days_since_entry": 101
-    },
-    {
-      "wellbore_name": "25/11-HT-4 Y2H",
-      "rig_name": "COSLPIONEER",
-      "entry_date": "2026-06-05",
-      "days_since_entry": 101
-    },
-    {
-      "wellbore_name": "7220/5-EC-4 Y1H",
-      "rig_name": "TRANSOCEAN ENABLER",
-      "entry_date": "2026-06-04",
-      "days_since_entry": 102
     }
   ]
 }
