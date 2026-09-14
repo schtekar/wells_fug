@@ -5656,20 +5656,6 @@
     "lon": 2.1418902030000595
   },
   {
-    "wellbore_name": "25/11-J-4 H",
-    "well": "25/11-J-4",
-    "status": "PLUGGED",
-    "entryDate": "2026-06-05",
-    "rig_name": "DEEPSEA ABERDEEN",
-    "rig_type": "MOVEABLE",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "BREIDABLIKK",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10554",
-    "lat": 59.23065119000006,
-    "lon": 2.5547792260000506
-  },
-  {
     "wellbore_name": "25/11-J-4 AH",
     "well": "25/11-J-4",
     "status": "ONLINE/OPERATIONAL",
@@ -5684,20 +5670,6 @@
     "lon": 2.5547792260000506
   },
   {
-    "wellbore_name": "25/11-HT-4 Y2H",
-    "well": "25/11-HT-4",
-    "status": "CLOSED",
-    "entryDate": "2026-06-05",
-    "rig_name": "COSLPIONEER",
-    "rig_type": "MOVEABLE",
-    "operator": "V\u00e5r Energi ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "BALDER",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10557",
-    "lat": 59.24648068000005,
-    "lon": 2.4631598770000664
-  },
-  {
     "wellbore_name": "34/10-C-18 C",
     "well": "34/10-C-18",
     "status": "",
@@ -5710,20 +5682,6 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10565",
     "lat": 61.21434618900008,
     "lon": 2.272678780000035
-  },
-  {
-    "wellbore_name": "7220/5-EC-4 Y1H",
-    "well": "7220/5-EC-4",
-    "status": "ONLINE/OPERATIONAL",
-    "entryDate": "2026-06-04",
-    "rig_name": "TRANSOCEAN ENABLER",
-    "rig_type": "MOVEABLE",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "JOHAN CASTBERG",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10566",
-    "lat": 72.54072816300004,
-    "lon": 20.35717510300003
   },
   {
     "wellbore_name": "7220/5-EC-4 Y2H",
@@ -6344,8 +6302,8 @@
   {
     "wellbore_name": "30/8-7 S",
     "well": "30/8-7",
-    "status": "",
-    "entryDate": "",
+    "status": "DRILLING",
+    "entryDate": "2026-09-09",
     "rig_name": "DEEPSEA BERGEN",
     "rig_type": "MOVEABLE",
     "operator": "Equinor Energy AS",
