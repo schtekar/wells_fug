@@ -5670,20 +5670,6 @@
     "lon": 20.35717510300003
   },
   {
-    "wellbore_name": "16/1-EA-1 Y2H",
-    "well": "16/1-EA-1",
-    "status": "CLOSED",
-    "entryDate": "2026-06-13",
-    "rig_name": "DEEPSEA NORDKAPP",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "SYMRA",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10569",
-    "lat": 58.96938505700007,
-    "lon": 2.2817363970000315
-  },
-  {
     "wellbore_name": "16/1-EA-1 Y3H",
     "well": "16/1-EA-1",
     "status": "",
@@ -6690,5 +6676,61 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10650",
     "lat": 59.35435742900006,
     "lon": 2.6841662330000418
+  },
+  {
+    "wellbore_name": "6507/8-F-3 BH",
+    "well": "6507/8-F-3",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN ENCOURAGE",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "HEIDRUN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10651",
+    "lat": 65.36921701600005,
+    "lon": 7.355292425000073
+  },
+  {
+    "wellbore_name": "16/2-D-7 Y2",
+    "well": "16/2-D-7",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "JOHAN SVERDRUP DP",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "JOHAN SVERDRUP",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10652",
+    "lat": 58.835400297000035,
+    "lon": 2.551911075000021
+  },
+  {
+    "wellbore_name": "6407/1-C-4 H",
+    "well": "6407/1-C-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN ENCOURAGE",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "TYRIHANS",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10653",
+    "lat": 64.78953532100007,
+    "lon": 7.0100004040000385
+  },
+  {
+    "wellbore_name": "34/10-B-17 C",
+    "well": "34/10-B-17",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "GULLFAKS B",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "GULLFAKS",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10654",
+    "lat": 61.20258882100006,
+    "lon": 2.1995241940000483
   }
 ]
