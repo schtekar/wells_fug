@@ -1,13 +1,79 @@
 {
   "num_rigs": 21,
-  "num_wells": 480,
-  "entered_wells": 41,
-  "not_entered_wells": 439,
+  "num_wells": 479,
+  "entered_wells": 52,
+  "not_entered_wells": 427,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "25/2-E-6 H",
+      "rig_name": "SCARABEO 8",
+      "entry_date": "2026-09-18",
+      "days_since_entry": 7
+    },
+    {
+      "wellbore_name": "6506/12-H-4 AH",
+      "rig_name": "TRANSOCEAN ENCOURAGE",
+      "entry_date": "2026-09-17",
+      "days_since_entry": 8
+    },
+    {
+      "wellbore_name": "34/10-D-4 CH",
+      "rig_name": "ASKELADDEN",
+      "entry_date": "2026-09-17",
+      "days_since_entry": 8
+    },
+    {
+      "wellbore_name": "25/2-E-4 H",
+      "rig_name": "SCARABEO 8",
+      "entry_date": "2026-09-16",
+      "days_since_entry": 9
+    },
+    {
+      "wellbore_name": "30/6-C-22 A",
+      "rig_name": "OSEBERG C",
+      "entry_date": "2026-09-15",
+      "days_since_entry": 10
+    },
+    {
+      "wellbore_name": "16/7-A-2 AH",
+      "rig_name": "COSLPROMOTER",
+      "entry_date": "2026-09-15",
+      "days_since_entry": 10
+    },
+    {
+      "wellbore_name": "16/1-D-12 AY1",
+      "rig_name": "NOBLE INVINCIBLE",
+      "entry_date": "2026-09-13",
+      "days_since_entry": 12
+    },
+    {
+      "wellbore_name": "7220/5-EC-4 Y2H",
+      "rig_name": "TRANSOCEAN ENABLER",
+      "entry_date": "2026-09-12",
+      "days_since_entry": 13
+    },
+    {
+      "wellbore_name": "30/11-F-6 H",
+      "rig_name": "SCARABEO 8",
+      "entry_date": "2026-09-12",
+      "days_since_entry": 13
+    },
+    {
+      "wellbore_name": "25/8-N-1 Y3H",
+      "rig_name": "COSLPIONEER",
+      "entry_date": "2026-09-10",
+      "days_since_entry": 15
+    },
+    {
+      "wellbore_name": "30/11-F-1 H",
+      "rig_name": "SCARABEO 8",
+      "entry_date": "2026-09-10",
+      "days_since_entry": 15
+    },
     {
       "wellbore_name": "30/8-7 S",
       "rig_name": "DEEPSEA BERGEN",
