@@ -6568,8 +6568,8 @@
   {
     "wellbore_name": "15/6-18 S",
     "well": "15/6-18",
-    "status": "",
-    "entryDate": "",
+    "status": "DRILLING",
+    "entryDate": "2026-09-27",
     "rig_name": "DEEPSEA NORDKAPP",
     "rig_type": "MOVEABLE",
     "operator": "Aker BP ASA",
@@ -6662,5 +6662,61 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10654",
     "lat": 61.20258882100006,
     "lon": 2.1995241940000483
+  },
+  {
+    "wellbore_name": "25/11-G-26 BY1",
+    "well": "25/11-G-26",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "GRANE",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "GRANE",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10655",
+    "lat": 59.16464486600006,
+    "lon": 2.4857892850000667
+  },
+  {
+    "wellbore_name": "25/11-G-26 C",
+    "well": "25/11-G-26",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "GRANE",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "GRANE",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10656",
+    "lat": 59.16464486600006,
+    "lon": 2.4857892850000667
+  },
+  {
+    "wellbore_name": "25/11-G-26 BY2",
+    "well": "25/11-G-26",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "GRANE",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "GRANE",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10657",
+    "lat": 59.16464486600006,
+    "lon": 2.4857892850000667
+  },
+  {
+    "wellbore_name": "25/11-G-26 BY3",
+    "well": "25/11-G-26",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "GRANE",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "GRANE",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10658",
+    "lat": 59.16464486600006,
+    "lon": 2.4857892850000667
   }
 ]
