@@ -1,8 +1,8 @@
 {
   "num_rigs": 21,
   "num_wells": 481,
-  "entered_wells": 51,
-  "not_entered_wells": 430,
+  "entered_wells": 55,
+  "not_entered_wells": 426,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
@@ -15,10 +15,28 @@
       "days_since_entry": 6
     },
     {
+      "wellbore_name": "25/2-S-4 H",
+      "rig_name": "SCARABEO 8",
+      "entry_date": "2026-09-26",
+      "days_since_entry": 7
+    },
+    {
+      "wellbore_name": "25/11-J-5 AY1H",
+      "rig_name": "DEEPSEA ABERDEEN",
+      "entry_date": "2026-09-25",
+      "days_since_entry": 8
+    },
+    {
       "wellbore_name": "15/6-U-7",
       "rig_name": "DEEPSEA NORDKAPP",
       "entry_date": "2026-09-25",
       "days_since_entry": 8
+    },
+    {
+      "wellbore_name": "33/12-B-32 A",
+      "rig_name": "STATFJORD B",
+      "entry_date": "2026-09-24",
+      "days_since_entry": 9
     },
     {
       "wellbore_name": "25/2-E-6 H",
@@ -119,6 +137,12 @@
     {
       "wellbore_name": "16/2-D-16 B",
       "rig_name": "JOHAN SVERDRUP DP",
+      "entry_date": "2026-08-29",
+      "days_since_entry": 35
+    },
+    {
+      "wellbore_name": "34/10-C-45 Y2",
+      "rig_name": "GULLFAKS C",
       "entry_date": "2026-08-29",
       "days_since_entry": 35
     },
