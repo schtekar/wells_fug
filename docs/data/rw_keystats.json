@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
   "num_wells": 494,
-  "entered_wells": 51,
-  "not_entered_wells": 443,
+  "entered_wells": 52,
+  "not_entered_wells": 442,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "25/2-S-4 BH",
+      "rig_name": "SCARABEO 8",
+      "entry_date": "2026-10-22",
+      "days_since_entry": 2
+    },
     {
       "wellbore_name": "25/11-G-26 BY1",
       "rig_name": "GRANE",
