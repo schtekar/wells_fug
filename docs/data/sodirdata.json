@@ -6106,7 +6106,7 @@
   {
     "wellbore_name": "6407/5-3 S",
     "well": "6407/5-3",
-    "status": "DRILLING",
+    "status": "P&A",
     "entryDate": "2026-08-10",
     "rig_name": "COSLPROSPECTOR",
     "rig_type": "MOVEABLE",
@@ -6400,7 +6400,7 @@
   {
     "wellbore_name": "15/6-18 S",
     "well": "15/6-18",
-    "status": "DRILLING",
+    "status": "P&A",
     "entryDate": "2026-09-27",
     "rig_name": "DEEPSEA NORDKAPP",
     "rig_type": "MOVEABLE",
@@ -6900,5 +6900,19 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10683",
     "lat": 61.448739802000034,
     "lon": 2.142048222000028
+  },
+  {
+    "wellbore_name": "33/9-F-4 DH",
+    "well": "33/9-F-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "COSLPROMOTER",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "EXPLORATION",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10684",
+    "lat": 61.44407628400006,
+    "lon": 1.9546957870000483
   }
 ]
