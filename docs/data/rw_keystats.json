@@ -1,13 +1,25 @@
 {
   "num_rigs": 21,
-  "num_wells": 493,
-  "entered_wells": 50,
-  "not_entered_wells": 443,
+  "num_wells": 491,
+  "entered_wells": 51,
+  "not_entered_wells": 440,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "25/2-H-2 Y1H",
+      "rig_name": "DEEPSEA NORDKAPP",
+      "entry_date": "2026-10-28",
+      "days_since_entry": 2
+    },
+    {
+      "wellbore_name": "30/11-W-4 CH",
+      "rig_name": "DEEPSEA STAVANGER",
+      "entry_date": "2026-10-26",
+      "days_since_entry": 4
+    },
     {
       "wellbore_name": "25/2-S-4 BH",
       "rig_name": "SCARABEO 8",
@@ -301,12 +313,6 @@
       "rig_name": "GULLFAKS C",
       "entry_date": "2026-07-25",
       "days_since_entry": 97
-    },
-    {
-      "wellbore_name": "15/3-A-3",
-      "rig_name": "SHELF DRILLING BARSK",
-      "entry_date": "2026-07-22",
-      "days_since_entry": 100
     }
   ]
 }
