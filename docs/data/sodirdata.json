@@ -4672,8 +4672,8 @@
     "well_type": "DEVELOPMENT",
     "field": "UNKNOWN",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/9578",
-    "lat": 59.26357524900004,
-    "lon": 2.622341646000052
+    "lat": 59.26357524700006,
+    "lon": 2.622188642000026
   },
   {
     "wellbore_name": "25/8-M-3 BH",
@@ -4686,8 +4686,8 @@
     "well_type": "DEVELOPMENT",
     "field": "UNKNOWN",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/9579",
-    "lat": 59.26357524900004,
-    "lon": 2.622341646000052
+    "lat": 59.26357524700006,
+    "lon": 2.622188642000026
   },
   {
     "wellbore_name": "16/1-D-8 D",
@@ -4926,20 +4926,6 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/other/otherall/9786",
     "lat": 59.583801608000044,
     "lon": 2.6402042580000398
-  },
-  {
-    "wellbore_name": "34/10-C-40 B",
-    "well": "34/10-C-40",
-    "status": "PRODUCING",
-    "entryDate": "2026-07-25",
-    "rig_name": "GULLFAKS C",
-    "rig_type": "FIXED",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "GULLFAKS",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/9787",
-    "lat": 61.214671199000065,
-    "lon": 2.2723957540000583
   },
   {
     "wellbore_name": "30/9-F-10 B",
@@ -6886,5 +6872,33 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10686",
     "lat": 59.99994221600008,
     "lon": 2.369443471000068
+  },
+  {
+    "wellbore_name": "25/8-M-3 CY1H",
+    "well": "25/8-M-3",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA ABERDEEN",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10687",
+    "lat": 59.26357524700006,
+    "lon": 2.622188642000026
+  },
+  {
+    "wellbore_name": "25/8-M-3 CY2H",
+    "well": "25/8-M-3",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "DEEPSEA ABERDEEN",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "UNKNOWN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10688",
+    "lat": 59.26357524700006,
+    "lon": 2.622188642000026
   }
 ]
