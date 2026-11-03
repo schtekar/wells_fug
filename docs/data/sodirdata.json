@@ -4326,20 +4326,6 @@
     "lon": 2.2723537530000613
   },
   {
-    "wellbore_name": "2/8-V-10",
-    "well": "2/8-V-10",
-    "status": "PREDRILLED",
-    "entryDate": "",
-    "rig_name": "NOBLE INTEGRATOR",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "UNKNOWN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/8789",
-    "lat": 56.25061764000003,
-    "lon": 3.3477334230000224
-  },
-  {
     "wellbore_name": "2/7-S-35 A",
     "well": "2/7-S-35",
     "status": "",
@@ -5532,13 +5518,13 @@
   {
     "wellbore_name": "34/10-C-18 C",
     "well": "34/10-C-18",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-10-31",
     "rig_name": "GULLFAKS C",
     "rig_type": "FIXED",
     "operator": "Equinor Energy AS",
     "well_type": "DEVELOPMENT",
-    "field": "UNKNOWN",
+    "field": "GULLFAKS",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10565",
     "lat": 61.21434618900008,
     "lon": 2.272678780000035
@@ -5574,13 +5560,13 @@
   {
     "wellbore_name": "6407/7-A-21 H",
     "well": "6407/7-A-21",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-10-31",
     "rig_name": "NJORD A",
     "rig_type": "FIXED",
     "operator": "Equinor Energy AS",
     "well_type": "DEVELOPMENT",
-    "field": "UNKNOWN",
+    "field": "NJORD",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10579",
     "lat": 64.27082964000004,
     "lon": 7.200984809000033
@@ -5696,20 +5682,6 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10594",
     "lat": 59.23060318800003,
     "lon": 2.5548292300000526
-  },
-  {
-    "wellbore_name": "30/11-W-4 AH",
-    "well": "30/11-W-4",
-    "status": "PLUGGED",
-    "entryDate": "2026-07-26",
-    "rig_name": "DEEPSEA STAVANGER",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "UNKNOWN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10596",
-    "lat": 60.11127920400003,
-    "lon": 2.5916885490000254
   },
   {
     "wellbore_name": "30/11-W-4 BH",
@@ -5910,13 +5882,13 @@
   {
     "wellbore_name": "35/11-B-11 BH",
     "well": "35/11-B-11",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-11-01",
     "rig_name": "COSLPROMOTER",
     "rig_type": "MOVEABLE",
     "operator": "Equinor Energy AS",
     "well_type": "DEVELOPMENT",
-    "field": "UNKNOWN",
+    "field": "FRAM",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10617",
     "lat": 61.038955197000064,
     "lon": 3.5739166260000275
@@ -6022,13 +5994,13 @@
   {
     "wellbore_name": "25/2-S-4 CH",
     "well": "25/2-S-4",
-    "status": "",
-    "entryDate": "",
+    "status": "ONLINE/OPERATIONAL",
+    "entryDate": "2026-10-29",
     "rig_name": "SCARABEO 8",
     "rig_type": "MOVEABLE",
     "operator": "Aker BP ASA",
     "well_type": "DEVELOPMENT",
-    "field": "UNKNOWN",
+    "field": "HUGIN SATELLITTER",
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10626",
     "lat": 59.81231506200004,
     "lon": 2.618428786000038
@@ -6148,8 +6120,8 @@
   {
     "wellbore_name": "35/6-7 S",
     "well": "35/6-7",
-    "status": "",
-    "entryDate": "",
+    "status": "DRILLING",
+    "entryDate": "2026-10-30",
     "rig_name": "COSLPROSPECTOR",
     "rig_type": "MOVEABLE",
     "operator": "V\u00e5r Energi ASA",
