@@ -1,13 +1,43 @@
 {
   "num_rigs": 21,
-  "num_wells": 493,
-  "entered_wells": 50,
-  "not_entered_wells": 443,
+  "num_wells": 491,
+  "entered_wells": 54,
+  "not_entered_wells": 437,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "35/11-B-11 BH",
+      "rig_name": "COSLPROMOTER",
+      "entry_date": "2026-11-01",
+      "days_since_entry": 2
+    },
+    {
+      "wellbore_name": "34/10-C-18 C",
+      "rig_name": "GULLFAKS C",
+      "entry_date": "2026-10-31",
+      "days_since_entry": 3
+    },
+    {
+      "wellbore_name": "6407/7-A-21 H",
+      "rig_name": "NJORD A",
+      "entry_date": "2026-10-31",
+      "days_since_entry": 3
+    },
+    {
+      "wellbore_name": "35/6-7 S",
+      "rig_name": "COSLPROSPECTOR",
+      "entry_date": "2026-10-30",
+      "days_since_entry": 4
+    },
+    {
+      "wellbore_name": "25/2-S-4 CH",
+      "rig_name": "SCARABEO 8",
+      "entry_date": "2026-10-29",
+      "days_since_entry": 5
+    },
     {
       "wellbore_name": "25/2-H-2 Y1H",
       "rig_name": "DEEPSEA NORDKAPP",
@@ -301,12 +331,6 @@
       "rig_name": "GULLFAKS B",
       "entry_date": "2026-08-02",
       "days_since_entry": 93
-    },
-    {
-      "wellbore_name": "30/11-W-4 AH",
-      "rig_name": "DEEPSEA STAVANGER",
-      "entry_date": "2026-07-26",
-      "days_since_entry": 100
     }
   ]
 }
