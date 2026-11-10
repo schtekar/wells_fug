@@ -5586,20 +5586,6 @@
     "lon": 2.602243531000056
   },
   {
-    "wellbore_name": "34/10-B-41 C",
-    "well": "34/10-B-41",
-    "status": "CLOSED",
-    "entryDate": "2026-08-02",
-    "rig_name": "GULLFAKS B",
-    "rig_type": "FIXED",
-    "operator": "Equinor Energy AS",
-    "well_type": "DEVELOPMENT",
-    "field": "GULLFAKS",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10582",
-    "lat": 61.202569821000054,
-    "lon": 2.199549196000021
-  },
-  {
     "wellbore_name": "34/10-56 S",
     "well": "34/10-56",
     "status": "DRILLING",
@@ -5868,7 +5854,7 @@
   {
     "wellbore_name": "34/10-A-21 B",
     "well": "34/10-A-21",
-    "status": "CLOSED",
+    "status": "PRODUCING",
     "entryDate": "2026-08-16",
     "rig_name": "GULLFAKS A",
     "rig_type": "FIXED",
@@ -6023,7 +6009,7 @@
     "wellbore_name": "36/7-6 S",
     "well": "36/7-6",
     "status": "DRILLING",
-    "entryDate": "2026-11-04",
+    "entryDate": "2026-11-03",
     "rig_name": "COSLPROSPECTOR",
     "rig_type": "MOVEABLE",
     "operator": "V\u00e5r Energi ASA",
@@ -6176,7 +6162,7 @@
   {
     "wellbore_name": "34/10-D-4 CH",
     "well": "34/10-D-4",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "PRODUCING",
     "entryDate": "2026-09-17",
     "rig_name": "ASKELADDEN",
     "rig_type": "MOVEABLE",
@@ -6232,7 +6218,7 @@
   {
     "wellbore_name": "30/4-U-2",
     "well": "30/4-U-2",
-    "status": "ONLINE/OPERATIONAL",
+    "status": "P&A",
     "entryDate": "2026-11-03",
     "rig_name": "DEEPSEA BERGEN",
     "rig_type": "MOVEABLE",
