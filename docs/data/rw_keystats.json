@@ -1,13 +1,19 @@
 {
   "num_rigs": 21,
-  "num_wells": 490,
+  "num_wells": 489,
   "entered_wells": 55,
-  "not_entered_wells": 435,
+  "not_entered_wells": 434,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "33/12-B-11 E",
+      "rig_name": "STATFJORD B",
+      "entry_date": "2026-11-08",
+      "days_since_entry": 6
+    },
     {
       "wellbore_name": "25/2-H-4 H",
       "rig_name": "DEEPSEA NORDKAPP",
@@ -331,12 +337,6 @@
       "rig_name": "HEIDRUN",
       "entry_date": "2026-08-07",
       "days_since_entry": 99
-    },
-    {
-      "wellbore_name": "7220/5-YB-2 H",
-      "rig_name": "TRANSOCEAN ENABLER",
-      "entry_date": "2026-08-06",
-      "days_since_entry": 100
     }
   ]
 }
