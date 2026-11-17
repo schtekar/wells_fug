@@ -5658,7 +5658,7 @@
   {
     "wellbore_name": "33/12-B-32 A",
     "well": "33/12-B-32",
-    "status": "CLOSED",
+    "status": "PRODUCING",
     "entryDate": "2026-09-24",
     "rig_name": "STATFJORD B",
     "rig_type": "FIXED",
@@ -6830,5 +6830,61 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10690",
     "lat": 58.83537529800003,
     "lon": 2.5520470800000226
+  },
+  {
+    "wellbore_name": "25/8-C-5 B",
+    "well": "25/8-C-5",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "RINGHORNE",
+    "rig_type": "FIXED",
+    "operator": "V\u00e5r Energi ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "BALDER",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10691",
+    "lat": 59.26555121900003,
+    "lon": 2.4482275700000287
+  },
+  {
+    "wellbore_name": "25/11-GT-1 Y1H",
+    "well": "25/11-GT-1",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "COSLPIONEER",
+    "rig_type": "MOVEABLE",
+    "operator": "V\u00e5r Energi ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "BALDER",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10692",
+    "lat": 59.23852518600006,
+    "lon": 2.447200788000032
+  },
+  {
+    "wellbore_name": "25/11-GT-1 Y2H",
+    "well": "25/11-GT-1",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "COSLPIONEER",
+    "rig_type": "MOVEABLE",
+    "operator": "V\u00e5r Energi ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "BALDER",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10693",
+    "lat": 59.23852518600006,
+    "lon": 2.447200788000032
+  },
+  {
+    "wellbore_name": "16/1-D-17 B",
+    "well": "16/1-D-17",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "NOBLE INVINCIBLE",
+    "rig_type": "MOVEABLE",
+    "operator": "Aker BP ASA",
+    "well_type": "DEVELOPMENT",
+    "field": "IVAR AASEN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10694",
+    "lat": 58.92164323500003,
+    "lon": 2.196495156000026
   }
 ]
