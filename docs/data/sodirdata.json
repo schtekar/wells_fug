@@ -5950,20 +5950,6 @@
     "lon": 2.618428786000038
   },
   {
-    "wellbore_name": "6407/5-3 S",
-    "well": "6407/5-3",
-    "status": "P&A",
-    "entryDate": "2026-08-10",
-    "rig_name": "COSLPROSPECTOR",
-    "rig_type": "MOVEABLE",
-    "operator": "V\u00e5r Energi ASA",
-    "well_type": "EXPLORATION",
-    "field": "UNKNOWN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10627",
-    "lat": 64.65854886100004,
-    "lon": 7.449471890000041
-  },
-  {
     "wellbore_name": "36/7-6 S",
     "well": "36/7-6",
     "status": "DRILLING",
@@ -5976,20 +5962,6 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/exploration/all/10628",
     "lat": 61.43961785500005,
     "lon": 4.225463160000061
-  },
-  {
-    "wellbore_name": "25/2-D-4 Y3",
-    "well": "25/2-D-4",
-    "status": "CLOSED",
-    "entryDate": "2026-08-10",
-    "rig_name": "NOBLE INTEGRATOR",
-    "rig_type": "MOVEABLE",
-    "operator": "Aker BP ASA",
-    "well_type": "DEVELOPMENT",
-    "field": "HUGIN",
-    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10630",
-    "lat": 59.870975669000075,
-    "lon": 2.565980444000047
   },
   {
     "wellbore_name": "25/2-D-4 Y4",
@@ -6204,7 +6176,7 @@
   {
     "wellbore_name": "16/2-D-16 B",
     "well": "16/2-D-16",
-    "status": "CLOSED",
+    "status": "PRODUCING",
     "entryDate": "2026-08-29",
     "rig_name": "JOHAN SVERDRUP DP",
     "rig_type": "FIXED",
@@ -6755,9 +6727,9 @@
     "rig_name": "NOBLE INVINCIBLE",
     "rig_type": "MOVEABLE",
     "operator": "Aker BP ASA",
-    "well_type": "UNKNOWN",
-    "field": "UNKNOWN",
-    "fact_page_url": null,
+    "well_type": "DEVELOPMENT",
+    "field": "IVAR AASEN",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10685",
     "lat": 58.921712237000065,
     "lon": 2.1964701520000744
   },
@@ -6886,5 +6858,47 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10694",
     "lat": 58.92164323500003,
     "lon": 2.196495156000026
+  },
+  {
+    "wellbore_name": "7220/7-CC-4 Y1H",
+    "well": "7220/7-CC-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN ENABLER",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "JOHAN CASTBERG",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10695",
+    "lat": 72.39064411800007,
+    "lon": 20.12756728100004
+  },
+  {
+    "wellbore_name": "7220/7-CC-4 Y2H",
+    "well": "7220/7-CC-4",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN ENABLER",
+    "rig_type": "MOVEABLE",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "JOHAN CASTBERG",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10696",
+    "lat": 72.39064411800007,
+    "lon": 20.12756728100004
+  },
+  {
+    "wellbore_name": "34/10-A-20 D",
+    "well": "34/10-A-20",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "GULLFAKS A",
+    "rig_type": "FIXED",
+    "operator": "Equinor Energy AS",
+    "well_type": "DEVELOPMENT",
+    "field": "GULLFAKS",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10697",
+    "lat": 61.17584862400008,
+    "lon": 2.1876422580000394
   }
 ]
