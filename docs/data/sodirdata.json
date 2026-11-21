@@ -5378,7 +5378,7 @@
   {
     "wellbore_name": "16/7-A-2 AH",
     "well": "16/7-A-2",
-    "status": "CLOSED",
+    "status": "PRODUCING",
     "entryDate": "2026-09-15",
     "rig_name": "COSLPROMOTER",
     "rig_type": "MOVEABLE",
@@ -6886,5 +6886,19 @@
     "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10697",
     "lat": 61.17584862400008,
     "lon": 2.1876422580000394
+  },
+  {
+    "wellbore_name": "35/9-X-1 H",
+    "well": "35/9-X-1",
+    "status": "",
+    "entryDate": "",
+    "rig_name": "TRANSOCEAN NORGE",
+    "rig_type": "MOVEABLE",
+    "operator": "Harbour Energy Norge AS",
+    "well_type": "DEVELOPMENT",
+    "field": "NOVA",
+    "fact_page_url": "https://factpages.sodir.no/wellbore/pageview/development/all/10698",
+    "lat": 61.27586862100003,
+    "lon": 3.6638071540000396
   }
 ]
