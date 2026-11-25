@@ -1,13 +1,103 @@
 {
   "num_rigs": 21,
-  "num_wells": 490,
-  "entered_wells": 48,
-  "not_entered_wells": 442,
+  "num_wells": 492,
+  "entered_wells": 63,
+  "not_entered_wells": 429,
   "stationary_rigs": 21,
   "moving_rigs": 0,
   "jackups": 7,
   "semisubs": 0,
   "recent_wells": [
+    {
+      "wellbore_name": "7220/7-CC-1 Y1H",
+      "rig_name": "TRANSOCEAN ENABLER",
+      "entry_date": "2026-11-21",
+      "days_since_entry": 4
+    },
+    {
+      "wellbore_name": "16/2-N-5 H",
+      "rig_name": "DEEPSEA BERGEN",
+      "entry_date": "2026-11-18",
+      "days_since_entry": 7
+    },
+    {
+      "wellbore_name": "35/9-B-1 BH",
+      "rig_name": "COSLPIONEER",
+      "entry_date": "2026-11-18",
+      "days_since_entry": 7
+    },
+    {
+      "wellbore_name": "25/11-G-26 C",
+      "rig_name": "GRANE",
+      "entry_date": "2026-11-17",
+      "days_since_entry": 8
+    },
+    {
+      "wellbore_name": "16/2-N-2 H",
+      "rig_name": "DEEPSEA BERGEN",
+      "entry_date": "2026-11-17",
+      "days_since_entry": 8
+    },
+    {
+      "wellbore_name": "16/1-D-6 C",
+      "rig_name": "NOBLE INVINCIBLE",
+      "entry_date": "2026-11-17",
+      "days_since_entry": 8
+    },
+    {
+      "wellbore_name": "6507/8-F-3 BH",
+      "rig_name": "TRANSOCEAN ENCOURAGE",
+      "entry_date": "2026-11-16",
+      "days_since_entry": 9
+    },
+    {
+      "wellbore_name": "16/2-N-4 H",
+      "rig_name": "DEEPSEA BERGEN",
+      "entry_date": "2026-11-16",
+      "days_since_entry": 9
+    },
+    {
+      "wellbore_name": "16/2-N-6 H",
+      "rig_name": "DEEPSEA BERGEN",
+      "entry_date": "2026-11-15",
+      "days_since_entry": 10
+    },
+    {
+      "wellbore_name": "16/5-J-5 H",
+      "rig_name": "DEEPSEA BERGEN",
+      "entry_date": "2026-11-14",
+      "days_since_entry": 11
+    },
+    {
+      "wellbore_name": "30/11-W-4 DH",
+      "rig_name": "DEEPSEA STAVANGER",
+      "entry_date": "2026-11-13",
+      "days_since_entry": 12
+    },
+    {
+      "wellbore_name": "16/5-J-2 H",
+      "rig_name": "DEEPSEA BERGEN",
+      "entry_date": "2026-11-13",
+      "days_since_entry": 12
+    },
+    {
+      "wellbore_name": "34/10-B-17 C",
+      "rig_name": "GULLFAKS B",
+      "entry_date": "2026-11-12",
+      "days_since_entry": 13
+    },
+    {
+      "wellbore_name": "16/5-J-4 H",
+      "rig_name": "DEEPSEA BERGEN",
+      "entry_date": "2026-11-12",
+      "days_since_entry": 13
+    },
+    {
+      "wellbore_name": "16/5-J-6 H",
+      "rig_name": "DEEPSEA BERGEN",
+      "entry_date": "2026-11-10",
+      "days_since_entry": 15
+    },
     {
       "wellbore_name": "33/12-B-11 E",
       "rig_name": "STATFJORD B",
